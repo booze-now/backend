@@ -1,3 +1,3 @@
 # A Booze Now projekt backend-je
 
-Részletek hamarosan.
+[Wiki oldal](https://github.com/booze-now/backend/wiki)
