@@ -16,8 +16,28 @@ class Drink extends Model
      */
     protected $fillable = [
         'name',
-        'category',
+        'category_id',
         'description',
         'status',
     ];
+
+    private static $statuses = [
+        'active',
+        'inactive',
+    ];
+
+    public static function getStatuses(): array
+    {
+        return array_map(
+            fn ($v): string =>
+            __("drink.{$v}") ?? $v,
+            Drink::$statuses
+        );
+    }
+
+    public static function getStatusValue($name): string
+    {
+        $idx = array_search($name, Drink::getStatuses(), true);
+        return ($idx >= 0)? Drink::$statuses[$idx] : $name;
+    }
 }
