@@ -1,3 +1,6 @@
 {
-    "That's me!": "Ez vagyok én!"
+    "Page not found.": "Az oldal nem található.",
+    ":category is invalid as a subcategory category." : "A(z) :parent nem érvényes szülő kategória.",
+    ":category cannot be subcategory if it has children category already.": "A(z) :parent nem lehet alkategória, ha már vannak gyerekei.",
+    "Invalid main category: :parent.": "Érvénytelen fő kategória: :parent"
 }

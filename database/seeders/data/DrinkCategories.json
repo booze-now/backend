@@ -1,0 +1,103 @@
+[
+    {
+        "hu": "Üdítők",
+        "en": "Soft Drinks",
+        "children": [
+            {
+                "hu": "Ásványvíz",
+                "en": "Mineral Water"
+            },
+            {
+                "hu": "Limonádék",
+                "en": "Lemonades"
+            },
+            {
+                "hu": "Gyümölcslevek",
+                "en": "Fruit Juices"
+            },
+            {
+                "hu": "Szénsavas italok",
+                "en": "Soda"
+            },
+            {
+                "hu": "Energiaitalok",
+                "en": "Energy Drinks"
+            },
+            {
+                "hu": "Kávék",
+                "en": "Coffees"
+            }
+        ]
+    },
+    {
+        "hu": "Sörök",
+        "en": "Beers",
+        "children": [
+            {
+                "hu": "Csapolt sörök",
+                "en": "Draft Beers"
+            },
+            {
+                "hu": "Üveges sörök",
+                "en": "Bottled Beers"
+            }
+        ]
+    },
+    {
+        "hu": "Borok",
+        "en": "Wines",
+        "children": [
+            {
+                "hu": "Fehér borok",
+                "en": "White Wines"
+            },
+            {
+                "hu": "Vörös borok",
+                "en": "Red Wines"
+            },
+            {
+                "hu": "Rozék",
+                "en": "Rosé Wines"
+            }
+        ]
+    },
+    {
+        "hu": "Pezsgők",
+        "en": "Sparkling Wines",
+        "children": []
+    },
+    {
+        "hu": "Rövid italok",
+        "en": "Spirits",
+        "children": [
+            {
+                "hu": "Pálinkák",
+                "en": "Fruit Brandies"
+            },
+            {
+                "hu": "Vodkák",
+                "en": "Vodkas"
+            },
+            {
+                "hu": "Ginek",
+                "en": "Gins"
+            },
+            {
+                "hu": "Likőrök",
+                "en": "Liqueurs"
+            },
+            {
+                "hu": "tequilák",
+                "en": "Tequila"
+            },
+            {
+                "hu": "whiskey-k",
+                "en": "Whiskeys"
+            },
+            {
+                "hu": "Rumok",
+                "en": "Rums"
+            }
+        ]
+    }
+]

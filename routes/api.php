@@ -17,3 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::apiResource('categories', \App\Http\Controllers\DrinkCategoryController::class);
+
+Route::fallback(function () {
+    return response()->json([
+        'status'    => false,
+        'message'   => __('Page not found.'),
+    ], 404);
+});

@@ -1,0 +1,349 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Booze Now",
+    "dateExported": "2024-01-23T18:06:05.959Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "1d8a2767-b1a6-4413-8347-b84345a99ae7",
+            "name": "Drinks",
+            "containerId": "",
+            "created": "2024-01-22T22:55:02.996Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "5ed83204-5145-44bf-a369-0dc18d9f776a",
+            "name": "Categories",
+            "containerId": "",
+            "created": "2024-01-22T22:55:02.997Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "68fd2e60-7af0-4c8a-a605-d49ffc52a0bd",
+            "name": "Noname1",
+            "containerId": "",
+            "created": "2024-01-22T22:55:02.999Z",
+            "sortNum": 30000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "c815f3f5-d7f4-446b-ae0f-57a86553f262",
+            "colId": "106f6e74-0f39-49c4-af43-a6d525b9c8f7",
+            "containerId": "1d8a2767-b1a6-4413-8347-b84345a99ae7",
+            "name": "drinks index",
+            "url": "/drinks",
+            "method": "GET",
+            "sortNum": 5000,
+            "created": "2024-01-22T22:55:02.998Z",
+            "modified": "2024-01-23T00:23:37.719Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d71dbd22-6554-4bae-9f0c-b6b548f6a7c7",
+            "colId": "106f6e74-0f39-49c4-af43-a6d525b9c8f7",
+            "containerId": "68fd2e60-7af0-4c8a-a605-d49ffc52a0bd",
+            "name": "noname1 index",
+            "url": "/noname1",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-01-22T22:55:02.997Z",
+            "modified": "2024-01-22T22:55:02.997Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "490ed3b1-6a34-476e-b2f7-89be111eb45f",
+            "colId": "106f6e74-0f39-49c4-af43-a6d525b9c8f7",
+            "containerId": "5ed83204-5145-44bf-a369-0dc18d9f776a",
+            "name": "Categories index",
+            "url": "/categories",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-01-22T22:55:03.000Z",
+            "modified": "2024-01-23T00:29:50.103Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "08116a68-68dd-4167-85f2-453775a570bc",
+            "colId": "106f6e74-0f39-49c4-af43-a6d525b9c8f7",
+            "containerId": "1d8a2767-b1a6-4413-8347-b84345a99ae7",
+            "name": "drinks view",
+            "url": "/drinks/{id}",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-01-22T22:55:03.001Z",
+            "modified": "2024-01-22T23:19:40.447Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "31",
+                    "isPath": true
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "c98e13be-be26-43e0-a68f-30835d624c93",
+            "colId": "106f6e74-0f39-49c4-af43-a6d525b9c8f7",
+            "containerId": "5ed83204-5145-44bf-a369-0dc18d9f776a",
+            "name": "Categories view",
+            "url": "/categories/{id}",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-01-22T22:55:03.002Z",
+            "modified": "2024-01-23T09:25:49.981Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "1",
+                    "isPath": true
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "59d2ca84-5d6b-4d48-bdfc-f16b813981e7",
+            "colId": "106f6e74-0f39-49c4-af43-a6d525b9c8f7",
+            "containerId": "68fd2e60-7af0-4c8a-a605-d49ffc52a0bd",
+            "name": "noname1 show",
+            "url": "/noname1/{item_id}/{user_id}",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-01-22T22:55:03.003Z",
+            "modified": "2024-01-22T22:55:03.003Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "item_id",
+                    "value": "8",
+                    "isPath": true
+                },
+                {
+                    "name": "user_id",
+                    "value": "3",
+                    "isPath": true
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "3c3ac77a-dee1-4b5d-af04-d7c6b4ad9360",
+            "colId": "106f6e74-0f39-49c4-af43-a6d525b9c8f7",
+            "containerId": "1d8a2767-b1a6-4413-8347-b84345a99ae7",
+            "name": "drinks store",
+            "url": "/drinks/",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-01-22T22:55:03.010Z",
+            "modified": "2024-01-23T00:00:34.679Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"status\": \"inaktív\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c2923f63-ac83-40e2-9150-921c2910ebb1",
+            "colId": "106f6e74-0f39-49c4-af43-a6d525b9c8f7",
+            "containerId": "5ed83204-5145-44bf-a369-0dc18d9f776a",
+            "name": "Categories store",
+            "url": "/categories/",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-01-22T22:55:03.011Z",
+            "modified": "2024-01-23T09:29:39.004Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"name\": \"Csapolt Borsodix2\",\n    \"parent\": \"8\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a38456ab-db1f-42d4-bdfa-6c233ac10ef8",
+            "colId": "106f6e74-0f39-49c4-af43-a6d525b9c8f7",
+            "containerId": "68fd2e60-7af0-4c8a-a605-d49ffc52a0bd",
+            "name": "noname1 store",
+            "url": "/noname1/",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-01-22T22:55:03.012Z",
+            "modified": "2024-01-22T22:55:03.012Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"item_id\": 8,\n    \"user_id\": 10\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "fad218a8-7aac-4036-88f4-6b99dc789838",
+            "colId": "106f6e74-0f39-49c4-af43-a6d525b9c8f7",
+            "containerId": "1d8a2767-b1a6-4413-8347-b84345a99ae7",
+            "name": "drinks update",
+            "url": "/drinks/{id}",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-01-22T22:55:03.004Z",
+            "modified": "2024-01-23T00:23:48.961Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "31",
+                    "isPath": true
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "30e19f08-b58e-4f5e-ab2a-8cd47044d6e2",
+            "colId": "106f6e74-0f39-49c4-af43-a6d525b9c8f7",
+            "containerId": "5ed83204-5145-44bf-a369-0dc18d9f776a",
+            "name": "Categories update",
+            "url": "/categories/1",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-01-22T22:55:03.005Z",
+            "modified": "2024-01-23T10:03:05.392Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"id\": 1,\n    \"parent\": 1\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1ddd1bda-40c0-47ed-82e0-fb28ac8acc67",
+            "colId": "106f6e74-0f39-49c4-af43-a6d525b9c8f7",
+            "containerId": "68fd2e60-7af0-4c8a-a605-d49ffc52a0bd",
+            "name": "noname1 update",
+            "url": "/noname1/{item_id}/{user_id}",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-01-22T22:55:03.006Z",
+            "modified": "2024-01-22T22:55:03.006Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "item_id",
+                    "value": "8",
+                    "isPath": true
+                },
+                {
+                    "name": "user_id",
+                    "value": "3",
+                    "isPath": true
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a08a541e-3bab-498d-a66a-af2f558a15d0",
+            "colId": "106f6e74-0f39-49c4-af43-a6d525b9c8f7",
+            "containerId": "1d8a2767-b1a6-4413-8347-b84345a99ae7",
+            "name": "drinks delete",
+            "url": "/drinks/{id}",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2024-01-22T22:55:03.007Z",
+            "modified": "2024-01-23T00:23:54.505Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "31",
+                    "isPath": true
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "226810a9-80ed-46be-a06e-4f82f49ac11a",
+            "colId": "106f6e74-0f39-49c4-af43-a6d525b9c8f7",
+            "containerId": "5ed83204-5145-44bf-a369-0dc18d9f776a",
+            "name": "Categories delete",
+            "url": "/categories/{id}",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2024-01-22T22:55:03.008Z",
+            "modified": "2024-01-23T00:44:21.496Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "7",
+                    "isPath": true
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "7bbb3c25-14b5-40dd-b00c-1e4743c8e5bf",
+            "colId": "106f6e74-0f39-49c4-af43-a6d525b9c8f7",
+            "containerId": "68fd2e60-7af0-4c8a-a605-d49ffc52a0bd",
+            "name": "noname1 delete",
+            "url": "/noname1/{item_id}/{user_id}",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2024-01-22T22:55:03.009Z",
+            "modified": "2024-01-22T22:55:03.009Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "item_id",
+                    "value": "8",
+                    "isPath": true
+                },
+                {
+                    "name": "user_id",
+                    "value": "10",
+                    "isPath": true
+                }
+            ],
+            "tests": []
+        }
+    ],
+    "settings": {
+        "headers": [
+            {
+                "name": "Accept",
+                "value": "application/json"
+            },
+            {
+                "name": "Content-Type",
+                "value": "application/json"
+            }
+        ],
+        "options": {
+            "baseUrl": "localhost:8000/api"
+        }
+    }
+}
