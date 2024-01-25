@@ -15,19 +15,21 @@ class DrinkCategorySeeder extends Seeder
      */
     public function run(): void
     {
-        DrinkCategory::truncate();
-
-        $json = File::get("database/seeders/data/DrinkCategories.json");
-        $categories = json_decode($json);
-        $this->saveCategories($categories);
+        $this->seedFromJson();
     }
 
-
-
+    protected function seedFromJson()
+    {
+        if (file_exists("database/seeders/data/DrinkCategories.json")) {
+            DrinkCategory::truncate();
+            $json = File::get("database/seeders/data/DrinkCategories.json");
+            $categories = json_decode($json);
+            $this->saveCategories($categories);
+        }
+    }
 
     protected function saveCategories($categories, $parent_id = null)
     {
-
         foreach ($categories as $key => $value) {
 
             $drink = DrinkCategory::create([
@@ -39,14 +41,6 @@ class DrinkCategorySeeder extends Seeder
             if ($value->children ?? false) {
                 $this->saveCategories($value->children, $drink->id);
             }
-            // DB::table('users')->insert([
-            //     'name_en' => Str::random(10),
-            //     'name_hu' => Str::random(10).'@example.com',
-            //     'password' => Hash::make('password'),
-            // ]);
         }
     }
 }
-
-
-// Artisan::call('db:seed', array('--class' => 'YourSeederClass'));

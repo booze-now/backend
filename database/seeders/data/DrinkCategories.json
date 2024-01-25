@@ -5,7 +5,7 @@
         "children": [
             {
                 "hu": "Ásványvíz",
-                "en": "Mineral Water"
+                "en": "Mineral Waters"
             },
             {
                 "hu": "Limonádék",
@@ -17,7 +17,7 @@
             },
             {
                 "hu": "Szénsavas italok",
-                "en": "Soda"
+                "en": "Carbonated Drinks"
             },
             {
                 "hu": "Energiaitalok",
@@ -26,6 +26,14 @@
             {
                 "hu": "Kávék",
                 "en": "Coffees"
+            },
+            {
+                "hu": "Teák",
+                "en": "Teas"
+            },
+            {
+                "hu": "Kimért üdítők",
+                "en": "Bulk Soft Drinks"
             }
         ]
     },
@@ -40,6 +48,10 @@
             {
                 "hu": "Üveges sörök",
                 "en": "Bottled Beers"
+            },
+            {
+                "hu": "Ciderek",
+                "en": "Ciders"
             }
         ]
     },
@@ -47,6 +59,10 @@
         "hu": "Borok",
         "en": "Wines",
         "children": [
+            {
+                "hu": "Ház borai",
+                "en": "House Wines"
+            },
             {
                 "hu": "Fehér borok",
                 "en": "White Wines"
@@ -67,37 +83,55 @@
         "children": []
     },
     {
+        "hu": "Brandyk",
+        "en": "Brandies"
+    },
+    {
+        "hu": "Spritzek",
+        "en": "Spritzes"
+    },
+    {
+        "hu": "Koktélok",
+        "en": "Cocktails"
+    },
+    {
+        "hu": "Long Drinkek",
+        "en": "Long Drinks"
+    },
+    {
         "hu": "Rövid italok",
-        "en": "Spirits",
-        "children": [
-            {
-                "hu": "Pálinkák",
-                "en": "Fruit Brandies"
-            },
-            {
-                "hu": "Vodkák",
-                "en": "Vodkas"
-            },
-            {
-                "hu": "Ginek",
-                "en": "Gins"
-            },
-            {
-                "hu": "Likőrök",
-                "en": "Liqueurs"
-            },
-            {
-                "hu": "tequilák",
-                "en": "Tequila"
-            },
-            {
-                "hu": "whiskey-k",
-                "en": "Whiskeys"
-            },
-            {
-                "hu": "Rumok",
-                "en": "Rums"
-            }
-        ]
+        "en": "Spirits"
+    },
+    {
+        "hu": "Pálinkák",
+        "en": "Fruit Brandies"
+    },
+    {
+        "hu": "Vodkák",
+        "en": "Vodkas"
+    },
+    {
+        "hu": "Ginek",
+        "en": "Gins"
+    },
+    {
+        "hu": "Likőrök",
+        "en": "Liqueurs"
+    },
+    {
+        "hu": "tequilák",
+        "en": "Tequilas"
+    },
+    {
+        "hu": "whiskey-k",
+        "en": "Whiskeys"
+    },
+    {
+        "hu": "Rumok",
+        "en": "Rums"
+    },
+    {
+        "hu": "Shotok",
+        "en": "Shots"
     }
 ]

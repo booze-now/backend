@@ -1,0 +1,1069 @@
+[
+    {
+        "hu": "Espresso",
+        "en": "Espresso",
+        "category_en": "Coffees",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Caffe Lungo",
+        "en": "Caffe Lungo",
+        "category_en": "Coffees",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Cappuccino",
+        "en": "Cappuccino",
+        "category_en": "Coffees",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Latte Macchiato",
+        "en": "Latte Macchiato",
+        "category_en": "Coffees",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Melange",
+        "en": "Melange",
+        "category_en": "Coffees",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Kókuszos Latte Macchiato",
+        "en": "Coconut Latte Macchiato",
+        "category_en": "Coffees",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Caramellás Latte Macchiato",
+        "en": "Caramel Latte Macchiato",
+        "category_en": "Coffees",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Jegeskávé Vanília Fagylalttal",
+        "en": "Iced Coffee with Vanilla Ice Cream",
+        "category_en": "Coffees",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Tej",
+        "en": "Milk",
+        "category_en": "Coffees",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Tejszín",
+        "en": "Cream",
+        "category_en": "Coffees",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Tejszínhab",
+        "en": "Whipped Cream",
+        "category_en": "Coffees",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Ceylon OP Nuware Eliya",
+        "description_hu": "2100 méter magasságban szüretelt fekete tea. Intenzív, piros-arany szín könnyű aromával.",
+        "en": "Ceylon OP Nuware Eliya",
+        "description_en": "Black tea harvested at altitude of 2100 metres. Intensive flavour, red-gold colour with a light aroma.",
+        "category_en": "Teas",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Ceylon Sencha",
+        "description_hu": "Klasszikus japán stílusú zöldtea, melyet Kínában termesztenek. Könnyű ízű, mézsárga főzetű tea.",
+        "en": "Ceylon Sencha",
+        "description_en": "Classic Ceylon green tea, light taste with honey like yellow brew.",
+        "category_en": "Teas",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Jázmin",
+        "description_hu": "Jázminvirágok aromájával ízesített zöld tea.",
+        "en": "Yasmin",
+        "description_en": "Gren tea scented with aroma of yasmine blossoms.",
+        "category_en": "Teas",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Erdei Eper",
+        "description_hu": "Hibiszkusz, bodzabogyó, mazsola, alma, fekete ribizli és levele, áfonya, málna és szeder keveréke.",
+        "en": "Wild Strawberry",
+        "description_en": "Mixture of hibiscus, elderberry, raisin, apple, blackcurrant and leaves, blueberry, raspberry and blackberry.",
+        "category_en": "Teas",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Szicíliai Narancs",
+        "description_hu": "Titkos tipp: alma, hibiszkusz, narancs, narancshéj, narancs- és rózsavirágok.",
+        "en": "Sicilian Orange",
+        "description_en": "Hidden tip: apple, hibiscus, orange, orange peel, orange and rose flowers.",
+        "category_en": "Teas",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Méz",
+        "en": "Honey",
+        "category_en": "Teas",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Classic Citromos",
+        "en": "Classic Lemon",
+        "category_en": "Lemonades",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Epres",
+        "en": "Strawberry",
+        "category_en": "Lemonades",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Málnás",
+        "en": "Raspberry",
+        "category_en": "Lemonades",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Bodzás",
+        "en": "Elderflower",
+        "category_en": "Lemonades",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Mangós",
+        "en": "Mango",
+        "category_en": "Lemonades",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Meggyes",
+        "en": "Sour Cherry",
+        "category_en": "Lemonades",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Happy Day Ananász",
+        "en": "Happy Day Pineapple",
+        "category_en": "Bulk Soft Drinks",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Sió Lime",
+        "en": "Sió Lime",
+        "category_en": "Bulk Soft Drinks",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Sió Alma",
+        "en": "Sió Apple",
+        "category_en": "Bulk Soft Drinks",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Cappy Öszibarack",
+        "en": "Cappy Apricot",
+        "category_en": "Fruit Juices",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Cappy Körte",
+        "en": "Cappy Pear",
+        "category_en": "Fruit Juices",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Cappy Eper",
+        "en": "Cappy Strawberry",
+        "category_en": "Fruit Juices",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Coca-Cola",
+        "en": "Coca-Cola",
+        "category_en": "Carbonated Drinks",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Coca-Cola Zéró",
+        "en": "Coca-Cola Zero",
+        "category_en": "Carbonated Drinks",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Fanta Narancs",
+        "en": "Fanta Orange",
+        "category_en": "Carbonated Drinks",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Kinley Gyömbér",
+        "en": "Kinley Ginger",
+        "category_en": "Carbonated Drinks",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Kinley Tonic",
+        "en": "Kinley Tonic",
+        "category_en": "Carbonated Drinks",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Thomas Henry Tonic",
+        "en": "Thomas Henry Tonic",
+        "category_en": "Carbonated Drinks",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "RedBull Classic",
+        "en": "Red Bull Classic",
+        "category_en": "Energy Drinks",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Hell",
+        "en": "Hell",
+        "category_en": "Energy Drinks",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Panyolai Elixir Birsalma",
+        "en": "Panyolai Elixir Quince",
+        "category_en": "Brandies",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Panyolai Elixir Irsai Olivér Szőlő",
+        "en": "Panyolai Elixir Irsai Olivér Grape",
+        "category_en": "Brandies",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Panyolai Elixír Érlelt Szabolcsi Alma",
+        "en": "Panyolai Elixir Aged Szabolcs Apple",
+        "category_en": "Brandies",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Panyolai Rubinmeggy",
+        "en": "Panyolai Ruby Sour Cherry",
+        "category_en": "Brandies",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Panyolai Misztikum Mák Likör (50%)",
+        "en": "Panyolai Mystique Poppy Seed Liqueur (50%)",
+        "category_en": "Brandies",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Panyolai Elixir Kajszibarack",
+        "en": "Panyolai Elixir Apricot",
+        "category_en": "Brandies",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Jim Beam",
+        "en": "Jim Beam",
+        "category_en": "Whiskeys",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Jim Beam Apple",
+        "en": "Jim Beam Apple",
+        "category_en": "Whiskeys",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Johnnie Walker",
+        "en": "Johnnie Walker",
+        "category_en": "Whiskeys",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Jack Daniel's",
+        "en": "Jack Daniel's",
+        "category_en": "Whiskeys",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Jack Daniel's Honey",
+        "en": "Jack Daniel's Honey",
+        "category_en": "Whiskeys",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Jack Daniel's Fire",
+        "en": "Jack Daniel's Fire",
+        "category_en": "Whiskeys",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Jameson",
+        "en": "Jameson",
+        "category_en": "Whiskeys",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Jameson Black Barrel",
+        "en": "Jameson Black Barrel",
+        "category_en": "Whiskeys",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Finsbury",
+        "en": "Finsbury",
+        "category_en": "Gins",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Beefeater",
+        "en": "Beefeater",
+        "category_en": "Gins",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Beefeater Pink",
+        "en": "Beefeater Pink",
+        "category_en": "Gins",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Beefeater Orange",
+        "en": "Beefeater Orange",
+        "category_en": "Gins",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Bombay",
+        "en": "Bombay",
+        "category_en": "Gins",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Nordes",
+        "en": "Nordes",
+        "category_en": "Gins",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Rsu",
+        "en": "Rsu",
+        "category_en": "Gins",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Drumshanbo Gunpowder Irish",
+        "en": "Drumshanbo Gunpowder Irish",
+        "category_en": "Gins",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Kapriol Grapefruit & Hibiscus",
+        "en": "Kapriol Grapefruit & Hibiscus",
+        "category_en": "Gins",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "La Su Mgo",
+        "en": "La Su Mgo",
+        "category_en": "Gins",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Carolans Krémlikőr",
+        "en": "Carolans Irish Cream Liqueur",
+        "category_en": "Liqueurs",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Malibu",
+        "en": "Malibu",
+        "category_en": "Liqueurs",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Tátratea (42,52)",
+        "en": "Tatratea (42,52)",
+        "category_en": "Liqueurs",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Tátratea (62,72)",
+        "en": "Tatratea (62,72)",
+        "category_en": "Liqueurs",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Becherovka",
+        "en": "Becherovka",
+        "category_en": "Liqueurs",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Unicum",
+        "en": "Unicum",
+        "category_en": "Liqueurs",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Unicum Szilva",
+        "en": "Unicum Plum",
+        "category_en": "Liqueurs",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Unicum Barista",
+        "en": "Unicum Barista",
+        "category_en": "Liqueurs",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Jägermeister",
+        "en": "Jägermeister",
+        "category_en": "Liqueurs",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Tubi",
+        "en": "Tubi",
+        "category_en": "Liqueurs",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Finlandia",
+        "en": "Finlandia",
+        "category_en": "Vodkas",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Absolut",
+        "en": "Absolut",
+        "category_en": "Vodkas",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Russian Standard",
+        "en": "Russian Standard",
+        "category_en": "Vodkas",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Grey Goose",
+        "en": "Grey Goose",
+        "category_en": "Vodkas",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Bacardi Carta Blanca",
+        "en": "Bacardi Carta Blanca",
+        "category_en": "Rums",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Bacardi Carta Negra",
+        "en": "Bacardi Carta Negra",
+        "category_en": "Rums",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Captain Morgan",
+        "en": "Captain Morgan",
+        "category_en": "Rums",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Diplomatico Rum Exclusiva",
+        "en": "Diplomatico Rum Exclusiva",
+        "category_en": "Rums",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Bumbu",
+        "en": "Bumbu",
+        "category_en": "Rums",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Don Papa Barso",
+        "en": "Don Papa Barso",
+        "category_en": "Rums",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "El Jimador Blanco",
+        "en": "El Jimador Blanco",
+        "category_en": "Tequilas",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "El Jimador Reposado",
+        "en": "El Jimador Reposado",
+        "category_en": "Tequilas",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Rosé Spritz",
+        "en": "Rosé Spritz",
+        "category_en": "Spritzes",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Mojo Spritz",
+        "en": "Mojo Spritz",
+        "category_en": "Spritzes",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Bodzás-Uborkás Spritz",
+        "en": "Elderflower-Cucumber Spritz",
+        "category_en": "Spritzes",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Aperol Spritz",
+        "en": "Aperol Spritz",
+        "category_en": "Spritzes",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Málnás Lime-os Spritz",
+        "en": "Raspberry-Lime Spritz",
+        "category_en": "Spritzes",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Natur Aqua Mentes",
+        "en": "Natur Aqua Still",
+        "category_en": "Mineral Waters",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Natur Aqua Szénsavas",
+        "en": "Natur Aqua Sparkling",
+        "category_en": "Mineral Waters",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Szóda",
+        "en": "Soda",
+        "category_en": "Mineral Waters",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Soproni",
+        "en": "Soproni",
+        "category_en": "Draft Beers",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Soproni Ipa",
+        "en": "Soproni Ipa",
+        "category_en": "Draft Beers",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Edelweiss Búza",
+        "en": "Edelweiss Wheat",
+        "category_en": "Draft Beers",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Mort Subite meggysör",
+        "en": "Mort Subite Cherry Beer",
+        "category_en": "Draft Beers",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Gösser",
+        "en": "Gösser",
+        "category_en": "Bottled Beers",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Heineken",
+        "en": "Heineken",
+        "category_en": "Bottled Beers",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Heineken Alkoholmentes /0%/",
+        "en": "Heineken Alcohol-Free /0%/",
+        "category_en": "Bottled Beers",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Gösser Natur Zitrone /0%/",
+        "en": "Gösser Lemon Radler /0%/",
+        "category_en": "Bottled Beers",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Krušovice Világos",
+        "en": "Krušovice Lager",
+        "category_en": "Bottled Beers",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Soproni Óvatos Duhaj Démon",
+        "en": "Soproni Careful Devilish Demon",
+        "category_en": "Bottled Beers",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Kronenbourg",
+        "en": "Kronenbourg",
+        "category_en": "Bottled Beers",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Mojo",
+        "description_hu": "(becherovka, feketeribizlilé, citrom, fahéjrúd)",
+        "en": "Mojo",
+        "description_en": "(Becherovka, Blackcurrant Juice, Lemon, Cinnamon Stick)",
+        "category_en": "Cocktails",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Cuba Libre",
+        "description_hu": "(bacardi, cola, lime)",
+        "en": "Cuba Libre",
+        "description_en": "(Bacardi, Cola, Lime)",
+        "category_en": "Cocktails",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Gin Fizz",
+        "description_hu": "(citromlé, cukorszirup, szóda, gin)",
+        "en": "Gin Fizz",
+        "description_en": "(Lemon Juice, Simple Syrup, Soda, Gin)",
+        "category_en": "Cocktails",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Tequila Sunrise",
+        "description_hu": "(narancslé, grenadin, tequila)",
+        "en": "Tequila Sunrise",
+        "description_en": "(Orange Juice, Grenadine, Tequila)",
+        "category_en": "Cocktails",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Summer Fresh",
+        "description_hu": "(vodka, mangó / málnaszirup, lime, almalé, gyümölcs)",
+        "en": "Summer Fresh",
+        "description_en": "(Vodka, Mango/Raspberry Syrup, Lime, Apple Juice, Fruits)",
+        "category_en": "Cocktails",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Sex On The Beach",
+        "description_hu": "(vodka, mangószirup, narancslé, feketeribizli)",
+        "en": "Sex On The Beach",
+        "description_en": "(Vodka, Mango Syrup, Orange Juice, Blackcurrant)",
+        "category_en": "Cocktails",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Pina Colada",
+        "description_hu": "(rum, tejszin, ananászlé, kókusz szirup)",
+        "en": "Pina Colada",
+        "description_en": "(Rum, Coconut Cream, Pineapple Juice, Coconut Syrup)",
+        "category_en": "Cocktails",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Flamingo",
+        "description_hu": "(epres gin, mangó / málnaszirup, narancslé, tonic, lime, gyümölcsök)",
+        "en": "Flamingo",
+        "description_en": "(Strawberry Gin, Mango/Raspberry Syrup, Orange Juice, Tonic, Lime, Fruits)",
+        "category_en": "Cocktails",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Bloody Mary",
+        "description_hu": "(vodka, paradicsomlé, citromlé, só, bors, worcester, tabasco)",
+        "en": "Bloody Mary",
+        "description_en": "(Vodka, Tomato Juice, Lemon Juice, Salt, Pepper, Worcestershire Sauce, Tabasco)",
+        "category_en": "Cocktails",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Speed",
+        "description_hu": "(gin, bacardi, tequila, citromlé, eperszirup, energiaital)",
+        "en": "Speed",
+        "description_en": "(Gin, Bacardi, Tequila, Lemon Juice, Strawberry Syrup, Energy Drink)",
+        "category_en": "Cocktails",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Margarita",
+        "description_hu": "(tequila, triple sec, citromlé)",
+        "en": "Margarita",
+        "description_en": "(Tequila, Triple Sec, Lemon Juice)",
+        "category_en": "Cocktails",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Midnight medicine",
+        "description_hu": "(tubi, tonic, fekete ribizlilé, citrom)",
+        "en": "Midnight Medicine",
+        "description_en": "(Tubi, Tonic, Blackcurrant Juice, Lemon)",
+        "category_en": "Cocktails",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Long Island Iced Tea",
+        "description_hu": "(gin, vodka, rum, tequila, triple sec, cola, lime)",
+        "en": "Long Island Iced Tea",
+        "description_en": "(Gin, Vodka, Rum, Tequila, Triple Sec, Cola, Lime)",
+        "category_en": "Cocktails",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Bacardi Spiced Cola",
+        "en": "Bacardi Spiced Cola",
+        "category_en": "Long Drinks",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Bombay Gin Tonic",
+        "en": "Bombay Gin Tonic",
+        "category_en": "Long Drinks",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Finlandia Tonic",
+        "en": "Finlandia Tonic",
+        "category_en": "Long Drinks",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Jack Cola",
+        "en": "Jack Cola",
+        "category_en": "Long Drinks",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Martini Fiero Tonic",
+        "en": "Martini Fiero Tonic",
+        "category_en": "Long Drinks",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Fény (6db)",
+        "en": "Light (6 pcs)",
+        "category_en": "Shots",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Kacsa (6db)",
+        "en": "Duck (6 pcs)",
+        "category_en": "Shots",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Vodka Barbie (5db)",
+        "en": "Vodka Barbie (5 pcs)",
+        "category_en": "Shots",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Málnás Vodka (6db)",
+        "en": "Raspberry Vodka (6 pcs)",
+        "category_en": "Shots",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Mangós Vodka (6db)",
+        "en": "Mango Vodka (6 pcs)",
+        "category_en": "Shots",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Bulanga (6db)",
+        "en": "Bulanga (6 pcs)",
+        "category_en": "Shots",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Lelovits Tamás Olaszrizling",
+        "en": "Lelovits Tamás Olaszrizling",
+        "category_en": "House Wines",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Lelovits Tamás Rosé Cuvée",
+        "en": "Lelovits Tamás Rosé Cuvée",
+        "category_en": "House Wines",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Frittmann Kékfrankos Rosé",
+        "en": "Frittmann Kékfrankos Rosé",
+        "category_en": "Rosé Wines",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Bodri Rozi Rosé",
+        "en": "Bodri Rozi Rosé",
+        "category_en": "Rosé Wines",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Vylyan Kakas Rosé",
+        "en": "Vylyan Kakas Rosé",
+        "category_en": "Rosé Wines",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Tar Cabernet Franc",
+        "en": "Tar Cabernet Franc",
+        "category_en": "Red Wines",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Vylyan Ördög Cuvée",
+        "en": "Vylyan Ördög Cuvée",
+        "category_en": "Red Wines",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Vida Ölelés Merlot",
+        "en": "Vida Ölelés Merlot",
+        "category_en": "Red Wines",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Balla Géza Kadarka",
+        "en": "Balla Géza Kadarka",
+        "category_en": "Red Wines",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Schieber Irsai Olivér",
+        "en": "Schieber Irsai Olivér",
+        "category_en": "White Wines",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Tűzkő Banka Zöldveltelini",
+        "en": "Tűzkő Banka Zöldveltelini",
+        "category_en": "White Wines",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Hangyál Sárgamuskotály",
+        "description_hu": "félédes",
+        "en": "Hangyál Sárgamuskotály",
+        "description_en": "semi-sweet",
+        "category_en": "White Wines",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Hangyál Balázs Sauvignon Blanc",
+        "en": "Hangyál Balázs Sauvignon Blanc",
+        "category_en": "White Wines",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Sabar Birtsbor Olaszrizling",
+        "en": "Sabar Estate Wine Olaszrizling",
+        "category_en": "White Wines",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Strongbow Gold",
+        "en": "Strongbow Gold",
+        "category_en": "Ciders",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Törley Gála",
+        "en": "Törley Gála",
+        "category_en": "Sparkling Wines",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Törley Doux",
+        "en": "Törley Doux",
+        "category_en": "Sparkling Wines",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Hungaria Extra Dry",
+        "en": "Hungaria Extra Dry",
+        "category_en": "Sparkling Wines",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Hungaria Irsai Olivér Doux",
+        "en": "Hungaria Irsai Olivér Doux",
+        "category_en": "Sparkling Wines",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Tussock Jumper Cava Brut",
+        "en": "Tussock Jumper Cava Brut",
+        "category_en": "Sparkling Wines",
+        "status_en": "active",
+        "status_hu": "aktív"
+    },
+    {
+        "hu": "Dissegna Prosecco Extra Dry",
+        "en": "Dissegna Prosecco Extra Dry",
+        "category_en": "Sparkling Wines",
+        "status_en": "active",
+        "status_hu": "aktív"
+    }
+]

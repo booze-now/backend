@@ -49,10 +49,8 @@ class DrinkCategoryController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    // public function update(Request $request, $id) // DrinkCategory $category
     public function update(Request $request, DrinkCategory $category)
     {
-        // $category = DrinkCategory::findOrFail($id);
         $valid = $request->validate([
             'name' => 'string|required|unique:drink_categories',
             'parent' => 'nullable|int:sometimes'
@@ -74,16 +72,7 @@ class DrinkCategoryController extends Controller
             }
         }
 
-        // return json_encode([
-        //     'id' => $category->id,
-        //     'request' => $request->all(),
-        //     'category' => $category->toArray(),
-        //     'parent' => $parent,
-        //     'children' => $children
-        // ]);
-
         $category->fill($valid);
-
         $category->save();
         return $category;
     }
