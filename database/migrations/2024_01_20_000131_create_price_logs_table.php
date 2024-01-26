@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('price_logs', function (Blueprint $table) {
             $table->id();
-            $table->integer('drink_measure_id')->relates('drink_measure')->on('id');
+            $table->integer('drink_unit_id')->relates('drink_unit')->on('id');
             $table->datetime('end');
             $table->decimal('unit_price', 8, 2);
             $table->timestamps();
-            $table->unique('drink_measure_id', 'end');
+            $table->unique('drink_unit_id', 'end');
         });
     }
 

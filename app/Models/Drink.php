@@ -26,6 +26,16 @@ class Drink extends Model
         'status',
     ];
 
+    protected $appends = ['name', 'description'];
+    protected $hidden = [
+        'name_en',
+        'name_hu',
+        'description_en',
+        'description_hu',
+        'created_at',
+        'updated_at',
+    ];
+
     private static $internalFieldDefs = [
         "id",
         'name_en',
@@ -35,7 +45,7 @@ class Drink extends Model
         'description_hu',
         "status",
         "created_at",
-        "updated_at"
+        "updated_at",
     ];
 
     private static $statuses = [
@@ -43,18 +53,19 @@ class Drink extends Model
         'inactive',
     ];
 
-    public function category2(): BelongsTo {
-        return $this->belongsTo(DrinkCategory::class, 'category_id', 'id');
+    public function category(): BelongsTo {
+        // return $this->belongsTo(DrinkCategory::class, 'category_id', 'id');
+        return $this->belongsTo(DrinkCategory::class, 'category_id');
     }
 
-    public function category(): HasOne
-    {
-        return $this->hasOne(DrinkCategory::class, 'id', 'category_id');
-    }
+    // public function category(): HasOne
+    // {
+    //     return $this->hasOne(DrinkCategory::class, 'id', 'category_id');
+    // }
 
-    public function measures(): HasMany
+    public function units(): HasMany
     {
-        return $this->hasMany(DrinkMeasure::class);
+        return $this->hasMany(DrinkUnit::class, 'drink_id', 'id');
     }
 
     public static function getStatuses(): array
@@ -82,6 +93,19 @@ class Drink extends Model
     {
         $locale = app()->getLocale();
         $this->attributes["name_{$locale}"] = $value;
+        return $this;
+    }
+
+    public function getDescriptionAttribute()
+    {
+        $locale = app()->getLocale();
+        return $this->attributes["description_{$locale}"];
+    }
+
+    public function setDescriptionAttribute($value)
+    {
+        $locale = app()->getLocale();
+        $this->attributes["description_{$locale}"] = $value;
         return $this;
     }
 

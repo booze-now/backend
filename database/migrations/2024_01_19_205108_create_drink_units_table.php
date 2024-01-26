@@ -11,14 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('drink_measures', function (Blueprint $table) {
+        Schema::create('drink_units', function (Blueprint $table) {
             $table->id();
             $table->integer('drink_id')->relates('drink')->on('id');
             $table->decimal('amount', 8, 2);
-            $table->integer('meas')->relates('dictionary')->on('id');
+            $table->string('unit_en')->nullable();
+            $table->string('unit_hu')->nullable();
             $table->decimal('unit_price', 8, 2);
             $table->string('status', 10); // CHECK ([status] IN ('aktív', 'inaktív'))
-            $table->unique('drink_id', 'amount', 'meas');
+            $table->unique(['drink_id', 'amount', 'unit_en']);
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('drink_measures');
+        Schema::dropIfExists('drink_units');
     }
 };

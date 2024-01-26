@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name_en', 32)->unique();
             $table->string('name_hu', 32)->unique();
-            $table->integer('parent')->nullable()->relates('drink_category')->on('id');
+            $table->integer('parent_id')->nullable()->relates('drink_category')->on('id');
             $table->timestamps();
         });
     }

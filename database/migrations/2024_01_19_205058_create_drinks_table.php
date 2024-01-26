@@ -13,9 +13,11 @@ return new class extends Migration
     {
         Schema::create('drinks', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 32)->unique();
+            $table->string('name_en', 32)->unique();
+            $table->string('name_hu', 32)->unique();
             $table->integer('category_id')->relates('drink_category')->on('id');
-            $table->string('description')->nullable();
+            $table->string('description_en')->nullable();
+            $table->string('description_hu')->nullable();
             $table->string('status', 10); // CHECK ([status] IN ('aktív', 'inaktív'))
             $table->timestamps();
         });

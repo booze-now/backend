@@ -15,7 +15,7 @@ class PriceLog extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'drink_measure_id',
+        'drink_unit_id',
         'end',
         'unit_price',
     ];

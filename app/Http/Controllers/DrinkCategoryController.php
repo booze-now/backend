@@ -47,6 +47,14 @@ class DrinkCategoryController extends Controller
     }
 
     /**
+     * Display the specified resource.
+     */
+    public function drinks(DrinkCategory $category)
+    {
+        return $category->drinks;
+    }
+
+    /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, DrinkCategory $category)

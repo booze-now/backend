@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Drink;
 use App\Models\DrinkCategory;
+use App\Models\DrinkUnit;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\File;
@@ -33,7 +34,7 @@ class DrinkSeeder extends Seeder
         foreach ($categories as $key => $value) {
 
             $category = DrinkCategory::where('name_en', $value->category_en);
-            if ($category->count() == 0)  {
+            if ($category->count() == 0) {
                 die("Hiányzik: " . $value->category_en);
             }
             $category = $category->pluck('id')[0];
@@ -46,6 +47,16 @@ class DrinkSeeder extends Seeder
                 'category_id' => $category,
                 'status' => $value->status_hu,
             ]);
+            foreach ($value->units as $unit) {
+                DrinkUnit::create([
+                    'drink_id' => $drink->id,
+                    'amount' => $unit->amount,
+                    'unit_en' => $unit->unit_en,
+                    'unit_hu' => $unit->unit_hu,
+                    'unit_price' => $unit->unit_price,
+                    'status' => 'aktív',
+                ]);
+            }
 
             if ($value->children ?? false) {
                 $this->saveDrinks($value->children, $drink->id);

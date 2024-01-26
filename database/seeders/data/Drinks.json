@@ -4,77 +4,165 @@
         "en": "Espresso",
         "category_en": "Coffees",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 450
+            }
+        ]
     },
     {
         "hu": "Caffe Lungo",
         "en": "Caffe Lungo",
         "category_en": "Coffees",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 450
+            }
+        ]
     },
     {
         "hu": "Cappuccino",
         "en": "Cappuccino",
         "category_en": "Coffees",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 590
+            }
+        ]
     },
     {
         "hu": "Latte Macchiato",
         "en": "Latte Macchiato",
         "category_en": "Coffees",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 650
+            }
+        ]
     },
     {
         "hu": "Melange",
         "en": "Melange",
         "category_en": "Coffees",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 750
+            }
+        ]
     },
     {
         "hu": "Kókuszos Latte Macchiato",
         "en": "Coconut Latte Macchiato",
         "category_en": "Coffees",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 750
+            }
+        ]
     },
     {
         "hu": "Caramellás Latte Macchiato",
         "en": "Caramel Latte Macchiato",
         "category_en": "Coffees",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 750
+            }
+        ]
     },
     {
         "hu": "Jegeskávé Vanília Fagylalttal",
         "en": "Iced Coffee with Vanilla Ice Cream",
         "category_en": "Coffees",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 890
+            }
+        ]
     },
     {
         "hu": "Tej",
         "en": "Milk",
         "category_en": "Coffees",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": "dl",
+                "unit_en": "dl",
+                "unit_price": 100
+            }
+        ]
     },
     {
         "hu": "Tejszín",
         "en": "Cream",
         "category_en": "Coffees",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": "db",
+                "unit_en": "pcs",
+                "unit_price": 100
+            }
+        ]
     },
     {
         "hu": "Tejszínhab",
         "en": "Whipped Cream",
         "category_en": "Coffees",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": "adag",
+                "unit_en": "dozen",
+                "unit_price": 150
+            }
+        ]
     },
     {
         "hu": "Ceylon OP Nuware Eliya",
@@ -83,7 +171,15 @@
         "description_en": "Black tea harvested at altitude of 2100 metres. Intensive flavour, red-gold colour with a light aroma.",
         "category_en": "Teas",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 400
+            }
+        ]
     },
     {
         "hu": "Ceylon Sencha",
@@ -92,7 +188,15 @@
         "description_en": "Classic Ceylon green tea, light taste with honey like yellow brew.",
         "category_en": "Teas",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 400
+            }
+        ]
     },
     {
         "hu": "Jázmin",
@@ -101,7 +205,15 @@
         "description_en": "Gren tea scented with aroma of yasmine blossoms.",
         "category_en": "Teas",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 400
+            }
+        ]
     },
     {
         "hu": "Erdei Eper",
@@ -110,7 +222,15 @@
         "description_en": "Mixture of hibiscus, elderberry, raisin, apple, blackcurrant and leaves, blueberry, raspberry and blackberry.",
         "category_en": "Teas",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 400
+            }
+        ]
     },
     {
         "hu": "Szicíliai Narancs",
@@ -119,609 +239,1593 @@
         "description_en": "Hidden tip: apple, hibiscus, orange, orange peel, orange and rose flowers.",
         "category_en": "Teas",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 400
+            }
+        ]
     },
     {
         "hu": "Méz",
         "en": "Honey",
         "category_en": "Teas",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": "adag",
+                "unit_en": "dozen",
+                "unit_price": 150
+            }
+        ]
     },
     {
         "hu": "Classic Citromos",
         "en": "Classic Lemon",
         "category_en": "Lemonades",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 5,
+                "unit_hu": "dl",
+                "unit_en": "dl",
+                "unit_price": 890
+            }
+        ]
     },
     {
         "hu": "Epres",
         "en": "Strawberry",
         "category_en": "Lemonades",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 5,
+                "unit_hu": "dl",
+                "unit_en": "dl",
+                "unit_price": 890
+            }
+        ]
     },
     {
         "hu": "Málnás",
         "en": "Raspberry",
         "category_en": "Lemonades",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 5,
+                "unit_hu": "dl",
+                "unit_en": "dl",
+                "unit_price": 890
+            }
+        ]
     },
     {
         "hu": "Bodzás",
         "en": "Elderflower",
         "category_en": "Lemonades",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 5,
+                "unit_hu": "dl",
+                "unit_en": "dl",
+                "unit_price": 890
+            }
+        ]
     },
     {
         "hu": "Mangós",
         "en": "Mango",
         "category_en": "Lemonades",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 5,
+                "unit_hu": "dl",
+                "unit_en": "dl",
+                "unit_price": 890
+            }
+        ]
     },
     {
         "hu": "Meggyes",
         "en": "Sour Cherry",
         "category_en": "Lemonades",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 5,
+                "unit_hu": "dl",
+                "unit_en": "dl",
+                "unit_price": 890
+            }
+        ]
     },
     {
         "hu": "Happy Day Ananász",
         "en": "Happy Day Pineapple",
         "category_en": "Bulk Soft Drinks",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": "dl",
+                "unit_en": "dl",
+                "unit_price": 200
+            }
+        ]
     },
     {
         "hu": "Sió Lime",
         "en": "Sió Lime",
         "category_en": "Bulk Soft Drinks",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": "dl",
+                "unit_en": "dl",
+                "unit_price": 200
+            }
+        ]
     },
     {
         "hu": "Sió Alma",
         "en": "Sió Apple",
         "category_en": "Bulk Soft Drinks",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": "dl",
+                "unit_en": "dl",
+                "unit_price": 200
+            }
+        ]
     },
     {
         "hu": "Cappy Öszibarack",
         "en": "Cappy Apricot",
         "category_en": "Fruit Juices",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 0.25,
+                "unit_hu": "l",
+                "unit_en": "l",
+                "unit_price": 650
+            }
+        ]
     },
     {
         "hu": "Cappy Körte",
         "en": "Cappy Pear",
         "category_en": "Fruit Juices",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 0.25,
+                "unit_hu": "l",
+                "unit_en": "l",
+                "unit_price": 650
+            }
+        ]
     },
     {
         "hu": "Cappy Eper",
         "en": "Cappy Strawberry",
         "category_en": "Fruit Juices",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 0.25,
+                "unit_hu": "l",
+                "unit_en": "l",
+                "unit_price": 650
+            }
+        ]
     },
     {
         "hu": "Coca-Cola",
         "en": "Coca-Cola",
         "category_en": "Carbonated Drinks",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 0.25,
+                "unit_hu": "l",
+                "unit_en": "l",
+                "unit_price": 580
+            }
+        ]
     },
     {
         "hu": "Coca-Cola Zéró",
         "en": "Coca-Cola Zero",
         "category_en": "Carbonated Drinks",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 0.25,
+                "unit_hu": "l",
+                "unit_en": "l",
+                "unit_price": 580
+            }
+        ]
     },
     {
         "hu": "Fanta Narancs",
         "en": "Fanta Orange",
         "category_en": "Carbonated Drinks",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 0.25,
+                "unit_hu": "l",
+                "unit_en": "l",
+                "unit_price": 580
+            }
+        ]
     },
     {
         "hu": "Kinley Gyömbér",
         "en": "Kinley Ginger",
         "category_en": "Carbonated Drinks",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 0.25,
+                "unit_hu": "l",
+                "unit_en": "l",
+                "unit_price": 580
+            }
+        ]
     },
     {
         "hu": "Kinley Tonic",
         "en": "Kinley Tonic",
         "category_en": "Carbonated Drinks",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 0.25,
+                "unit_hu": "l",
+                "unit_en": "l",
+                "unit_price": 580
+            }
+        ]
     },
     {
         "hu": "Thomas Henry Tonic",
         "en": "Thomas Henry Tonic",
         "category_en": "Carbonated Drinks",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 0.25,
+                "unit_hu": "l",
+                "unit_en": "l",
+                "unit_price": 990
+            }
+        ]
     },
     {
         "hu": "RedBull Classic",
         "en": "Red Bull Classic",
         "category_en": "Energy Drinks",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 890
+            }
+        ]
     },
     {
         "hu": "Hell",
         "en": "Hell",
         "category_en": "Energy Drinks",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 590
+            }
+        ]
     },
     {
         "hu": "Panyolai Elixir Birsalma",
         "en": "Panyolai Elixir Quince",
         "category_en": "Brandies",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 745
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 1490
+            }
+        ]
     },
     {
         "hu": "Panyolai Elixir Irsai Olivér Szőlő",
         "en": "Panyolai Elixir Irsai Olivér Grape",
         "category_en": "Brandies",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 745
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 1490
+            }
+        ]
     },
     {
         "hu": "Panyolai Elixír Érlelt Szabolcsi Alma",
         "en": "Panyolai Elixir Aged Szabolcs Apple",
         "category_en": "Brandies",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 745
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 1490
+            }
+        ]
     },
     {
         "hu": "Panyolai Rubinmeggy",
         "en": "Panyolai Ruby Sour Cherry",
         "category_en": "Brandies",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 745
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 1490
+            }
+        ]
     },
     {
         "hu": "Panyolai Misztikum Mák Likör (50%)",
         "en": "Panyolai Mystique Poppy Seed Liqueur (50%)",
         "category_en": "Brandies",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 745
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 1490
+            }
+        ]
     },
     {
         "hu": "Panyolai Elixir Kajszibarack",
         "en": "Panyolai Elixir Apricot",
         "category_en": "Brandies",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 895
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 1790
+            }
+        ]
     },
     {
         "hu": "Jim Beam",
         "en": "Jim Beam",
         "category_en": "Whiskeys",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 375
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 750
+            }
+        ]
     },
     {
         "hu": "Jim Beam Apple",
         "en": "Jim Beam Apple",
         "category_en": "Whiskeys",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 395
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 790
+            }
+        ]
     },
     {
         "hu": "Johnnie Walker",
         "en": "Johnnie Walker",
         "category_en": "Whiskeys",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 395
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 790
+            }
+        ]
     },
     {
         "hu": "Jack Daniel's",
         "en": "Jack Daniel's",
         "category_en": "Whiskeys",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 450
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 900
+            }
+        ]
     },
     {
         "hu": "Jack Daniel's Honey",
         "en": "Jack Daniel's Honey",
         "category_en": "Whiskeys",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 450
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 900
+            }
+        ]
     },
     {
         "hu": "Jack Daniel's Fire",
         "en": "Jack Daniel's Fire",
         "category_en": "Whiskeys",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 450
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 900
+            }
+        ]
     },
     {
         "hu": "Jameson",
         "en": "Jameson",
         "category_en": "Whiskeys",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 475
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 950
+            }
+        ]
     },
     {
         "hu": "Jameson Black Barrel",
         "en": "Jameson Black Barrel",
         "category_en": "Whiskeys",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 795
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 1590
+            }
+        ]
     },
     {
         "hu": "Finsbury",
         "en": "Finsbury",
         "category_en": "Gins",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 325
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 650
+            }
+        ]
     },
     {
         "hu": "Beefeater",
         "en": "Beefeater",
         "category_en": "Gins",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 395
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 790
+            }
+        ]
     },
     {
         "hu": "Beefeater Pink",
         "en": "Beefeater Pink",
         "category_en": "Gins",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 395
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 790
+            }
+        ]
     },
     {
         "hu": "Beefeater Orange",
         "en": "Beefeater Orange",
         "category_en": "Gins",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 395
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 790
+            }
+        ]
     },
     {
         "hu": "Bombay",
         "en": "Bombay",
         "category_en": "Gins",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 475
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 950
+            }
+        ]
     },
     {
         "hu": "Nordes",
         "en": "Nordes",
         "category_en": "Gins",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 645
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 1290
+            }
+        ]
     },
     {
         "hu": "Rsu",
         "en": "Rsu",
         "category_en": "Gins",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 650
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 1300
+            }
+        ]
     },
     {
         "hu": "Drumshanbo Gunpowder Irish",
         "en": "Drumshanbo Gunpowder Irish",
         "category_en": "Gins",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 695
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 1390
+            }
+        ]
     },
     {
         "hu": "Kapriol Grapefruit & Hibiscus",
         "en": "Kapriol Grapefruit & Hibiscus",
         "category_en": "Gins",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 745
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 1490
+            }
+        ]
     },
     {
         "hu": "La Su Mgo",
         "en": "La Su Mgo",
         "category_en": "Gins",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 745
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 1490
+            }
+        ]
     },
     {
         "hu": "Carolans Krémlikőr",
         "en": "Carolans Irish Cream Liqueur",
         "category_en": "Liqueurs",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 395
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 790
+            }
+        ]
     },
     {
         "hu": "Malibu",
         "en": "Malibu",
         "category_en": "Liqueurs",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 375
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 750
+            }
+        ]
     },
     {
         "hu": "Tátratea (42,52)",
         "en": "Tatratea (42,52)",
         "category_en": "Liqueurs",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 595
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 1190
+            }
+        ]
     },
     {
         "hu": "Tátratea (62,72)",
         "en": "Tatratea (62,72)",
         "category_en": "Liqueurs",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 645
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 1290
+            }
+        ]
     },
     {
         "hu": "Becherovka",
         "en": "Becherovka",
         "category_en": "Liqueurs",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 395
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 790
+            }
+        ]
     },
     {
         "hu": "Unicum",
         "en": "Unicum",
         "category_en": "Liqueurs",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 410
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 820
+            }
+        ]
     },
     {
         "hu": "Unicum Szilva",
         "en": "Unicum Plum",
         "category_en": "Liqueurs",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 410
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 820
+            }
+        ]
     },
     {
         "hu": "Unicum Barista",
         "en": "Unicum Barista",
         "category_en": "Liqueurs",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 410
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 820
+            }
+        ]
     },
     {
         "hu": "Jägermeister",
         "en": "Jägermeister",
         "category_en": "Liqueurs",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 410
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 820
+            }
+        ]
     },
     {
         "hu": "Tubi",
         "en": "Tubi",
         "category_en": "Liqueurs",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 745
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 1490
+            }
+        ]
     },
     {
         "hu": "Finlandia",
         "en": "Finlandia",
         "category_en": "Vodkas",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 345
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 690
+            }
+        ]
     },
     {
         "hu": "Absolut",
         "en": "Absolut",
         "category_en": "Vodkas",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 395
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 790
+            }
+        ]
     },
     {
         "hu": "Russian Standard",
         "en": "Russian Standard",
         "category_en": "Vodkas",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 395
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 790
+            }
+        ]
     },
     {
         "hu": "Grey Goose",
         "en": "Grey Goose",
         "category_en": "Vodkas",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 700
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 1400
+            }
+        ]
     },
     {
         "hu": "Bacardi Carta Blanca",
         "en": "Bacardi Carta Blanca",
         "category_en": "Rums",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 375
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 750
+            }
+        ]
     },
     {
         "hu": "Bacardi Carta Negra",
         "en": "Bacardi Carta Negra",
         "category_en": "Rums",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 425
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 850
+            }
+        ]
     },
     {
         "hu": "Captain Morgan",
         "en": "Captain Morgan",
         "category_en": "Rums",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 425
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 850
+            }
+        ]
     },
     {
         "hu": "Diplomatico Rum Exclusiva",
         "en": "Diplomatico Rum Exclusiva",
         "category_en": "Rums",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 845
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 1690
+            }
+        ]
     },
     {
         "hu": "Bumbu",
         "en": "Bumbu",
         "category_en": "Rums",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 845
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 1690
+            }
+        ]
     },
     {
         "hu": "Don Papa Barso",
         "en": "Don Papa Barso",
         "category_en": "Rums",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 975
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 1950
+            }
+        ]
     },
     {
         "hu": "El Jimador Blanco",
         "en": "El Jimador Blanco",
         "category_en": "Tequilas",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 450
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 900
+            }
+        ]
     },
     {
         "hu": "El Jimador Reposado",
         "en": "El Jimador Reposado",
         "category_en": "Tequilas",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 2,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 450
+            },
+            {
+                "amount": 4,
+                "unit_hu": "cl",
+                "unit_en": "cl",
+                "unit_price": 900
+            }
+        ]
     },
     {
         "hu": "Rosé Spritz",
         "en": "Rosé Spritz",
         "category_en": "Spritzes",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 1290
+            }
+        ]
     },
     {
         "hu": "Mojo Spritz",
         "en": "Mojo Spritz",
         "category_en": "Spritzes",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 1290
+            }
+        ]
     },
     {
         "hu": "Bodzás-Uborkás Spritz",
         "en": "Elderflower-Cucumber Spritz",
         "category_en": "Spritzes",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 1390
+            }
+        ]
     },
     {
         "hu": "Aperol Spritz",
         "en": "Aperol Spritz",
         "category_en": "Spritzes",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 1390
+            }
+        ]
     },
     {
         "hu": "Málnás Lime-os Spritz",
         "en": "Raspberry-Lime Spritz",
         "category_en": "Spritzes",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 1390
+            }
+        ]
     },
     {
         "hu": "Natur Aqua Mentes",
         "en": "Natur Aqua Still",
         "category_en": "Mineral Waters",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 0.33,
+                "unit_hu": "l",
+                "unit_en": "l",
+                "unit_price": 450
+            },
+            {
+                "amount": 0.75,
+                "unit_hu": "l",
+                "unit_en": "l",
+                "unit_price": 890
+            }
+        ]
     },
     {
         "hu": "Natur Aqua Szénsavas",
         "en": "Natur Aqua Sparkling",
         "category_en": "Mineral Waters",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 0.33,
+                "unit_hu": "l",
+                "unit_en": "l",
+                "unit_price": 450
+            },
+            {
+                "amount": 0.75,
+                "unit_hu": "l",
+                "unit_en": "l",
+                "unit_price": 890
+            }
+        ]
     },
     {
         "hu": "Szóda",
         "en": "Soda",
         "category_en": "Mineral Waters",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": "dl",
+                "unit_en": "dl",
+                "unit_price": 60
+            }
+        ]
     },
     {
         "hu": "Soproni",
         "en": "Soproni",
         "category_en": "Draft Beers",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 1
+            }
+        ]
     },
     {
         "hu": "Soproni Ipa",
         "en": "Soproni Ipa",
         "category_en": "Draft Beers",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 1
+            }
+        ]
     },
     {
         "hu": "Edelweiss Búza",
         "en": "Edelweiss Wheat",
         "category_en": "Draft Beers",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 1
+            }
+        ]
     },
     {
         "hu": "Mort Subite meggysör",
         "en": "Mort Subite Cherry Beer",
         "category_en": "Draft Beers",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 1
+            }
+        ]
     },
     {
         "hu": "Gösser",
         "en": "Gösser",
         "category_en": "Bottled Beers",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 0.33,
+                "unit_hu": "l",
+                "unit_en": "l",
+                "unit_price": 690
+            }
+        ]
     },
     {
         "hu": "Heineken",
         "en": "Heineken",
         "category_en": "Bottled Beers",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 0.5,
+                "unit_hu": "l",
+                "unit_en": "l",
+                "unit_price": 750
+            }
+        ]
     },
     {
         "hu": "Heineken Alkoholmentes /0%/",
         "en": "Heineken Alcohol-Free /0%/",
         "category_en": "Bottled Beers",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 0.5,
+                "unit_hu": "l",
+                "unit_en": "l",
+                "unit_price": 750
+            }
+        ]
     },
     {
         "hu": "Gösser Natur Zitrone /0%/",
         "en": "Gösser Lemon Radler /0%/",
         "category_en": "Bottled Beers",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 0.5,
+                "unit_hu": "l",
+                "unit_en": "l",
+                "unit_price": 790
+            }
+        ]
     },
     {
         "hu": "Krušovice Világos",
         "en": "Krušovice Lager",
         "category_en": "Bottled Beers",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 0.5,
+                "unit_hu": "l",
+                "unit_en": "l",
+                "unit_price": 750
+            }
+        ]
     },
     {
         "hu": "Soproni Óvatos Duhaj Démon",
         "en": "Soproni Careful Devilish Demon",
         "category_en": "Bottled Beers",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 0.5,
+                "unit_hu": "l",
+                "unit_en": "l",
+                "unit_price": 750
+            }
+        ]
     },
     {
         "hu": "Kronenbourg",
         "en": "Kronenbourg",
         "category_en": "Bottled Beers",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 0.5,
+                "unit_hu": "l",
+                "unit_en": "l",
+                "unit_price": 850
+            }
+        ]
     },
     {
         "hu": "Mojo",
@@ -730,7 +1834,15 @@
         "description_en": "(Becherovka, Blackcurrant Juice, Lemon, Cinnamon Stick)",
         "category_en": "Cocktails",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 1190
+            }
+        ]
     },
     {
         "hu": "Cuba Libre",
@@ -739,7 +1851,15 @@
         "description_en": "(Bacardi, Cola, Lime)",
         "category_en": "Cocktails",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 1190
+            }
+        ]
     },
     {
         "hu": "Gin Fizz",
@@ -748,7 +1868,15 @@
         "description_en": "(Lemon Juice, Simple Syrup, Soda, Gin)",
         "category_en": "Cocktails",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 1190
+            }
+        ]
     },
     {
         "hu": "Tequila Sunrise",
@@ -757,7 +1885,15 @@
         "description_en": "(Orange Juice, Grenadine, Tequila)",
         "category_en": "Cocktails",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 1190
+            }
+        ]
     },
     {
         "hu": "Summer Fresh",
@@ -766,7 +1902,15 @@
         "description_en": "(Vodka, Mango/Raspberry Syrup, Lime, Apple Juice, Fruits)",
         "category_en": "Cocktails",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 1190
+            }
+        ]
     },
     {
         "hu": "Sex On The Beach",
@@ -775,7 +1919,15 @@
         "description_en": "(Vodka, Mango Syrup, Orange Juice, Blackcurrant)",
         "category_en": "Cocktails",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 1190
+            }
+        ]
     },
     {
         "hu": "Pina Colada",
@@ -784,7 +1936,15 @@
         "description_en": "(Rum, Coconut Cream, Pineapple Juice, Coconut Syrup)",
         "category_en": "Cocktails",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 1290
+            }
+        ]
     },
     {
         "hu": "Flamingo",
@@ -793,7 +1953,15 @@
         "description_en": "(Strawberry Gin, Mango/Raspberry Syrup, Orange Juice, Tonic, Lime, Fruits)",
         "category_en": "Cocktails",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 1390
+            }
+        ]
     },
     {
         "hu": "Bloody Mary",
@@ -802,7 +1970,15 @@
         "description_en": "(Vodka, Tomato Juice, Lemon Juice, Salt, Pepper, Worcestershire Sauce, Tabasco)",
         "category_en": "Cocktails",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 1690
+            }
+        ]
     },
     {
         "hu": "Speed",
@@ -811,7 +1987,15 @@
         "description_en": "(Gin, Bacardi, Tequila, Lemon Juice, Strawberry Syrup, Energy Drink)",
         "category_en": "Cocktails",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 1790
+            }
+        ]
     },
     {
         "hu": "Margarita",
@@ -820,7 +2004,15 @@
         "description_en": "(Tequila, Triple Sec, Lemon Juice)",
         "category_en": "Cocktails",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 1990
+            }
+        ]
     },
     {
         "hu": "Midnight medicine",
@@ -829,7 +2021,15 @@
         "description_en": "(Tubi, Tonic, Blackcurrant Juice, Lemon)",
         "category_en": "Cocktails",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 1990
+            }
+        ]
     },
     {
         "hu": "Long Island Iced Tea",
@@ -838,161 +2038,399 @@
         "description_en": "(Gin, Vodka, Rum, Tequila, Triple Sec, Cola, Lime)",
         "category_en": "Cocktails",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 2490
+            }
+        ]
     },
     {
         "hu": "Bacardi Spiced Cola",
         "en": "Bacardi Spiced Cola",
         "category_en": "Long Drinks",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 990
+            }
+        ]
     },
     {
         "hu": "Bombay Gin Tonic",
         "en": "Bombay Gin Tonic",
         "category_en": "Long Drinks",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 990
+            }
+        ]
     },
     {
         "hu": "Finlandia Tonic",
         "en": "Finlandia Tonic",
         "category_en": "Long Drinks",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 990
+            }
+        ]
     },
     {
         "hu": "Jack Cola",
         "en": "Jack Cola",
         "category_en": "Long Drinks",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 1190
+            }
+        ]
     },
     {
         "hu": "Martini Fiero Tonic",
         "en": "Martini Fiero Tonic",
         "category_en": "Long Drinks",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 1390
+            }
+        ]
     },
     {
         "hu": "Fény (6db)",
         "en": "Light (6 pcs)",
         "category_en": "Shots",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 2190
+            }
+        ]
     },
     {
         "hu": "Kacsa (6db)",
         "en": "Duck (6 pcs)",
         "category_en": "Shots",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 2190
+            }
+        ]
     },
     {
         "hu": "Vodka Barbie (5db)",
         "en": "Vodka Barbie (5 pcs)",
         "category_en": "Shots",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 2290
+            }
+        ]
     },
     {
         "hu": "Málnás Vodka (6db)",
         "en": "Raspberry Vodka (6 pcs)",
         "category_en": "Shots",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 2290
+            }
+        ]
     },
     {
         "hu": "Mangós Vodka (6db)",
         "en": "Mango Vodka (6 pcs)",
         "category_en": "Shots",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 2290
+            }
+        ]
     },
     {
         "hu": "Bulanga (6db)",
         "en": "Bulanga (6 pcs)",
         "category_en": "Shots",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": null,
+                "unit_en": null,
+                "unit_price": 2690
+            }
+        ]
     },
     {
         "hu": "Lelovits Tamás Olaszrizling",
         "en": "Lelovits Tamás Olaszrizling",
         "category_en": "House Wines",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": "dl",
+                "unit_en": "dl",
+                "unit_price": 390
+            }
+        ]
     },
     {
         "hu": "Lelovits Tamás Rosé Cuvée",
         "en": "Lelovits Tamás Rosé Cuvée",
         "category_en": "House Wines",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": "dl",
+                "unit_en": "dl",
+                "unit_price": 390
+            }
+        ]
     },
     {
         "hu": "Frittmann Kékfrankos Rosé",
         "en": "Frittmann Kékfrankos Rosé",
         "category_en": "Rosé Wines",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": "dl",
+                "unit_en": "dl",
+                "unit_price": 450
+            },
+            {
+                "amount": 1,
+                "unit_hu": "üveg",
+                "unit_en": "bottle",
+                "unit_price": 3375
+            }
+        ]
     },
     {
         "hu": "Bodri Rozi Rosé",
         "en": "Bodri Rozi Rosé",
         "category_en": "Rosé Wines",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": "dl",
+                "unit_en": "dl",
+                "unit_price": 530
+            },
+            {
+                "amount": 1,
+                "unit_hu": "üveg",
+                "unit_en": "bottle",
+                "unit_price": 3975
+            }
+        ]
     },
     {
         "hu": "Vylyan Kakas Rosé",
         "en": "Vylyan Kakas Rosé",
         "category_en": "Rosé Wines",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": "dl",
+                "unit_en": "dl",
+                "unit_price": 550
+            },
+            {
+                "amount": 1,
+                "unit_hu": "üveg",
+                "unit_en": "bottle",
+                "unit_price": 4125
+            }
+        ]
     },
     {
         "hu": "Tar Cabernet Franc",
         "en": "Tar Cabernet Franc",
         "category_en": "Red Wines",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": "dl",
+                "unit_en": "dl",
+                "unit_price": 1
+            },
+            {
+                "amount": 1,
+                "unit_hu": "üveg",
+                "unit_en": "bottle",
+                "unit_price": 1
+            }
+        ]
     },
     {
         "hu": "Vylyan Ördög Cuvée",
         "en": "Vylyan Ördög Cuvée",
         "category_en": "Red Wines",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": "dl",
+                "unit_en": "dl",
+                "unit_price": 1
+            },
+            {
+                "amount": 1,
+                "unit_hu": "üveg",
+                "unit_en": "bottle",
+                "unit_price": 1
+            }
+        ]
     },
     {
         "hu": "Vida Ölelés Merlot",
         "en": "Vida Ölelés Merlot",
         "category_en": "Red Wines",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": "dl",
+                "unit_en": "dl",
+                "unit_price": 1
+            },
+            {
+                "amount": 1,
+                "unit_hu": "üveg",
+                "unit_en": "bottle",
+                "unit_price": 1
+            }
+        ]
     },
     {
         "hu": "Balla Géza Kadarka",
         "en": "Balla Géza Kadarka",
         "category_en": "Red Wines",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": "dl",
+                "unit_en": "dl",
+                "unit_price": 1
+            },
+            {
+                "amount": 1,
+                "unit_hu": "üveg",
+                "unit_en": "bottle",
+                "unit_price": 1
+            }
+        ]
     },
     {
         "hu": "Schieber Irsai Olivér",
         "en": "Schieber Irsai Olivér",
         "category_en": "White Wines",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": "dl",
+                "unit_en": "dl",
+                "unit_price": 490
+            },
+            {
+                "amount": 1,
+                "unit_hu": "üveg",
+                "unit_en": "bottle",
+                "unit_price": 3675
+            }
+        ]
     },
     {
         "hu": "Tűzkő Banka Zöldveltelini",
         "en": "Tűzkő Banka Zöldveltelini",
         "category_en": "White Wines",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": "dl",
+                "unit_en": "dl",
+                "unit_price": 570
+            },
+            {
+                "amount": 1,
+                "unit_hu": "üveg",
+                "unit_en": "bottle",
+                "unit_price": 4275
+            }
+        ]
     },
     {
         "hu": "Hangyál Sárgamuskotály",
@@ -1001,69 +2439,161 @@
         "description_en": "semi-sweet",
         "category_en": "White Wines",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": "dl",
+                "unit_en": "dl",
+                "unit_price": 690
+            },
+            {
+                "amount": 1,
+                "unit_hu": "üveg",
+                "unit_en": "bottle",
+                "unit_price": 5175
+            }
+        ]
     },
     {
         "hu": "Hangyál Balázs Sauvignon Blanc",
         "en": "Hangyál Balázs Sauvignon Blanc",
         "category_en": "White Wines",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": "dl",
+                "unit_en": "dl",
+                "unit_price": 740
+            },
+            {
+                "amount": 1,
+                "unit_hu": "üveg",
+                "unit_en": "bottle",
+                "unit_price": 5550
+            }
+        ]
     },
     {
-        "hu": "Sabar Birtsbor Olaszrizling",
+        "hu": "Sabar Birtokbor Olaszrizling",
         "en": "Sabar Estate Wine Olaszrizling",
         "category_en": "White Wines",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": "üveg",
+                "unit_en": "bottle",
+                "unit_price": 5900
+            }
+        ]
     },
     {
         "hu": "Strongbow Gold",
         "en": "Strongbow Gold",
         "category_en": "Ciders",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 0.33,
+                "unit_hu": "l",
+                "unit_en": "l",
+                "unit_price": 860
+            }
+        ]
     },
     {
         "hu": "Törley Gála",
         "en": "Törley Gála",
         "category_en": "Sparkling Wines",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": "üveg",
+                "unit_en": "bottle",
+                "unit_price": 2900
+            }
+        ]
     },
     {
         "hu": "Törley Doux",
         "en": "Törley Doux",
         "category_en": "Sparkling Wines",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": "üveg",
+                "unit_en": "bottle",
+                "unit_price": 2900
+            }
+        ]
     },
     {
         "hu": "Hungaria Extra Dry",
         "en": "Hungaria Extra Dry",
         "category_en": "Sparkling Wines",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": "üveg",
+                "unit_en": "bottle",
+                "unit_price": 4900
+            }
+        ]
     },
     {
         "hu": "Hungaria Irsai Olivér Doux",
         "en": "Hungaria Irsai Olivér Doux",
         "category_en": "Sparkling Wines",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": "üveg",
+                "unit_en": "bottle",
+                "unit_price": 4900
+            }
+        ]
     },
     {
         "hu": "Tussock Jumper Cava Brut",
         "en": "Tussock Jumper Cava Brut",
         "category_en": "Sparkling Wines",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": "üveg",
+                "unit_en": "bottle",
+                "unit_price": 5990
+            }
+        ]
     },
     {
         "hu": "Dissegna Prosecco Extra Dry",
         "en": "Dissegna Prosecco Extra Dry",
         "category_en": "Sparkling Wines",
         "status_en": "active",
-        "status_hu": "aktív"
+        "status_hu": "aktív",
+        "units": [
+            {
+                "amount": 1,
+                "unit_hu": "üveg",
+                "unit_en": "bottle",
+                "unit_price": 6590
+            }
+        ]
     }
 ]

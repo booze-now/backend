@@ -9,12 +9,19 @@ use Illuminate\Support\Facades\Schema;
 
 class DrinkController extends Controller
 {
+    protected static $valid_withs = ['category', 'units'];
+
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        return Drink::with(['category', 'category2'])->get();
+        $with = [];
+
+        if ($request->with) {
+            $with = array_intersect(explode(',', strtolower($request->with)), self::$valid_withs);
+        }
+        return Drink::with($with)->get();
     }
 
     /**
@@ -31,17 +38,21 @@ class DrinkController extends Controller
             'status' => ['required', 'string', Rule::in(Drink::getStatuses())],
         ]);
         $drink = new Drink();
-        $drink->fill($valid);
-        $drink->save();
+        $drink->fill($valid)->save();
         return $drink;
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Drink $drink)
+    public function show(Request $request, $id)
     {
-        return $drink;
+        $with = [];
+
+        if ($request->with) {
+            $with = array_intersect(explode(',', strtolower($request->with)), self::$valid_withs);
+        }
+        return Drink::with($with)->find($id);
     }
 
     /**
@@ -55,11 +66,10 @@ class DrinkController extends Controller
             'category_id' => 'sometimes|integer',
             'description_en' => 'sometimes|nullable|string',
             'description_hu' => 'sometimes|nullable|string',
-            'status' => ['sometimes', 'string', /*Rule::in(Drink::getStatuses())*/],
+            'status' => ['sometimes', 'string', Rule::in(Drink::getStatuses())],
         ]);
 
-        $drink->fill($valid);
-        $drink->save();
+        $drink->fill($valid)->save();
         return $drink;
     }
 

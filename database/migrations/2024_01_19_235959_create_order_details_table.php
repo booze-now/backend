@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('order_details', function (Blueprint $table) {
             $table->id();
             $table->integer('order_id')->relates('order')->on('id');
-            $table->integer('drink_measure_id');
+            $table->integer('drink_unit_id');
             $table->integer('amount');
             $table->integer('promo_id')->relates('promo')->on('id')->nullable();
             $table->integer('unit_price');

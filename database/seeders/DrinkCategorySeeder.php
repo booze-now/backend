@@ -6,7 +6,7 @@ use App\Models\DrinkCategory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use File;
+use Illuminate\Support\Facades\File as File;
 
 class DrinkCategorySeeder extends Seeder
 {
@@ -35,7 +35,7 @@ class DrinkCategorySeeder extends Seeder
             $drink = DrinkCategory::create([
                 'name_en' => $value->en,
                 'name_hu' => $value->hu,
-                'parent' => $parent_id,
+                'parent_id' => $parent_id,
             ]);
 
             if ($value->children ?? false) {
@@ -44,3 +44,5 @@ class DrinkCategorySeeder extends Seeder
         }
     }
 }
+
+
