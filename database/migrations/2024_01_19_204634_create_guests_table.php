@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('status', 10); // CHECK ([status] IN ('guest', 'aktív', 'inaktív', 'anonimizált'))
             $table->rememberToken();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
