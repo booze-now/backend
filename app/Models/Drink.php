@@ -52,11 +52,6 @@ class Drink extends Model
         "updated_at",
     ];
 
-    private static $statuses = [
-        'active',
-        'inactive',
-    ];
-
     public function category(): BelongsTo
     {
         // return $this->belongsTo(DrinkCategory::class, 'category_id', 'id');
@@ -73,6 +68,7 @@ class Drink extends Model
         return $this->hasMany(DrinkUnit::class, 'drink_id', 'id');
     }
 
+/*
     public static function getStatuses(): array
     {
         return array_map(
@@ -87,6 +83,7 @@ class Drink extends Model
         $idx = array_search($name, Drink::getStatuses(), true);
         return ($idx >= 0) ? Drink::$statuses[$idx] : $name;
     }
+*/
 
     public function getNameAttribute()
     {
