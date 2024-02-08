@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('unit_en')->nullable();
             $table->string('unit_hu')->nullable();
             $table->decimal('unit_price', 8, 2);
-            $table->boolean('active');
+            $table->boolean('active')->default(true);
             $table->unique(['drink_id', 'amount', 'unit_en']);
             $table->timestamps();
         });
