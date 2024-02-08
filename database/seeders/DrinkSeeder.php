@@ -45,7 +45,7 @@ class DrinkSeeder extends Seeder
                 'description_en' => $value->description_en ?? null,
                 'description_hu' => $value->description_hu ?? null,
                 'category_id' => $category,
-                'status' => $value->status_hu,
+                'active' => $value->active,
             ]);
             foreach ($value->units as $unit) {
                 DrinkUnit::create([
@@ -54,7 +54,7 @@ class DrinkSeeder extends Seeder
                     'unit_en' => $unit->unit_en,
                     'unit_hu' => $unit->unit_hu,
                     'unit_price' => $unit->unit_price,
-                    'status' => 'aktív',
+                    'active' => true,
                 ]);
             }
         }

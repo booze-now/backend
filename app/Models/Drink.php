@@ -23,7 +23,7 @@ class Drink extends Model
         'category_id',
         'description_en',
         'description_hu',
-        'status',
+        'active',
     ];
 
     protected $appends = ['name', 'description'];
@@ -34,6 +34,10 @@ class Drink extends Model
         'description_hu',
         'created_at',
         'updated_at',
+    ];
+
+    protected $casts = [
+        'active' => 'boolean'
     ];
 
     private static $internalFieldDefs = [
@@ -53,7 +57,8 @@ class Drink extends Model
         'inactive',
     ];
 
-    public function category(): BelongsTo {
+    public function category(): BelongsTo
+    {
         // return $this->belongsTo(DrinkCategory::class, 'category_id', 'id');
         return $this->belongsTo(DrinkCategory::class, 'category_id');
     }
@@ -80,7 +85,7 @@ class Drink extends Model
     public static function getStatusValue($name): string
     {
         $idx = array_search($name, Drink::getStatuses(), true);
-        return ($idx >= 0)? Drink::$statuses[$idx] : $name;
+        return ($idx >= 0) ? Drink::$statuses[$idx] : $name;
     }
 
     public function getNameAttribute()
@@ -108,5 +113,4 @@ class Drink extends Model
         $this->attributes["description_{$locale}"] = $value;
         return $this;
     }
-
 }

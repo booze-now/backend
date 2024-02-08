@@ -19,10 +19,9 @@ return new class extends Migration
             $table->string('password');
             $table->string('table', 36)->nullable();
             $table->boolean('reservee')->nullable();
-            $table->string('status', 10); // CHECK ([status] IN ('guest', 'aktív', 'inaktív', 'anonimizált'))
+            $table->boolean('active')->default(false);
             $table->rememberToken();
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 

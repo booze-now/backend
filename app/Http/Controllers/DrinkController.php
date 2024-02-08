@@ -32,10 +32,10 @@ class DrinkController extends Controller
         $valid = $request->validate([
             'name_en' => 'string|required|unique:drink,name_en',
             'name_hu' => 'string|required|unique:drink,name_hu',
-            'category_id' => 'required|integer',
-            'description_en' => 'sometimes|nullable|boolean',
-            'description_hu' => 'sometimes|nullable|boolean',
-            'status' => ['required', 'string', Rule::in(Drink::getStatuses())],
+            'category_id' => 'integer|required',
+            'description_en' => 'string|sometimes|nullable',
+            'description_hu' => 'string|sometimes|nullable',
+            'active' => 'boolean|required',
         ]);
         $drink = new Drink();
         $drink->fill($valid)->save();
@@ -61,12 +61,12 @@ class DrinkController extends Controller
     public function update(Request $request, Drink $drink)
     {
         $valid = $request->validate([
-            'name_en' => 'sometimes|unique',
-            'name_hu' => 'sometimes|unique',
-            'category_id' => 'sometimes|integer',
-            'description_en' => 'sometimes|nullable|string',
-            'description_hu' => 'sometimes|nullable|string',
-            'status' => ['sometimes', 'string', Rule::in(Drink::getStatuses())],
+            'name_en' => 'string|sometimes|unique',
+            'name_hu' => 'string|sometimes|unique',
+            'category_id' => 'integer|sometimes',
+            'description_en' => 'string|sometimes|nullable',
+            'description_hu' => 'string|sometimes|nullable',
+            'active' => 'boolean|required',
         ]);
 
         $drink->fill($valid)->save();

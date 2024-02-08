@@ -22,7 +22,7 @@ class Employee extends Authenticatable
         'email',
         'password',
         'role',
-        'status',
+        'active',
     ];
 
     /**
@@ -43,5 +43,6 @@ class Employee extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
+        'active' => 'boolean',
     ];
 }

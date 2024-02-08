@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer('category_id')->relates('drink_category')->on('id');
             $table->string('description_en')->nullable();
             $table->string('description_hu')->nullable();
-            $table->string('status', 10); // CHECK ([status] IN ('aktív', 'inaktív'))
+            $table->boolean('active')->default(true);
             $table->timestamps();
         });
     }

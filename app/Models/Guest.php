@@ -10,7 +10,7 @@ use Laravel\Sanctum\HasApiTokens;
 
 class Guest extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable, SoftDeletes;
+    use HasApiTokens, HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -23,7 +23,7 @@ class Guest extends Authenticatable
         'password',
         'table',
         'reservee',
-        'status',
+        'active',
     ];
 
     /**
@@ -44,5 +44,6 @@ class Guest extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
+        'active' => 'boolean'
     ];
 }

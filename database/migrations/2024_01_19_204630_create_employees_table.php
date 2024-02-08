@@ -18,7 +18,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('role', 16);  // CHECK ([role] IN ('pincér', 'pultos', 'backoffice'))
-            $table->string('status', 10);  // CHECK ([status] IN ('aktív', 'inaktív'))
+            $table->boolean('active')->default(true);
             $table->rememberToken();
             $table->timestamps();
         });
