@@ -29,9 +29,9 @@ class DrinkSeeder extends Seeder
         }
     }
 
-    protected function saveDrinks($categories, $parent_id = null)
+    protected function saveDrinks($drinks)
     {
-        foreach ($categories as $key => $value) {
+        foreach ($drinks as $key => $value) {
 
             $category = DrinkCategory::where('name_en', $value->category_en);
             if ($category->count() == 0) {
@@ -56,10 +56,6 @@ class DrinkSeeder extends Seeder
                     'unit_price' => $unit->unit_price,
                     'status' => 'aktív',
                 ]);
-            }
-
-            if ($value->children ?? false) {
-                $this->saveDrinks($value->children, $drink->id);
             }
         }
     }
