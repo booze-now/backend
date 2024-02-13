@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('promo_types', function (Blueprint $table) {
             $table->id();
-            $table->string('description');
+            $table->string('description_en');
+            $table->string('description_hu');
             $table->timestamps();
         });
     }

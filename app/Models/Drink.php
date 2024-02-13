@@ -13,6 +13,27 @@ class Drink extends Model
     use HasFactory;
 
     /**
+     * Fields
+     *
+     * name_en: string
+     * name_hu: string
+     * category_id: integer
+     * description_en: ?string
+     * description_hu: ?string
+     * active: boolean=true
+     *
+     * Relations
+     *
+     * name_en ux
+     * name_hu ux
+     * category_id  => drink_category.id
+     * id <= drink_unit.drink_id
+     */
+
+     public const INACTIVE = 0;
+     public const ACTIVE = 1;
+
+     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
@@ -47,28 +68,22 @@ class Drink extends Model
         'category_id',
         'description_en',
         'description_hu',
-        "status",
-        "created_at",
-        "updated_at",
+        'active',
+        'created_at',
+        'updated_at',
     ];
 
     public function category(): BelongsTo
     {
-        // return $this->belongsTo(DrinkCategory::class, 'category_id', 'id');
         return $this->belongsTo(DrinkCategory::class, 'category_id');
     }
-
-    // public function category(): HasOne
-    // {
-    //     return $this->hasOne(DrinkCategory::class, 'id', 'category_id');
-    // }
 
     public function units(): HasMany
     {
         return $this->hasMany(DrinkUnit::class, 'drink_id', 'id');
     }
 
-/*
+    /*
     public static function getStatuses(): array
     {
         return array_map(

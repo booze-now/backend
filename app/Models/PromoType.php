@@ -15,6 +15,34 @@ class PromoType extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'description',
+        'description_en',
+        'description_hu',
     ];
+
+    protected $appends = ['description'];
+
+
+    /**
+     * The attributes that should be hidden for serialization.
+     *
+     * @var array<int, string>
+     */
+    protected $hidden = [
+        'created_at',
+        'updated_at',
+    ];
+
+    public function getDescriptionAttribute()
+    {
+        $locale = app()->getLocale();
+        return $this->attributes["description_{$locale}"];
+    }
+
+    public function setDescriptionAttribute($value)
+    {
+        $locale = app()->getLocale();
+        $this->attributes["description_{$locale}"] = $value;
+        return $this;
+    }
+
 }

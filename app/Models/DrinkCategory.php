@@ -13,6 +13,20 @@ class DrinkCategory extends Model
     use HasFactory;
 
     /**
+     * Fields
+     *
+     * name_en: string ', 32)->unique();
+     * name_hu: string ', 32)->unique();
+     * parent_id: ?integer
+     *
+     * Relations
+     *
+     * name_en ux
+     * name_hu ux
+     * parent_id => drink_category.id
+     */
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>

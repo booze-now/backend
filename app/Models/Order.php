@@ -24,4 +24,29 @@ class Order extends Model
         'served_at',
         'table',
     ];
+
+    /**
+     * The attributes that should be hidden for serialization.
+     *
+     * @var array<int, string>
+     */
+    protected $hidden = [
+        'created_at',
+        'updated_at',
+    ];
+
+    protected $appends = [
+        'status'
+    ];
+
+
+    public function getStatusAttribute() {
+        // pending awaiting 'feldolgozás alatt'
+        // in progress 'elkészítés alatt'
+        // ready 'kész'
+        // served 'kiszolgálva'
+        // paid 'fizetve'
+        return _('');
+    }
+
 }

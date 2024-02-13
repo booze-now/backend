@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('promo_id')->relates('promo')->on('id')->nullable();
             $table->integer('unit_price');
             $table->decimal('discount', 5, 2)->nullable()->default(0);
-            $table->integer('receipt_id')->relates('receipt')->on('id');
+            $table->integer('receipt_id')->relates('receipt')->on('id')->nullable();
             $table->timestamps();
         });
     }

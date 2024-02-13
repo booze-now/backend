@@ -29,13 +29,14 @@ class DrinkController extends Controller
      */
     public function store(Request $request)
     {
+        // return response($request->all(), 404);
         $valid = $request->validate([
-            'name_en' => 'string|required|unique:drink,name_en',
-            'name_hu' => 'string|required|unique:drink,name_hu',
+            'name_en' => 'string|required|unique:drinks,name_en',
+            'name_hu' => 'string|required|unique:drinks,name_hu',
             'category_id' => 'integer|required',
             'description_en' => 'string|sometimes|nullable',
             'description_hu' => 'string|sometimes|nullable',
-            'active' => 'boolean|required',
+            'active' => 'boolean|sometimes',
         ]);
         $drink = new Drink();
         $drink->fill($valid)->save();
@@ -52,7 +53,7 @@ class DrinkController extends Controller
         if ($request->with) {
             $with = array_intersect(explode(',', strtolower($request->with)), self::$valid_withs);
         }
-        return Drink::with($with)->find($id);
+        return Drink::with($with)->findOrFail($id);
     }
 
     /**
@@ -66,7 +67,7 @@ class DrinkController extends Controller
             'category_id' => 'integer|sometimes',
             'description_en' => 'string|sometimes|nullable',
             'description_hu' => 'string|sometimes|nullable',
-            'active' => 'boolean|required',
+            'active' => 'boolean|sometimes',
         ]);
 
         $drink->fill($valid)->save();
