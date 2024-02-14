@@ -40,13 +40,17 @@ class Order extends Model
     ];
 
 
-    public function getStatusAttribute() {
-        // pending awaiting 'feldolgozás alatt'
-        // in progress 'elkészítés alatt'
-        // ready 'kész'
-        // served 'kiszolgálva'
-        // paid 'fizetve'
-        return _('');
+    public function getStatusAttribute()
+    {
+        if ($this->recorded_at->null()) {
+            $status = __('pending');
+        } elseif ($this->made_at->null()) {
+            $status = __('in progress');
+        } elseif ($this->served_at->null()) {
+            $status = __('ready');
+        } else {
+            $status = __('served');
+        }
+        return $status;
     }
-
 }

@@ -12,6 +12,16 @@ class Employee extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    public const ROLES = [ //pincér', 'pultos', 'backoffice
+        'waiter',
+        'bartender',
+        'backoffice',
+    ];
+
+    public const WAITER = 0;
+    public const BARTENDER = 1;
+    public const BACKOFFICE = 2;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -21,7 +31,7 @@ class Employee extends Authenticatable
         'name',
         'email',
         'password',
-        'role',
+        'role_code',
         'active',
     ];
 
@@ -45,4 +55,20 @@ class Employee extends Authenticatable
         'password' => 'hashed',
         'active' => 'boolean',
     ];
+
+    public function scopeBartender($query) {
+        return $query->where('role_code', Employee::BARTENDER);
+    }
+
+    public function scopeWaiter($query) {
+        return $query->where('role_code', Employee::WAITER);
+    }
+
+    public function scopeBackoffice($query) {
+        return $query->where('role_code', Employee::BACKOFFICE);
+    }
+
+    public function getRoleAttribute() {
+        return __(Employee::ROLES[$this->role_code]);
+    }
 }
