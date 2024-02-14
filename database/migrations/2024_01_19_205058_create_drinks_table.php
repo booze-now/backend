@@ -15,11 +15,13 @@ return new class extends Migration
             $table->id();
             $table->string('name_en', 32)->unique();
             $table->string('name_hu', 32)->unique();
-            $table->integer('category_id')->relates('drink_category')->on('id');
+            $table->unsignedBigInteger('category_id');
             $table->string('description_en')->nullable();
             $table->string('description_hu')->nullable();
             $table->boolean('active')->default(true);
             $table->timestamps();
+
+            $table->foreign('category_id')->references('id')->on('drink_categories');
         });
     }
 

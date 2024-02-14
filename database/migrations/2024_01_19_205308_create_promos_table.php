@@ -13,11 +13,14 @@ return new class extends Migration
     {
         Schema::create('promos', function (Blueprint $table) {
             $table->id();
-            $table->integer('promo_id')->relates('promo_type')->on('id');
+            $table->unsignedBigInteger('promo_id');
             $table->datetime('start');
             $table->datetime('end')->nullable();
-            $table->integer('category')->relates('category')->on('id')->nullable();
+            $table->unsignedBigInteger('category')->nullable();
             $table->timestamps();
+
+            $table->foreign('promo_id')->references('id')->on('promo_types');
+            $table->foreign('category')->references('id')->on('drink_categories');
         });
     }
 

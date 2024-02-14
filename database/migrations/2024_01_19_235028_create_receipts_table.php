@@ -14,14 +14,16 @@ return new class extends Migration
         Schema::create('receipts', function (Blueprint $table) {
             $table->id();
             $table->string('serno', 16)->unique();
-            $table->integer('guest_id')->relates('guest')->on('id');
+            $table->unsignedBigInteger('guest_id');
             $table->datetime('issued_at');
-            $table->integer('paid_for')->relates('employee')->on('id');
+            $table->unsignedBigInteger('paid_for');
             $table->datetime('paid_at');
             $table->string('payment_method', 16); // CHECK ([payment_method] IN ('készpénz', 'bankkártya'))
             $table->string('table', 36)->nullable();
-
             $table->timestamps();
+
+            $table->foreign('paid_for')->references('id')->on('employees');
+            $table->foreign('guest_id')->references('id')->on('guests');
         });
     }
 

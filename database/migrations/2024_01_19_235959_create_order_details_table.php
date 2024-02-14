@@ -16,11 +16,14 @@ return new class extends Migration
             $table->integer('order_id')->relates('order')->on('id');
             $table->integer('drink_unit_id');
             $table->integer('amount');
-            $table->integer('promo_id')->relates('promo')->on('id')->nullable();
+            $table->unsignedBigInteger('promo_id')->nullable();
             $table->integer('unit_price');
             $table->decimal('discount', 5, 2)->nullable()->default(0);
-            $table->integer('receipt_id')->relates('receipt')->on('id')->nullable();
+            $table->unsignedBigInteger('receipt_id')->nullable();
             $table->timestamps();
+
+            $table->foreign('promo_id')->references('id')->on('promos');
+            $table->foreign('receipt_id')->references('id')->on('receipts');
         });
     }
 
