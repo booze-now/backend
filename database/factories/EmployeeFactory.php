@@ -30,7 +30,7 @@ class EmployeeFactory extends Factory
         return [
             'name' => $name,
             'email' => $email,
-            'password' => Hash::make('Password1!'),
+            'password' => 'Password1!',
             'role_code' => rand(0, 2),
             'active' => 1,
         ];
