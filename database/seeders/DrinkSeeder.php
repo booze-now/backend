@@ -22,7 +22,7 @@ class DrinkSeeder extends Seeder
     protected function seedFromJson()
     {
         if (file_exists("database/seeders/data/Drinks.json")) {
-            Drink::truncate();
+            // Drink::truncate();
             $json = File::get("database/seeders/data/Drinks.json");
             $drinks = json_decode($json);
             $this->saveDrinks($drinks);

@@ -21,7 +21,7 @@ class DrinkCategorySeeder extends Seeder
     protected function seedFromJson()
     {
         if (file_exists("database/seeders/data/DrinkCategories.json")) {
-            DrinkCategory::truncate();
+            // DrinkCategory::truncate();
             $json = File::get("database/seeders/data/DrinkCategories.json");
             $categories = json_decode($json);
             $this->saveCategories($categories);

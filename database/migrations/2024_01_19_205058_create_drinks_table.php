@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('drinks', function (Blueprint $table) {
             $table->id();
-            $table->string('name_en', 32)->unique();
-            $table->string('name_hu', 32)->unique();
+            $table->string('name_en', 64)->unique();
+            $table->string('name_hu', 64)->unique();
             $table->unsignedBigInteger('category_id');
             $table->string('description_en')->nullable();
             $table->string('description_hu')->nullable();
