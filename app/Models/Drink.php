@@ -103,7 +103,7 @@ class Drink extends Model
     public function getNameAttribute()
     {
         $locale = app()->getLocale();
-        return $this->attributes["name_{$locale}"];
+        return $this->attributes["name_{$locale}"] ?? null;
     }
 
     public function setNameAttribute($value)
@@ -116,7 +116,7 @@ class Drink extends Model
     public function getDescriptionAttribute()
     {
         $locale = app()->getLocale();
-        return $this->attributes["description_{$locale}"];
+        return $this->attributes["description_{$locale}"] ?? null;
     }
 
     public function setDescriptionAttribute($value)

@@ -21,7 +21,6 @@ class PromoType extends Model
 
     protected $appends = ['description'];
 
-
     /**
      * The attributes that should be hidden for serialization.
      *

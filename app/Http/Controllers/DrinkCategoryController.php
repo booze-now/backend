@@ -71,7 +71,6 @@ class DrinkCategoryController extends Controller
             }
 
             $children = DrinkCategory::where('parent', $category->id)->count();
-            echo $children;
             if ($children > 0) {
                 throw new \Exception(__(":category cannot be subcategory if it has children category already.", ['parent' => $request->name ?? $category->name]));
             }

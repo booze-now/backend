@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Drink;
-use Illuminate\Validation\Rule;
+use App\Models\Promo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Schema;
 
-class DrinkController extends Controller
+class PromoController extends Controller
 {
-    protected static $valid_withs = ['category', 'units'];
+    protected static $valid_withs = ['category'];
 
     /**
      * Display a listing of the resource.
@@ -21,7 +20,7 @@ class DrinkController extends Controller
         if ($request->with) {
             $with = array_intersect(explode(',', strtolower($request->with)), self::$valid_withs);
         }
-        return Drink::with($with)->get();
+        return Promo::with($with)->get();
     }
 
     /**
@@ -31,16 +30,13 @@ class DrinkController extends Controller
     {
         // return response($request->all(), 404);
         $valid = $request->validate([
-            'name_en' => 'string|required|unique:drinks,name_en',
-            'name_hu' => 'string|required|unique:drinks,name_hu',
+            'start' => 'date|required',
+            'end' => 'date|sometimes|after:start',
             'category_id' => 'integer|required',
-            'description_en' => 'string|sometimes|nullable',
-            'description_hu' => 'string|sometimes|nullable',
-            'active' => 'boolean|sometimes',
         ]);
-        $drink = new Drink();
-        $drink->fill($valid)->save();
-        return $drink;
+        $promo = new Promo();
+        $promo->fill($valid)->save();
+        return $promo;
     }
 
     /**
@@ -53,53 +49,50 @@ class DrinkController extends Controller
         if ($request->with) {
             $with = array_intersect(explode(',', strtolower($request->with)), self::$valid_withs);
         }
-        return Drink::with($with)->findOrFail($id);
+        return Promo::with($with)->findOrFail($id);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Drink $drink)
+    public function update(Request $request, Promo $promo)
     {
         $valid = $request->validate([
-            'name_en' => 'string|sometimes|unique:drinks,name_en',
-            'name_hu' => 'string|sometimes|unique:drinks,name_hu',
-            'category_id' => 'integer|sometimes',
-            'description_en' => 'string|sometimes|nullable',
-            'description_hu' => 'string|sometimes|nullable',
-            'active' => 'boolean|sometimes',
+            'start' => 'date|required',
+            'end' => 'date|sometimes|after:start',
+            'category_id' => 'integer|required',
         ]);
 
-        $drink->fill($valid)->save();
-        return $drink;
+        $promo->fill($valid)->save();
+        return $promo;
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Drink $drink)
+    public function destroy(Promo $promo)
     {
-        if ( $drink->delete()) return response()->noContent();
+        return $promo->delete();
     }
 
     public function scheme()
     {
-        $drink = Drink::firstOrNew();
+        $promo = Promo::firstOrNew();
 
         // if an existing record was found
-        if ($drink->exists) {
-            $drink = $drink->attributesToArray();
+        if ($promo->exists) {
+            $promo = $promo->attributesToArray();
         } else { // otherwise a new model instance was instantiated
             // get the column names for the table
-            $columns = Schema::getColumnListing($drink->getTable());
+            $columns = Schema::getColumnListing($promo->getTable());
 
             // create array where column names are keys, and values are null
             $columns = array_fill_keys($columns, null);
 
             // merge the populated values into the base array
-            $drink = array_merge($columns, $drink->attributesToArray());
+            $promo = array_merge($columns, $promo->attributesToArray());
         }
 
-        return $drink;
+        return $promo;
     }
 }

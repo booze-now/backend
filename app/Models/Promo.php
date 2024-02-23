@@ -10,6 +10,20 @@ class Promo extends Model
     use HasFactory;
 
     /**
+     * Fields
+     *
+     * unsignedBigInteger('promo_id');
+     * start: datetime
+     * end: ?datetime
+     * category_id: ?UnsignedBigInteger
+     *
+     * Relations
+     *
+     * promo_id => promo_types.id
+     * category_id => drink_categories.id
+     */
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
@@ -18,7 +32,7 @@ class Promo extends Model
         'promo_id',
         'start',
         'end',
-        'category',
+        'category_id',
     ];
 
     /**

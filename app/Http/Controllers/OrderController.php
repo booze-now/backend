@@ -53,11 +53,11 @@ class OrderController extends Controller
             'guest_id' => 'integer|required',
             'recorded_by' => 'integer|sometimes',
             'recorded_at' => 'datetime|sometimes',
-            'made_by' => 'integer|sometimes',
-            'made_at' => 'datetime|sometimes',
-            'served_by' => 'integer|sometimes',
-            'served_at' => 'datetime|sometimes',
-            'table' => 'string|sometimes',
+            'made_by' => 'integer|sometimes|nullable',
+            'made_at' => 'datetime|sometimes|nullable',
+            'served_by' => 'integer|sometimes|nullable',
+            'served_at' => 'datetime|sometimes|nullable',
+            'table' => 'string|sometimes|nullable',
         ]);
         $order = new Order();
         $order->fill($valid)->save();
@@ -86,11 +86,11 @@ class OrderController extends Controller
             'guest_id' => 'integer|required',
             'recorded_by' => 'integer|sometimes',
             'recorded_at' => 'datetime|sometimes',
-            'made_by' => 'integer|sometimes',
-            'made_at' => 'datetime|sometimes',
-            'served_by' => 'integer|sometimes',
-            'served_at' => 'datetime|sometimes',
-            'table' => 'string|sometimes',
+            'made_by' => 'integer|sometimes|nullable',
+            'made_at' => 'datetime|sometimes|nullable',
+            'served_by' => 'integer|sometimes|nullable',
+            'served_at' => 'datetime|sometimes|nullable',
+            'table' => 'string|sometimes|nullable',
         ]);
 
         $order->fill($valid)->save();

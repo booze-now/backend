@@ -12,7 +12,7 @@ class Employee extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    public const ROLES = [ //pincér', 'pultos', 'backoffice
+    public const ROLES = [ //'pincér', 'pultos', 'backoffice'
         'waiter',
         'bartender',
         'backoffice',
@@ -35,6 +35,9 @@ class Employee extends Authenticatable
         'active',
     ];
 
+    protected $appends = ['role'];
+
+
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -43,6 +46,9 @@ class Employee extends Authenticatable
     protected $hidden = [
         'password',
         'remember_token',
+        'email_verified_at',
+        'created_at',
+        'updated_at',
     ];
 
     /**
@@ -56,19 +62,23 @@ class Employee extends Authenticatable
         'active' => 'boolean',
     ];
 
-    public function scopeBartender($query) {
+    public function scopeBartender($query)
+    {
         return $query->where('role_code', Employee::BARTENDER);
     }
 
-    public function scopeWaiter($query) {
+    public function scopeWaiter($query)
+    {
         return $query->where('role_code', Employee::WAITER);
     }
 
-    public function scopeBackoffice($query) {
+    public function scopeBackoffice($query)
+    {
         return $query->where('role_code', Employee::BACKOFFICE);
     }
 
-    public function getRoleAttribute() {
+    public function getRoleAttribute()
+    {
         return __(Employee::ROLES[$this->role_code]);
     }
 }

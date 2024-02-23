@@ -16,11 +16,11 @@ return new class extends Migration
             $table->unsignedBigInteger('promo_id');
             $table->datetime('start');
             $table->datetime('end')->nullable();
-            $table->unsignedBigInteger('category')->nullable();
+            $table->unsignedBigInteger('category_id')->nullable();
             $table->timestamps();
 
             $table->foreign('promo_id')->references('id')->on('promo_types');
-            $table->foreign('category')->references('id')->on('drink_categories');
+            $table->foreign('category_id')->references('id')->on('drink_categories');
         });
     }
 
