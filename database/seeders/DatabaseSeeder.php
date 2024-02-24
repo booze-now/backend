@@ -15,15 +15,15 @@ class DatabaseSeeder extends Seeder
         $this->call([
             GuestSeeder::class,
             EmployeeSeeder::class,
-            DrinkCategorySeeder::class,
-            DrinkSeeder::class,
+            // DrinkCategorySeeder::class,
+            // DrinkSeeder::class,
         ]);
 
         // \App\Models\User::factory(10)->create();
 
-            // \App\Models\User::factory()->create([
-            //     'name' => 'Test User',
-            //     'email' => 'test@example.com',
-            // ]);
+        // \App\Models\User::factory()->create([
+        //     'name' => 'Test User',
+        //     'email' => 'test@example.com',
+        // ]);
     }
 }

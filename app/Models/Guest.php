@@ -3,16 +3,16 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
-
-use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
+use Tymon\JWTAuth\Contracts\JWTSubject;
 
-class Guest extends Authenticatable
+class Guest extends Authenticatable implements JWTSubject
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasFactory, Notifiable;
+
+    protected $guard = 'guard_guest';
 
     /**
      * Fields
@@ -56,6 +56,7 @@ class Guest extends Authenticatable
     protected $hidden = [
         'password',
         'remember_token',
+        'email_verified_at',
         'created_at',
         'updated_at',
     ];
@@ -83,5 +84,34 @@ class Guest extends Authenticatable
             ->whereNotNull("{$this->getTable()}.email_verified_at")
             ->whereNull("{$this->getTable()}.deleted_at")
             ->where("{$this->getTable()}.active", Guest::ACTIVE);
+    }
+
+    /**
+     * Get the identifier that will be stored in the subject claim of the JWT.
+     *
+     * @return mixed
+     */
+    public function getJWTIdentifier()
+    {
+        return $this->getKey();
+    }
+
+    /**
+     * Return a key value array, containing any custom claims to be added to the JWT.
+     *
+     * @return array
+     */
+    public function getJWTCustomClaims()
+    {
+        return [
+            'role' => 'guest'
+        ];
+
+    }
+
+    public function checkCustomClaims($claims)
+    {
+        echo json_encode($claims);
+        return $claims['role'] && $claims['role'] == 'guest';
     }
 }

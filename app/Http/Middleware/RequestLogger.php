@@ -29,9 +29,11 @@ class RequestLogger
             'Origin' => $request->header('host'),
         ];
 
-        Log::channel('requests')->info(json_encode($request->headers->all(), JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));
+        $header = $request->headers->all();
 
-        Log::channel('requests')->info($uuid . ":\n" . json_encode($data, JSON_UNESCAPED_SLASHES| JSON_PRETTY_PRINT));
+//        Log::channel('requests')->info(json_encode($request->headers->all(), JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));
+
+        Log::channel('requests')->info($uuid . ":\n" . json_encode(['data' => $data, 'header' => $header], JSON_UNESCAPED_SLASHES| JSON_PRETTY_PRINT));
 
         $ret = $next($request);
 

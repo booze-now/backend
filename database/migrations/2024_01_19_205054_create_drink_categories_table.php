@@ -28,8 +28,6 @@ return new class extends Migration
     public function down(): void
     {
         // Schema::disableForeignKeyConstraints();
-        // Schema::dropForeign('fk_parent');
-
         if (env('DB_CONNECTION') !== 'sqlite') {
             Schema::table('drink_categories', function (Blueprint $table) {
                 $table->dropForeign(['parent_id']);
