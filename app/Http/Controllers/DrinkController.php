@@ -117,8 +117,8 @@ class DrinkController extends Controller
 
         $tree = [];
 
-        foreach($categories as $cat) {
-            $cat = (object)($cat->toArray());
+        foreach($categories as $category) {
+            $cat = (object)($category->toArray());
 
             $cat->drinks = array_filter($drinks->toArray(), function ($d) use ($cat) {return $d['category_id'] == $cat->id;});
 
@@ -132,7 +132,5 @@ class DrinkController extends Controller
         }
 
         return $tree;
-
-
     }
 }
