@@ -105,15 +105,14 @@ class DrinkController extends Controller
 
     public function menu(Request $request)
     {
-        return Drink::get()->append('category_name')->append('units')->makeHidden(['category']);
+        return Drink::where('active', true)->get()->append('category_name')->append('units')->makeHidden(['category', 'active']);
 
     }
 
     public function menuTree(Request $request)
     {
         $categories = \App\Models\DrinkCategory::all();
-        $drinks = Drink::get()->append('category_name')->append('units')->makeHidden(['category']);
-
+        $drinks = Drink::where('active', true)->get()->append('category_name')->append('units')->makeHidden(['category', 'active']);
 
         $tree = [];
 
