@@ -119,7 +119,7 @@ class DrinkController extends Controller
         foreach($categories as $category) {
             $cat = (object)($category->toArray());
 
-            $cat->drinks = array_filter($drinks->toArray(), function ($d) use ($cat) {return $d['category_id'] == $cat->id;});
+            $cat->drinks = array_values(array_filter($drinks->toArray(), function ($d) use ($cat) {return $d['category_id'] == $cat->id;}));
 
             if ($cat->parent_id === null) {
                 $tree[$cat->id] = $cat;
