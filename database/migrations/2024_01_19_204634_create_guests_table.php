@@ -20,9 +20,16 @@ return new class extends Migration
             $table->string('table', 36)->nullable();
             $table->boolean('reservee')->nullable();
             $table->boolean('active')->default(false);
-            $table->rememberToken();
+            // $table->rememberToken();
             $table->timestamps();
+            $table->softDeletes();
         });
+        (new \App\Models\Guest())->fill([
+            'name' => 'zsolt-vendeg',
+            'email' => 'zschopper+guest@gmail.com',
+            'password' => 'Bo0ze-nOOOw!'
+
+        ])->save();
     }
 
     /**

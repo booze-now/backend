@@ -19,9 +19,19 @@ return new class extends Migration
             $table->string('password');
             $table->integer('role_code');  // CHECK ([role] IN ('pincér', 'pultos', 'backoffice'))
             $table->boolean('active')->default(true);
-            $table->rememberToken();
+            // $table->rememberToken();
             $table->timestamps();
+            $table->softDeletes();
         });
+
+
+        App\Models\Employee::create([
+            'name' => 'admin',
+            'email' => 'zschopper+admin@gmail.com',
+            'password' => 'Bo0ze-nOOOw!',
+            'role_code' => \App\Models\Employee::BACKOFFICE,
+            'active' => 1,
+        ]);
 
         (new \App\Models\Employee())->fill([
             'name' => 'StafAdmin',
@@ -30,7 +40,7 @@ return new class extends Migration
             'password' => 'StafAdminBo0ze-nOOOw!',
         ])->save();
     }
-    
+
 
     /**
      * Reverse the migrations.
