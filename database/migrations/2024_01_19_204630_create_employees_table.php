@@ -22,7 +22,15 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+        (new \App\Models\Employee())->fill([
+            'name' => 'StafAdmin',
+            'email' => 'StafAdmin@boozenow.hu',
+            'role_code'=>1,
+            'password' => 'StafAdminBo0ze-nOOOw!',
+        ])->save();
     }
+    
 
     /**
      * Reverse the migrations.
