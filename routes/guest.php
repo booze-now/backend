@@ -15,9 +15,7 @@ Route::get('/reset', [AuthController::class, 'reset'])->name('password.reset');
 Route::middleware(['auth:guard_guest', 'verify.jwt'])->group(function () {
 
     Route::post('/logout', [AuthController::class, 'logout']);
-
-    Route::get('/me', function (Request $request) {
-        return [$payload = auth()->payload(), Auth::user()];
-    });
+    Route::get('/me', [GuestController::class, 'me']);
+    Route::post('/update-self', [GuestController::class, 'updateSelf']);
 
 });
