@@ -30,10 +30,10 @@ class Drink extends Model
      * id <= drink_unit.drink_id
      */
 
-     public const INACTIVE = 0;
-     public const ACTIVE = 1;
+    public const INACTIVE = 0;
+    public const ACTIVE = 1;
 
-     /**
+    /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
@@ -124,5 +124,15 @@ class Drink extends Model
         $locale = app()->getLocale();
         $this->attributes["description_{$locale}"] = $value;
         return $this;
+    }
+
+    public function getCategoryNameAttribute()
+    {
+        return $this->category->name;
+    }
+
+    public function getUnitsAttribute()
+    {
+        return $this->units()->get()->makeHidden(['id', 'drink_id']);
     }
 }

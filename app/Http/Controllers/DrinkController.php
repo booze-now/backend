@@ -102,4 +102,37 @@ class DrinkController extends Controller
 
         return $drink;
     }
+
+    public function menu(Request $request)
+    {
+        return Drink::get()->append('category_name')->append('units')->makeHidden(['category']);
+
+    }
+
+    public function menuTree(Request $request)
+    {
+        $categories = \App\Models\DrinkCategory::all();
+        $drinks = Drink::get()->append('category_name')->append('units')->makeHidden(['category']);
+
+
+        $tree = [];
+
+        foreach($categories as $cat) {
+            $cat = (object)($cat->toArray());
+
+            $cat->drinks = array_filter($drinks->toArray(), function ($d) use ($cat) {return $d['category_id'] == $cat->id;});
+
+            if ($cat->parent_id === null) {
+                $tree[$cat->id] = $cat;
+                $cat->subcategory = [];
+            } else {
+                $tree[$cat->parent_id]->subcategory[$cat->id] = $cat;
+            }
+            unset($cat->parent_id);
+        }
+
+        return $tree;
+
+
+    }
 }
