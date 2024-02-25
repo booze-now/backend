@@ -4,13 +4,14 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 
 class Guest extends Authenticatable implements JWTSubject
 {
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, SoftDeletes;
 
     protected $guard = 'guard_guest';
 
@@ -59,6 +60,7 @@ class Guest extends Authenticatable implements JWTSubject
         'email_verified_at',
         'created_at',
         'updated_at',
+        'deleted_at',
     ];
 
     /**
@@ -106,7 +108,6 @@ class Guest extends Authenticatable implements JWTSubject
         return [
             'role' => 'guest'
         ];
-
     }
 
     public function checkCustomClaims($claims)

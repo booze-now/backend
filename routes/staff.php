@@ -21,6 +21,7 @@ Route::middleware(['auth:guard_employee', 'verify.jwt'])->group(function () {
 
     Route::get('drinks/scheme', [\App\Http\Controllers\DrinkController::class, 'scheme']);
     Route::apiResource('drinks', \App\Http\Controllers\DrinkController::class);
+    Route::apiResource('employees', \App\Http\Controllers\EmployeeController::class);
     Route::get('categories/{category}/drinks', [\App\Http\Controllers\DrinkCategoryController::class, 'drinks']);
     Route::apiResource('categories', \App\Http\Controllers\DrinkCategoryController::class);
     Route::apiResource('drink-units', \App\Http\Controllers\DrinkUnitController::class);
