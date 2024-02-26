@@ -10,6 +10,13 @@ class DrinkUnit extends Model
 {
     use HasFactory;
 
+
+    protected $dispatchesEvents = [
+        'created' => \App\Events\DrinkUnitCreated::class,
+        'updated' => \App\Events\DrinkUnitUpdated::class,
+        'deleted' => \App\Events\DrinkUnitDeleted::class,
+    ];
+
     /**
      * The attributes that are mass assignable.
      *

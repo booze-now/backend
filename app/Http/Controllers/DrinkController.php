@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Drink;
 use Illuminate\Validation\Rule;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Schema;
 
 class DrinkController extends Controller
@@ -40,6 +41,7 @@ class DrinkController extends Controller
         ]);
         $drink = new Drink();
         $drink->fill($valid)->save();
+        event(new \App\Events\DrinkCreated($drink));
         return $drink;
     }
 
@@ -71,6 +73,7 @@ class DrinkController extends Controller
         ]);
 
         $drink->fill($valid)->save();
+        event(new \App\Events\DrinkUpdated($drink));
         return $drink;
     }
 
@@ -79,7 +82,11 @@ class DrinkController extends Controller
      */
     public function destroy(Drink $drink)
     {
-        if ( $drink->delete()) return response()->noContent();
+        $id = $drink->id;
+        if ($drink->delete()) {
+            event(new \App\Events\DrinkDeleted(Drink::class, $id));
+            return response()->noContent();
+        }
     }
 
     public function scheme()
@@ -106,30 +113,40 @@ class DrinkController extends Controller
     public function menu(Request $request)
     {
         return Drink::where('active', true)->get()->append('category_name')->append('units')->makeHidden(['category', 'active']);
-
     }
 
     public function menuTree(Request $request)
     {
-        $categories = \App\Models\DrinkCategory::all();
-        $drinks = Drink::where('active', true)->get()->append('category_name')->append('units')->makeHidden(['category', 'active']);
+        $locale = app()->getLocale();
+        $cached = Cache::get("drink-menu-tree-{$locale}");
 
-        $tree = [];
+        if ($cached) {
+            $response = $cached;
+        } else {
+            $categories = \App\Models\DrinkCategory::all();
+            $drinks = Drink::where('active', true)->get()->append('category_name')->append('units')->makeHidden(['category', 'active']);
 
-        foreach($categories as $category) {
-            $cat = (object)($category->toArray());
+            $tree = [];
 
-            $cat->drinks = array_values(array_filter($drinks->toArray(), function ($d) use ($cat) {return $d['category_id'] == $cat->id;}));
+            foreach ($categories as $category) {
+                $cat = (object)($category->toArray());
 
-            if ($cat->parent_id === null) {
-                $tree[$cat->id] = $cat;
-                $cat->subcategory = [];
-            } else {
-                $tree[$cat->parent_id]->subcategory[$cat->id] = $cat;
+                $cat->drinks = array_values(array_filter($drinks->toArray(), function ($d) use ($cat) {
+                    return $d['category_id'] == $cat->id;
+                }));
+
+                if ($cat->parent_id === null) {
+                    $tree[$cat->id] = $cat;
+                    $cat->subcategory = [];
+                } else {
+                    $tree[$cat->parent_id]->subcategory[$cat->id] = $cat;
+                }
+                unset($cat->parent_id);
+                $response = $tree;
             }
-            unset($cat->parent_id);
+            Cache::put("drink-menu-tree-{$locale}", $response, 3600);
         }
 
-        return $tree;
+        return $response;
     }
 }

@@ -12,6 +12,12 @@ class DrinkCategory extends Model
 {
     use HasFactory;
 
+    protected $dispatchesEvents = [
+        'created' => \App\Events\DrinkCategoryCreated::class,
+        'updated' => \App\Events\DrinkCategoryUpdated::class,
+        'deleted' => \App\Events\DrinkCategoryDeleted::class,
+    ];
+
     /**
      * Fields
      *

@@ -19,6 +19,9 @@ Route::middleware(['auth:guard_employee', 'verify.jwt'])->group(function () {
     // Route::post('/email/verification-notification', [AuthController::class, 'verificationNotification']);
     Route::post('/logout', [AuthController::class, 'logout']);
 
+    Route::get('/menu', [\App\Http\Controllers\DrinkController::class, 'menu']);
+    Route::get('/menu-tree', [\App\Http\Controllers\DrinkController::class, 'menuTree']);
+
     Route::get('drinks/scheme', [\App\Http\Controllers\DrinkController::class, 'scheme']);
     Route::apiResource('drinks', \App\Http\Controllers\DrinkController::class);
     Route::apiResource('employees', \App\Http\Controllers\EmployeeController::class);

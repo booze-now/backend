@@ -18,6 +18,33 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+        \App\Events\DrinkCreated::class => [
+            \App\Listeners\InvalidateCache::class,
+        ],
+        \App\Events\DrinkUpdated::class => [
+            \App\Listeners\InvalidateCache::class,
+        ],
+        \App\Events\DrinkDeleted::class => [
+            \App\Listeners\InvalidateCache::class,
+        ],
+        \App\Events\DrinkCategoryCreated::class => [
+            \App\Listeners\InvalidateCache::class,
+        ],
+        \App\Events\DrinkCategoryUpdated::class => [
+            \App\Listeners\InvalidateCache::class,
+        ],
+        \App\Events\DrinkCategoryDeleted::class => [
+            \App\Listeners\InvalidateCache::class,
+        ],
+        \App\Events\DrinkUnitCreated::class => [
+            \App\Listeners\InvalidateCache::class,
+        ],
+        \App\Events\DrinkUnitUpdated::class => [
+            \App\Listeners\InvalidateCache::class,
+        ],
+        \App\Events\DrinkUnitDeleted::class => [
+            \App\Listeners\InvalidateCache::class,
+        ],
     ];
 
     /**
