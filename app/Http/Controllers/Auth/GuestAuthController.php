@@ -52,7 +52,7 @@ class GuestAuthController extends Controller
     {
         # When access token will be expired, we are going to generate a new one wit this function
         # and return it here in response
-        return $this->respondWithToken(auth()->refresh());
+        return $this->respondWithToken(Auth::refresh());
     }
 
    /**
@@ -69,7 +69,7 @@ class GuestAuthController extends Controller
         return response()->json([
             'access_token' => $token,
             'token_type' => 'bearer',
-            'expires_in' => auth()->factory()->getTTL() * 60
+            'expires_in' => Auth::factory()->getTTL() * 60
         ]);
     }
 
