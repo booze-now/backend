@@ -29,22 +29,28 @@ class DrinkControllerTest extends TestCase
     protected $employee;
     protected $guest;
 
+    public function actingAs(\Illuminate\Contracts\Auth\Authenticatable $user, $guard = null) {
+        $ret = parent::actingAs($user, $guard);
+        $token = Auth::tokenById($this->employee->id);
+        $this->withHeaders([
+            'Authorization' => "Bearer $token",
+        ]);
+
+        return $ret;
+    }
+
     protected function setUp(): void
     {
         parent::setUp();
-        echo "\nsetup\n";
+        echo "\nRunning: {$this->name()}\n";
         DB::connection()->getSchemaBuilder()->enableForeignKeyConstraints();
         // Create a user for authentication
         $this->employee = \App\Models\Employee::factory()->create();
-
         $this->guest = \App\Models\Guest::factory()->create();
     }
     public function test_we_can_create_drink_category(): void
     {
-
-        $this->actingAs($this->employee, 'employee');
-        // echo json_encode($this->employee);
-        Auth::shouldUse('employee');
+        $this->actingAs($this->employee, 'guard_employee');
 
         self::$sampleDrink = (object)([
             'id' => null,
@@ -63,7 +69,6 @@ class DrinkControllerTest extends TestCase
             'name_en' => self::$sampleDrink->category->name_en,
             'name_hu' => self::$sampleDrink->category->name_hu,
         ]);
-        // echo $response->getContent();
         $response->assertStatus(201);
         $category = DrinkCategory::get()->last();
         self::$sampleDrink->category->id = $category->id;
@@ -71,9 +76,8 @@ class DrinkControllerTest extends TestCase
 
     public function test_we_can_create_drink(): void
     {
-        // echo $this->employee->name;
 
-        $this->actingAs($this->employee);
+        $this->actingAs($this->employee, 'guard_employee');
         $category = DrinkCategory::factory()->create();
 
         $response = $this->post('/api/staff/drinks', [
@@ -81,7 +85,7 @@ class DrinkControllerTest extends TestCase
             'name_hu' => self::$sampleDrink->name_hu,
             'description_en' => self::$sampleDrink->description_en,
             'description_hu' => self::$sampleDrink->description_hu,
-            'category_id' => $category->id,// self::$sampleDrink->category->id,
+            'category_id' => $category->id,
         ]);
 
         $response->assertStatus(201);
@@ -89,7 +93,7 @@ class DrinkControllerTest extends TestCase
     }
     public function test_index()
     {
-        $this->actingAs($this->employee);
+        $this->actingAs($this->employee, 'guard_employee');
 
         $response = $this->get('/api/staff/drinks');
         $response->assertStatus(200);
@@ -97,9 +101,8 @@ class DrinkControllerTest extends TestCase
 
     public function test_store()
     {
-        $this->actingAs($this->employee);
+        $this->actingAs($this->employee, 'guard_employee');
         $category = DrinkCategory::factory()->create();
-        // echo json_encode($category);
 
         $drinkData = [
             'name_en' => 'Test Drink',
@@ -114,6 +117,7 @@ class DrinkControllerTest extends TestCase
 
     public function test_show()
     {
+        $this->actingAs($this->employee, 'guard_employee');
         $drink = \App\Models\Drink::factory()->create();
 
         $response = $this->get("/api/staff/drinks/{$drink->id}");
@@ -122,12 +126,12 @@ class DrinkControllerTest extends TestCase
 
     public function test_update()
     {
+        $this->actingAs($this->employee, 'guard_employee');
         $drink = \App\Models\Drink::factory()->create();
 
         $updatedData = [
             'name_en' => 'Updated Name',
             'active' => false
-            // Add more data as needed
         ];
 
         $response = $this->put("/api/staff/drinks/{$drink->id}", $updatedData);
@@ -136,6 +140,7 @@ class DrinkControllerTest extends TestCase
 
     public function test_destroy()
     {
+        $this->actingAs($this->employee, 'guard_employee');
         $drink = \App\Models\Drink::factory()->create();
 
         $response = $this->delete("/api/staff/drinks/{$drink->id}");
@@ -144,6 +149,7 @@ class DrinkControllerTest extends TestCase
 
     public function test_scheme()
     {
+        $this->actingAs($this->employee, 'guard_employee');
         $response = $this->get('/api/staff/drinks/scheme');
         $response->assertStatus(200);
     }
