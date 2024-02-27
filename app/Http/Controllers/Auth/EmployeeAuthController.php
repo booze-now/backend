@@ -51,7 +51,7 @@ class EmployeeAuthController extends Controller
     {
         # When access token will be expired, we are going to generate a new one wit this function
         # and return it here in response
-        return $this->respondWithToken(auth()->refresh());
+        return $this->respondWithToken(Auth::refresh());
     }
 
    /**
@@ -66,9 +66,10 @@ class EmployeeAuthController extends Controller
         # This function is used to make JSON response with new
         # access token of current user
         return response()->json([
+            'user' => auth()->user(),
             'access_token' => $token,
             'token_type' => 'bearer',
-            'expires_in' => auth()->factory()->getTTL() * 60
+            'expires_in' => Auth::factory()->getTTL() * 60
         ]);
     }
 
