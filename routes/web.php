@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/token', function () {
+    return request()->session()->token();
+});
+
+
 Route::get('/', function () {
     return ['Laravel' => app()->version()];
 });
