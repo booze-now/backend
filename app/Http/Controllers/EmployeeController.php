@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Employee;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Validation\Rule;
 
@@ -115,4 +117,40 @@ class EmployeeController extends Controller
 
         return $employee;
     }
+
+    public function me(Request $request) {
+        $payload = Auth::payload()->toArray();
+        $payload['refresh_ttl'] = $payload['iat'] + Config::get('jwt.refresh_ttl') * 60;
+        $payload['iat_dt'] = gmdate("Y-m-d\TH:i:s\Z", intval($payload['iat']));
+        $payload['exp_dt'] = gmdate("Y-m-d\TH:i:s\Z", intval($payload['exp']));
+        $payload['refresh_ttl_dt'] = gmdate("Y-m-d\TH:i:s\Z", intval($payload['refresh_ttl']));
+        // $payload
+
+        return [$payload, Auth::user()->makeVisible(['created_at'])];
+    }
+
+    public function updateSelf(Request $request)
+    {
+        $guest = Employee::find(Auth::user()->id);
+        $valid = $request->validate([
+            'name' => 'string|sometimes|required',
+            'email' => 'prohibited',
+            'active' => 'prohibited',
+            'password' => [
+                'string',
+                'required',
+                'confirmed',
+                'sometimes',
+                'min:10',             // legalább 10 karakter hosszú
+                'regex:/[a-z]/',      // legalább egy kisbetű
+                'regex:/[A-Z]/',      // legalább egy nagybetű
+                'regex:/[0-9]/',      // legalább egy számjegy
+                'regex:/[@+\-\.$!%*#?&]/', // legalább egy speciális karakter
+            ],
+        ]);
+
+        $guest->fill($valid)->save();
+        return $guest;
+    }
+
 }

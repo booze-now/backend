@@ -13,6 +13,7 @@ Route::post('/confirm-password', [AuthController::class, 'confirmPassword']);
 Route::get('/reset', [AuthController::class, 'reset'])->name('password.reset');
 
 
+Route::get('/refresh', [AuthController::class, 'refresh'])->middleware(['refresh.jwt']);
 Route::middleware(['auth:guard_employee', 'verify.jwt'])->group(function () {
     // Route::post('/reset-password', [AuthController::class, 'resetPassword']);
     // Route::get('/verify-email/{id}/{hash}', [AuthController::class, 'verifyEmail']);
@@ -29,8 +30,5 @@ Route::middleware(['auth:guard_employee', 'verify.jwt'])->group(function () {
     Route::get('categories/{category}/drinks', [\App\Http\Controllers\DrinkCategoryController::class, 'drinks']);
     Route::apiResource('categories', \App\Http\Controllers\DrinkCategoryController::class);
     Route::apiResource('drink-units', \App\Http\Controllers\DrinkUnitController::class);
-    Route::get('/me', function (Request $request) {
-        return [$payload = auth()->payload(), Auth::user()];
-    });
-
+    Route::get('/me', [\App\Http\Controllers\EmployeeController::class, 'me']);
 });

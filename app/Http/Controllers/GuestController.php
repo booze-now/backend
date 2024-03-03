@@ -78,32 +78,6 @@ class GuestController extends Controller
         $guest->fill($valid)->save();
         return $guest;
     }
-    public function me(Request $request) {
-        return Auth::user()->makeVisible(['created_at']);
-    }
-    public function updateSelf(Request $request)
-    {
-        $guest = Guest::find(Auth::user()->id);
-        $valid = $request->validate([
-            'name' => 'string|sometimes|required',
-            'email' => 'prohibited',
-            'active' => 'prohibited',
-            'password' => [
-                'string',
-                'required',
-                'confirmed',
-                'sometimes',
-                'min:10',             // legalább 10 karakter hosszú
-                'regex:/[a-z]/',      // legalább egy kisbetű
-                'regex:/[A-Z]/',      // legalább egy nagybetű
-                'regex:/[0-9]/',      // legalább egy számjegy
-                'regex:/[@+\-\.$!%*#?&]/', // legalább egy speciális karakter
-            ],
-        ]);
-
-        $guest->fill($valid)->save();
-        return $guest;
-    }
 
     /**
      * Remove the specified resource from storage.
@@ -134,4 +108,33 @@ class GuestController extends Controller
 
         return $guest;
     }
+
+    public function me(Request $request) {
+        return Auth::user()->makeVisible(['created_at']);
+    }
+
+    public function updateSelf(Request $request)
+    {
+        $guest = Guest::find(Auth::user()->id);
+        $valid = $request->validate([
+            'name' => 'string|sometimes|required',
+            'email' => 'prohibited',
+            'active' => 'prohibited',
+            'password' => [
+                'string',
+                'required',
+                'confirmed',
+                'sometimes',
+                'min:10',             // legalább 10 karakter hosszú
+                'regex:/[a-z]/',      // legalább egy kisbetű
+                'regex:/[A-Z]/',      // legalább egy nagybetű
+                'regex:/[0-9]/',      // legalább egy számjegy
+                'regex:/[@+\-\.$!%*#?&]/', // legalább egy speciális karakter
+            ],
+        ]);
+
+        $guest->fill($valid)->save();
+        return $guest;
+    }
+
 }
