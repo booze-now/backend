@@ -21,10 +21,8 @@ class RefreshJWTToken
     {
         $payload = Auth::payload();
         $refresh_ttl =  $payload['ttl'] + Config::get('jwt.refresh_ttl') * 60;
-        return response()->json($refresh_ttl ."<". time());
         if ($refresh_ttl < time())
         {
-
             // new TokenExpiredException("Token expired", 401);
         }
         $ret = Auth::setTTL(7200)->check();
