@@ -10,7 +10,7 @@ Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/forgot-password', [AuthController::class, 'forgotPassword']);
 Route::post('/confirm-password', [AuthController::class, 'confirmPassword']);
-Route::get('/reset', [AuthController::class, 'reset'])->name('password.reset');
+Route::get('/reset', [AuthController::class, 'reset']);
 Route::get('/drinks', [\App\Http\Controllers\DrinkController::class, 'index']);
 Route::get('/menu', [\App\Http\Controllers\DrinkController::class, 'menu']);
 Route::get('/menu-tree', [\App\Http\Controllers\DrinkController::class, 'menuTree']);
