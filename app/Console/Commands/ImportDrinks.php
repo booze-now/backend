@@ -36,7 +36,6 @@ class ImportDrinks extends Command
             return;
         }
 
-        // $jsonContents = file_get_contents($filePath);
         $jsonContents = File::get($filePath);
         $drinks = json_decode($jsonContents);
 
@@ -45,7 +44,9 @@ class ImportDrinks extends Command
             foreach ($drinks as $data) {
                 $category = DrinkCategory::firstOrCreate(['name_en' => $data->category_en]);
 
-                $drink = Drink::create([
+                $drink = Drink::firstOrCreate([
+                    'name_en' => $data->en
+                ], [
                     'name_en' => $data->en,
                     'name_hu' => $data->hu,
                     'description_en' => $data->description_en ?? null,
@@ -55,7 +56,11 @@ class ImportDrinks extends Command
                 ]);
 
                 foreach ($data->units as $unit) {
-                    DrinkUnit::create([
+                    DrinkUnit::firstOrCreate([
+                        'drink_id' => $drink->id,
+                        'amount' => $unit->amount,
+                        'unit_en' => $unit->unit_en,
+                    ], [
                         'drink_id' => $drink->id,
                         'amount' => $unit->amount,
                         'unit_en' => $unit->unit_en,

@@ -36,7 +36,6 @@ class ImportCategories extends Command
             return;
         }
 
-        // $jsonContents = file_get_contents($filePath);
         $jsonContents = File::get($filePath);
         $categories = json_decode($jsonContents);
 
@@ -55,7 +54,9 @@ class ImportCategories extends Command
     {
         foreach ($categories as $key => $value) {
 
-            $drink = DrinkCategory::create([
+            $drink = DrinkCategory::firstOrCreate([
+                'name_en' => $value->en
+            ], [
                 'name_en' => $value->en,
                 'name_hu' => $value->hu,
                 'parent_id' => $parent_id,
@@ -66,7 +67,4 @@ class ImportCategories extends Command
             }
         }
     }
-
-
-
 }
