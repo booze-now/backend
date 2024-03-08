@@ -14,7 +14,7 @@ Route::get('/reset', [AuthController::class, 'reset']);
 
 
 Route::get('/refresh', [AuthController::class, 'refresh'])->middleware(['refresh.jwt']);
-Route::middleware(['auth:guard_employee', 'verify.jwt'])->group(function () {
+Route::middleware(['auth:guard_employee'])->group(function () {
     // Route::post('/reset-password', [AuthController::class, 'resetPassword']);
     // Route::get('/verify-email/{id}/{hash}', [AuthController::class, 'verifyEmail']);
     // Route::post('/email/verification-notification', [AuthController::class, 'verificationNotification']);

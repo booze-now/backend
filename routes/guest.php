@@ -15,10 +15,8 @@ Route::get('/drinks', [\App\Http\Controllers\DrinkController::class, 'index']);
 Route::get('/menu', [\App\Http\Controllers\DrinkController::class, 'menu']);
 Route::get('/menu-tree', [\App\Http\Controllers\DrinkController::class, 'menuTree']);
 
-Route::middleware(['auth:guard_guest', 'verify.jwt'])->group(function () {
-
+Route::middleware(['auth:guard_guest'])->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::get('/me', [GuestController::class, 'me']);
     Route::post('/update-self', [GuestController::class, 'updateSelf']);
-
 });

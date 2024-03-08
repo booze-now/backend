@@ -66,6 +66,7 @@ class GuestAuthController extends Controller
     {
         # This function is used to make JSON response with new
         # access token of current user
+
         return response()->json([
             'user' => auth()->user(),
             'access_token' => $token,

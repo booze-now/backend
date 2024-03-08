@@ -29,7 +29,11 @@ class RequestLogger
             'Origin' => $request->header('host'),
         ];
 
-        $header = $request->headers->all();
+        // $header = $request->headers->all();
+
+        $header = collect($request->header())->transform(function ($item) {
+            return $item[0];
+        });
 
 //        Log::channel('requests')->info(json_encode($request->headers->all(), JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));
 

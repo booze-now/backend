@@ -124,7 +124,6 @@ class EmployeeController extends Controller
         $payload['iat_dt'] = gmdate("Y-m-d\TH:i:s\Z", intval($payload['iat']));
         $payload['exp_dt'] = gmdate("Y-m-d\TH:i:s\Z", intval($payload['exp']));
         $payload['refresh_ttl_dt'] = gmdate("Y-m-d\TH:i:s\Z", intval($payload['refresh_ttl']));
-        // $payload
 
         return [$payload, Auth::user()->makeVisible(['created_at'])];
     }
