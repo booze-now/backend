@@ -19,12 +19,13 @@ class Employee extends Authenticatable implements JWTSubject
         'waiter',
         'bartender',
         'backoffice',
+        'admin',
     ];
 
     public const WAITER = 0;
     public const BARTENDER = 1;
     public const BACKOFFICE = 2;
-
+    public const ADMIN = 3;
     /**
      * The attributes that are mass assignable.
      *
@@ -79,6 +80,10 @@ class Employee extends Authenticatable implements JWTSubject
     public function scopeBackoffice($query)
     {
         return $query->where('role_code', Employee::BACKOFFICE);
+    }
+    public function scopeAdmin($query)
+    {
+        return $query->where('role_code', Employee::ADMIN);
     }
 
     public function getRoleAttribute()
