@@ -125,7 +125,7 @@ class EmployeeController extends Controller
         $payload['exp_dt'] = gmdate("Y-m-d\TH:i:s\Z", intval($payload['exp']));
         $payload['refresh_ttl_dt'] = gmdate("Y-m-d\TH:i:s\Z", intval($payload['refresh_ttl']));
 
-        return [$payload, Auth::user()->makeVisible(['created_at'])];
+        return [Auth::user()->makeVisible(['created_at'])];
     }
 
     public function updateSelf(Request $request)
