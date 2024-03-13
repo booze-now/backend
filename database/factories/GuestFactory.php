@@ -23,13 +23,15 @@ class GuestFactory extends Factory
 
         $last_name = fake()->lastName();
         $last_name .= rand(0, 4) ? '' : '-' . fake()->lastName();
-
         $first_name = fake()->firstName($gender);
         $middle_name = rand(0, 1) ? fake()->firstName($gender) : '';
+
         $name = implode(' ', array_filter([$last_name, $first_name, $middle_name]));
         $email = strtolower(str_replace(' ', '.', StrUtils::stripAccents($name))) . '@example.com';
         return [
-            'name' => $name,
+            'first_name' => $first_name,
+            'middle_name' => $middle_name,
+            'last_name' => $last_name,
             'email' => $email,
             'password' => Hash::make('Password1!'),
             'table' => null,
