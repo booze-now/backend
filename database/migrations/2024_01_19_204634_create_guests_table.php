@@ -13,8 +13,10 @@ return new class extends Migration
     {
         Schema::create('guests', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
+            $table->string('first_name', 32);
+            $table->string('middle_name', 32);
+            $table->string('last_name', 32);
+            $table->string('email', 64)->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('table', 36)->nullable();
@@ -25,7 +27,9 @@ return new class extends Migration
             $table->softDeletes();
         });
         (new \App\Models\Guest())->fill([
-            'name' => 'zsolt-vendeg',
+            'first_name' => 'Zsolt',
+            'middle_name' => 'Guest',
+            'last_name' => 'Schopper',
             'email' => 'zschopper+guest@gmail.com',
             'password' => 'Bo0ze-nOOOw!'
 

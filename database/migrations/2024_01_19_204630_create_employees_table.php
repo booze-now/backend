@@ -13,8 +13,10 @@ return new class extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
+            $table->string('first_name', 32);
+            $table->string('middle_name', 32);
+            $table->string('last_name', 32);
+            $table->string('email', 64)->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->integer('role_code');  // CHECK ([role] IN ('pincér', 'pultos', 'backoffice'))
@@ -24,9 +26,10 @@ return new class extends Migration
             $table->softDeletes();
         });
 
-
         App\Models\Employee::create([
-            'name' => 'admin',
+            'first_name' => 'Zsolt',
+            'middle_name' => 'Admin',
+            'last_name' => 'Schopper',
             'email' => 'zschopper+admin@gmail.com',
             'password' => 'Bo0ze-nOOOw!',
             'role_code' => \App\Models\Employee::BACKOFFICE,
@@ -34,7 +37,9 @@ return new class extends Migration
         ]);
 
         (new \App\Models\Employee())->fill([
-            'name' => 'StafAdmin',
+            'first_name' => 'StafAdmin',
+            'middle_name' => 'StafAdmin',
+            'last_name' => 'StafAdmin',
             'email' => 'StafAdmin@boozenow.hu',
             'role_code'=>1,
             'password' => 'StafAdminBo0ze-nOOOw!',

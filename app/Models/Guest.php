@@ -17,8 +17,9 @@ class Guest extends Authenticatable implements JWTSubject
 
     /**
      * Fields
-     *
-     * name: string
+     * first_name: string
+     * middle_name: string
+     * last_name: string
      * email: string
      * email_verified_at: ?timestamp
      * password: string
@@ -41,7 +42,9 @@ class Guest extends Authenticatable implements JWTSubject
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'first_name',
+        'middle_name',
+        'last_name',
         'email',
         'password',
         'table',
@@ -86,6 +89,23 @@ class Guest extends Authenticatable implements JWTSubject
             ->whereNotNull("{$this->getTable()}.email_verified_at")
             ->whereNull("{$this->getTable()}.deleted_at")
             ->where("{$this->getTable()}.active", Guest::ACTIVE);
+    }
+
+    public function getNameAttribute()
+    {
+        $locale = App::currentLocale();
+        $order = Config::get("regional.{$locale}.name_format");
+        $items = [];
+        foreach ($order as $name) {
+            if ($name) {
+                if ($name === strtoupper($name)) {
+                    $items[] = strtoupper($this->{strtolower($name)}) . ',';
+                } else {
+                    $items[] = $this->{$name};
+                }
+            }
+        }
+        return implode(' ', $items);
     }
 
     /**

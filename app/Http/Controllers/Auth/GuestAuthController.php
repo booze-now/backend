@@ -148,13 +148,17 @@ class GuestAuthController extends Controller
     public function register(Request $request): Response
     {
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
+            'first_name' => ['required', 'string', 'max:255'],
+            'middle_name' => ['string', 'max:255'],
+            'last_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . Guest::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
         $guest = Guest::create([
-            'name' => $request->name,
+            'first_name' => $request->first_name,
+            'middle_name' => $request->middle_name,
+            'last_name' => $request->last_name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
@@ -185,7 +189,7 @@ class GuestAuthController extends Controller
 
     }
 
-public function reset()
+    public function reset()
     {
         # When access token will be expired, we are going to generate a new one wit this function
         # and return it here in response

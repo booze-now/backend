@@ -22,13 +22,15 @@ class EmployeeFactory extends Factory
 
         $last_name = fake()->lastName();
         $last_name .= rand(0, 4) ? '' : '-' . fake()->lastName();
-
         $first_name = fake()->firstName($gender);
         $middle_name = rand(0, 1) ? fake()->firstName($gender) : '';
+
         $name = implode(' ', array_filter([$last_name, $first_name, $middle_name]));
         $email = strtolower(str_replace(' ', '.', StrUtils::stripAccents($name))) . '@boozenow.hu';
         return [
-            'name' => $name,
+            'first_name' => $first_name,
+            'middle_name' => $middle_name,
+            'last_name' => $last_name,
             'email' => $email,
             'password' => 'Password1!',
             'role_code' => rand(0, 2),

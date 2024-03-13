@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -14,6 +13,24 @@ class Employee extends Authenticatable implements JWTSubject
     use HasFactory, Notifiable, SoftDeletes;
 
     protected $guard = 'guard_employee';
+
+    /**
+     * Fields
+     * first_name: string
+     * middle_name: string
+     * last_name: string
+     * email: string
+     * email_verified_at: ?timestamp
+     * password: string
+     * role_code: integer    // CHECK ([role] IN ('pincér', 'pultos', 'backoffice'))
+     * active: boolean=true
+     *
+     * Relations
+     *
+     * email ux
+     * id <= order.guest_id
+     * id <= receipt.guest_id
+     */
 
     public const ROLES = [ //'pincér', 'pultos', 'backoffice'
         'waiter',
@@ -32,14 +49,16 @@ class Employee extends Authenticatable implements JWTSubject
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'first_name',
+        'middle_name',
+        'last_name',
         'email',
         'password',
         'role_code',
         'active',
     ];
 
-    protected $appends = ['role'];
+    protected $appends = ['role', 'name'];
 
 
     /**
@@ -81,6 +100,7 @@ class Employee extends Authenticatable implements JWTSubject
     {
         return $query->where('role_code', Employee::BACKOFFICE);
     }
+
     public function scopeAdmin($query)
     {
         return $query->where('role_code', Employee::ADMIN);
@@ -89,6 +109,23 @@ class Employee extends Authenticatable implements JWTSubject
     public function getRoleAttribute()
     {
         return __(Employee::ROLES[$this->role_code]);
+    }
+
+    public function getNameAttribute()
+    {
+        $locale = App::currentLocale();
+        $order = Config::get("regional.{$locale}.name_format");
+        $items = [];
+        foreach ($order as $name) {
+            if ($name) {
+                if ($name === strtoupper($name)) {
+                    $items[] = strtoupper($this->{strtolower($name)}) . ',';
+                } else {
+                    $items[] = $this->{$name};
+                }
+            }
+        }
+        return implode(' ', $items);
     }
 
     /**
