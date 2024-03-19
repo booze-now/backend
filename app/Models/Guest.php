@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Config;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 
 class Guest extends Authenticatable implements JWTSubject, MustVerifyEmail
@@ -51,6 +53,8 @@ class Guest extends Authenticatable implements JWTSubject, MustVerifyEmail
         'reservee',
         'active',
     ];
+
+    protected $appends = ['name'];
 
     /**
      * The attributes that should be hidden for serialization.
