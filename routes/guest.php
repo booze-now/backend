@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Auth\GuestAuthController as AuthController;
+use App\Http\Controllers\DrinkController;
 use App\Http\Controllers\GuestController as GuestController;
 
 Route::post('/register', [AuthController::class, 'register']);
@@ -14,6 +15,9 @@ Route::get('/reset', [AuthController::class, 'reset']);
 Route::get('/drinks', [\App\Http\Controllers\DrinkController::class, 'index']);
 Route::get('/menu', [\App\Http\Controllers\DrinkController::class, 'menu']);
 Route::get('/menu-tree', [\App\Http\Controllers\DrinkController::class, 'menuTree']);
+
+Route::get('/drinks', [DrinkController::class, 'index']);
+Route::get('/drinks/{drink}', [DrinkController::class, 'show']);
 
 Route::middleware(['auth:guard_guest'])->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
