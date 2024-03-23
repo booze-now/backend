@@ -27,6 +27,7 @@ class Guest extends Authenticatable implements JWTSubject, MustVerifyEmail
      * password: string
      * table: ?string
      * reservee: ?boolean
+     * picture: ?string
      * active: boolean=false
      *
      * Relations
@@ -51,6 +52,7 @@ class Guest extends Authenticatable implements JWTSubject, MustVerifyEmail
         'password',
         'table',
         'reservee',
+        'picture',
         'active',
     ];
 

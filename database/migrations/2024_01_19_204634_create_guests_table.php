@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('table', 36)->nullable();
             $table->boolean('reservee')->nullable();
+            $table->string('picture', 64)->nullable();
             $table->boolean('active')->default(false);
             // $table->rememberToken();
             $table->timestamps();

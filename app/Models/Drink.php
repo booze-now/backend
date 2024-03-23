@@ -26,6 +26,7 @@ class Drink extends Model
      * category_id: integer
      * description_en: ?string
      * description_hu: ?string
+     * picture: ?string
      * active: boolean=true
      *
      * Relations
@@ -50,6 +51,7 @@ class Drink extends Model
         'category_id',
         'description_en',
         'description_hu',
+        'picture',
         'active',
     ];
 
