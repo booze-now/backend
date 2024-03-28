@@ -37,6 +37,9 @@ class GuestAuthController extends Controller
         return $this->respondWithToken($token);
     }
 
+    /**
+     * Handle logout.
+     */
     public function logout(Request $request)
     {
         Auth::logout(true); # This is just logout function that will destroy access token of current user
@@ -55,7 +58,7 @@ class GuestAuthController extends Controller
         return $this->respondWithToken(Auth::refresh());
     }
 
-   /**
+    /**
      * Get the token array structure.
      *
      * @param  string $token
@@ -189,9 +192,24 @@ class GuestAuthController extends Controller
 
     }
 
+    public function resendEmailVerificationMail(Request $request)
+    {
+        $request->validate([
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255'],
+        ]);
+        $guest = Guest::where('email', $request->email)
+            ->whereNull('email_verified_at')->first();
+        if ($guest) {
+            $guest->sendEmailVerificationNotification();
+        }
+        return ['message' => __('We have received your request. ' .
+            'If there is an unconfirmed registration associated with the provided email address, ' .
+            'we have sent a confirmation email. Please check your inbox, including the spam or promotions folder.')];
+    }
+
     public function reset()
     {
-        # When access token will be expired, we are going to generate a new one wit this function
+        # When access token will be expired, we are going to generate a new one with this function
         # and return it here in response
         return request()->all();
     }

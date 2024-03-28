@@ -9,12 +9,16 @@ use App\Http\Controllers\GuestController as GuestController;
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
-Route::post('/forgot-password', [AuthController::class, 'forgotPassword']);
-Route::post('/confirm-password', [AuthController::class, 'confirmPassword']);
-Route::get('/reset', [AuthController::class, 'reset']);
-Route::get('/drinks', [\App\Http\Controllers\DrinkController::class, 'index']);
-Route::get('/menu', [\App\Http\Controllers\DrinkController::class, 'menu']);
-Route::get('/menu-tree', [\App\Http\Controllers\DrinkController::class, 'menuTree']);
+Route::post('/forgot-password', [AuthController::class, 'forgotPassword']); // +elfelejtett jelszó emlékeztető levél küldés
+Route::post('/confirm-password', [AuthController::class, 'confirmPassword']); // +elfelejtett jelszó, változtatás
+Route::get('/reset', [AuthController::class, 'reset']); // jelszó reset link request
+Route::post('/verify/resend', [AuthController::class, 'resendEmailVerificationMail'])
+    ->middleware(['throttle:6,1']);
+
+Route::get('/refresh', [AuthController::class, 'refresh'])->middleware(['refresh.jwt']); // token frissítés
+
+Route::get('/menu', [DrinkController::class, 'menu']);
+Route::get('/menu-tree', [DrinkController::class, 'menuTree']);
 
 Route::get('/drinks', [DrinkController::class, 'index']);
 Route::get('/drinks/{drink}', [DrinkController::class, 'show']);

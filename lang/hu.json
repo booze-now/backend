@@ -21,5 +21,6 @@
     "If you're having trouble clicking the \":actionText\" button, copy and paste the URL below\ninto your web browser:": "Ha gondot jelent a \":actionText\" gombra való kattintás, másolja és illessze be az alábbi URL-t\na webböngészőjébe:",
     "Regards": "Üdvözlettel",
     "All rights reserved.": "Minden jog fenntartva.",
-    "Please click the button below to verify your email address.": "Kérjük, kattintson az alábbi gombra az e-mail címének megerősítéséhez."
+    "Please click the button below to verify your email address.": "Kérjük, kattintson az alábbi gombra az e-mail címének megerősítéséhez.",
+    "We have received your request. If there is an unconfirmed registration associated with the provided email address, we have sent a confirmation email. Please check your inbox, including the spam or promotions folder.": "Kérésedet rögzítettük. Ha a megadott email címhez tartozik aktiválatlan regisztráció, elküldtünk egy megerősítő emailt. Kérjük, ellenőrizd a beérkező leveleidet, beleértve a spam vagy promóciós mappát is."
 }
