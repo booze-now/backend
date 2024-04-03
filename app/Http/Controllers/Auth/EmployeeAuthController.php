@@ -30,7 +30,7 @@ class EmployeeAuthController extends Controller
         $credentials = request(['email', 'password']);
 
         if (!$token = Auth::attempt($credentials)) {
-            return response()->json(['error' => __('Unauthorized?')], 401);
+            return response()->json(['message' => __('Unauthorized?')], 401);
         }
 
         return $this->respondWithToken($token);
