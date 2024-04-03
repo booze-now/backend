@@ -8,14 +8,20 @@ use App\Models\Guest;
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Events\Verified;
+use Illuminate\Auth\Notifications\ResetPassword;
+use Illuminate\Auth\Notifications\VerifyEmail;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rules;
 use Illuminate\Validation\ValidationException;
+use Illuminate\Auth\Notifications\ResetPassword as ResetPasswordNotification;
 
 
 class GuestAuthController extends Controller
@@ -92,6 +98,28 @@ class GuestAuthController extends Controller
         // We will send the password reset link to this user. Once we have attempted
         // to send the link, we will examine the response then see the message we
         // need to show to the user. Finally, we'll send out a proper response.
+
+        $guest = Guest::where(['email', $request->email])->get();
+
+        if ($guest === null) {
+            return response()->json(['error' => __('Invalid data #3')], 401);
+        }
+
+        ResetPassword::$createUrlCallback = function ($notifiable) {
+            $data = json_decode($notifiable->data, JSON_OBJECT_AS_ARRAY);
+            $guid = Str::uuid()->toString();
+            $data['reset_password_guid'] = $guid;
+            $notifiable->data = $data;
+            $notifiable->save();
+
+            // Log::info('notif: ' . var_export($notifiable, true));
+            return implode('/', [Config::get('app.frontend_url'), 'reset-password', $notifiable->id, $guid]);
+        };
+
+        // $this->notify(new ResetPasswordNotification($url));
+        // $user->sendPasswordResetNotification('');
+        // return static::RESET_LINK_SENT;
+
         $status = Password::broker('guests')->sendResetLink(
             $request->only('email')
         );
@@ -106,41 +134,42 @@ class GuestAuthController extends Controller
     }
 
     /**
-     * Handle an incoming new password request.
+     * Handle an incoming reset password request.
      *
      * @throws \Illuminate\Validation\ValidationException
      */
-    public function confirmPassword(Request $request) // : JsonResponse
+    public function resetPassword(Request $request) // : JsonResponse
     {
         $request->validate([
-            'token' => ['required'],
-            'email' => ['required', 'email'],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
-            'password_confirmation' => ['required', Rules\Password::defaults()],
+            'id' => ['required'],
+            'guid' => ['uuid', 'required'],
+            'password' => ['required',  Rules\Password::defaults()],
         ]);
 
-        // Here we will attempt to reset the user's password. If it is successful we
-        // will update the password on an actual user model and persist it to the
-        // database. Otherwise we will parse the error and return the response.
-        $status = Password::broker('guests')->reset(
-            $request->only('email', 'password', 'password_confirmation', 'token'),
-            function ($user) use ($request) {
-                $user->forceFill([
-                    'password' => Hash::make($request->password),
-                    'remember_token' => Str::random(60),
-                ])->save();
-
-                event(new PasswordReset($user));
-            }
-        );
-
-        if ($status != Password::PASSWORD_RESET) {
-            throw ValidationException::withMessages([
-                'email' => [__($status)],
-            ]);
+        $guest = Guest::findOrFail($request->id);
+        $data = json_decode($guest->data);
+        if (empty($data['reset_password_guid'])) {
+            return response()->json(['error' => __('Invalid data #1')], 401);
         }
 
-        return response()->json(['status' => __($status)]);
+        if ($data['reset_password_guid'] !== $request->guid) {
+            return response()->json([
+                'error' => __('Invalid data #2'),
+                'stored_guid' => $data['reset_password_guid'],
+                'sent_guid' => $request->guid,
+            ], 401);
+        }
+
+        unset($data['reset_password_guid']);
+
+        $guest->forceFill([
+            'password' => Hash::make($request->password),
+            'data' => $data,
+        ])->save();
+
+        event(new PasswordReset($guest));
+
+        return response()->json(['message' => __('Your password has been updated')]);
     }
 
     /**
@@ -166,6 +195,16 @@ class GuestAuthController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
+        VerifyEmail::$createUrlCallback = function ($notifiable) {
+            $data = $notifiable->data;
+            $guid = Str::uuid()->toString();
+            $data['verification_guid'] = $guid;
+            $notifiable->data = $data;
+            $notifiable->save();
+
+            return implode('/', [Config::get('app.frontend_url'), 'confirm-registration', $notifiable->id, $guid]);
+        };
+
         event(new Registered($guest));
 
         Auth::login($guest);
@@ -174,22 +213,44 @@ class GuestAuthController extends Controller
     }
     public function confirmRegistration(Request $request)
     {
+        $request->validate([
+            'id' => ['required'],
+            'guid' => ['uuid', 'required'],
+        ]);
 
-        // if ($request->user()->hasVerifiedEmail()) {
-        //     return redirect()->intended(
-        //         config('app.frontend_url').RouteServiceProvider::HOME.'?verified=1'
-        //     );
-        // }
+        $guest = Guest::findOrFail($request->id);
+        $data = $guest->data;
+
+        if (empty($data['verification_guid'])) {
+            return response()->json(['error' => __('Invalid data #1')], 401);
+        }
+        if (!empty($guest->hasVerifiedEmail())) {
+            return response()->json(['message' => __('Your email is already verified')], 200);
+        }
+
+        if ($data['verification_guid'] !== $request->guid) {
+            return response()->json([
+                'error' => __('Invalid data #2'),
+                'stored_guid' => $data['verification_guid'],
+                'sent_guid' => $request->guid,
+            ], 401);
+        }
+
+        unset($data['verification_guid']);
+
+        $guest->forceFill([
+            'password' => Hash::make($request->password),
+            'data' => $data,
+            'email_verified_at' => \Date::now(),
+        ])->save();
+
+        event(new PasswordReset($guest));
+
+        return response()->json(['message' => __('Your account has been activated')]);
 
         if ($request->user()->markEmailAsVerified()) {
             event(new Verified($request->user()));
         }
-
-
-        // return redirect()->intended(
-        //     config('app.frontend_url').RouteServiceProvider::HOME.'?verified=1'
-        // );
-
     }
 
     public function resendEmailVerificationMail(Request $request)
@@ -200,11 +261,21 @@ class GuestAuthController extends Controller
         $guest = Guest::where('email', $request->email)
             ->whereNull('email_verified_at')->first();
         if ($guest) {
+            VerifyEmail::$createUrlCallback = function ($notifiable) {
+                $data = $notifiable->data;
+                $guid = Str::uuid()->toString();
+                $data['verification_guid'] = $guid;
+                $notifiable->data = $data;
+                $notifiable->save();
+
+                return implode('/', [Config::get('app.frontend_url'), 'confirm-registration', $notifiable->id, $guid]);
+            };
             $guest->sendEmailVerificationNotification();
         }
         return ['message' => __('We have received your request. ' .
-            'If there is an unconfirmed registration associated with the provided email address, ' .
-            'we have sent a confirmation email. Please check your inbox, including the spam or promotions folder.')];
+            'If there is an unconfirmed registration associated with ' .
+            'the provided email address, we have sent a confirmation email. ' .
+            'Please check your inbox, including the spam or promotions folder.')];
     }
 
     public function reset()
