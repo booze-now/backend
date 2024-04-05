@@ -25,6 +25,8 @@ class GuestAuthController extends Controller
 {
     protected $guard = 'guard_guest';
 
+    protected $token_length = 20;
+
     /**
      * Handle an authentication attempt.
      */
@@ -34,7 +36,16 @@ class GuestAuthController extends Controller
         $credentials = request(['email', 'password']);
 
         if (!$token = Auth::attempt($credentials)) {
-            return response()->json(['message' => __('Unauthorized?')], 401);
+            return response()->json(['message' => __('Your email address or password Whoops! It seems something didn\'t go as planned.')], 401);
+        }
+        $user = Auth::user();
+
+        if (!$user->active) {
+            return response()->json(['message' => __('Your account is inactive and may not log in.')], 401);
+        }
+
+        if (!$user->hasVerifiedEmail()) {
+            return response()->json(['message' => __('You may need to confirm your email address before log in.')], 401);
         }
 
         return $this->respondWithToken($token);
@@ -86,6 +97,7 @@ class GuestAuthController extends Controller
      *
      * @throws \Illuminate\Validation\ValidationException
      */
+    // fiók kezelés - jelszó alap #1
     public function forgotPassword(Request $request) //: JsonResponse
     {
         $request->validate([
@@ -99,17 +111,19 @@ class GuestAuthController extends Controller
         $guest = Guest::where(['email', $request->email])->get();
 
         if ($guest === null) {
-            return response()->json(['error' => __('Invalid data #3')], 401);
+            return response()->json(['message' => __('Invalid data #3')], 401);
         }
 
         ResetPassword::$createUrlCallback = function ($notifiable) {
             $data = $notifiable->data;
-            $guid = Str::uuid()->toString();
-            $data['reset_password_guid'] = $guid;
+            $token = Str::random($this->token_length);
+            $exp_at = time() + Config::get('auth.passwords.guests.expire') * 60;
+            $data['pw_reset_token'] = $token;
+            $data['pw_reset_exp'] = $exp_at;
             $notifiable->data = $data;
             $notifiable->save();
 
-            return implode('/', [Config::get('app.frontend_url'), 'reset-password', $notifiable->id, $guid]);
+            return implode('/', [Config::get('app.frontend_url'), 'reset-password', $notifiable->id, $token]);
         };
 
         // $this->notify(new ResetPasswordNotification($url));
@@ -134,29 +148,32 @@ class GuestAuthController extends Controller
      *
      * @throws \Illuminate\Validation\ValidationException
      */
+    // fiók kezelés - jelszó alap #2
     public function resetPassword(Request $request) // : JsonResponse
     {
         $request->validate([
             'id' => ['required'],
-            'guid' => ['uuid', 'required'],
+            'token' => ['string', "min:{$this->token_length}", "max:{$this->token_length}", 'required'],
             'password' => ['required',  Rules\Password::defaults()],
         ]);
 
         $guest = Guest::findOrFail($request->id);
-        $data = json_decode($guest->data);
-        if (empty($data['reset_password_guid'])) {
-            return response()->json(['error' => __('Invalid data #1')], 401);
+        $data = $guest->data;
+        error_log(json_encode($data, JSON_PRETTY_PRINT));
+        if (empty($data['pw_reset_token']) || empty($data['pw_reset_exp'])) {
+            return response()->json(['message' => __('Invalid request')], 401);
         }
 
-        if ($data['reset_password_guid'] !== $request->guid) {
-            return response()->json([
-                'error' => __('Invalid data #2'),
-                'stored_guid' => $data['reset_password_guid'],
-                'sent_guid' => $request->guid,
-            ], 401);
+        if ($data['pw_reset_exp'] < time()) {
+            return response()->json(['message' => __('The password reset link is invalid or it has expired, please request a new one.')], 401);
         }
 
-        unset($data['reset_password_guid']);
+        if ($data['pw_reset_token'] !== $request->token) {
+            return response()->json(['message' => __('The password reset link is invalid or it has expired, please request a new one..')], 401);
+        }
+
+        unset($data['pw_reset_token']);
+        unset($data['pw_reset_exp']);
 
         $guest->forceFill([
             'password' => Hash::make($request->password),
@@ -173,14 +190,15 @@ class GuestAuthController extends Controller
      *
      * @throws \Illuminate\Validation\ValidationException
      */
-    public function register(Request $request): Response
+    // fiók kezelés - regisztráció #1
+    public function register(Request $request)
     {
         $request->validate([
             'first_name' => ['required', 'string', 'max:255'],
             'middle_name' => ['string', 'max:255'],
             'last_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . Guest::class],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'password' => ['required',  Rules\Password::defaults()],
         ]);
 
         $guest = Guest::create([
@@ -193,12 +211,14 @@ class GuestAuthController extends Controller
 
         VerifyEmail::$createUrlCallback = function ($notifiable) {
             $data = $notifiable->data;
-            $guid = Str::uuid()->toString();
-            $data['verification_guid'] = $guid;
+            $token = Str::random($this->token_length);
+            $exp_at = time() + Config::get('auth.password_timeout') * 60;
+            $data['confirm_token'] = $token;
+            $data['confirm_exp'] = $exp_at;
             $notifiable->data = $data;
             $notifiable->save();
 
-            return implode('/', [Config::get('app.frontend_url'), 'confirm-registration', $notifiable->id, $guid]);
+            return implode('/', [Config::get('app.frontend_url'), 'confirm-registration', $notifiable->id, $token]);
         };
 
         event(new Registered($guest));
@@ -207,32 +227,36 @@ class GuestAuthController extends Controller
 
         return response()->json(['message' => __('Thank you for registering for our service. An email has been sent to the email address you provided on registration.')]);
     }
+
+    // fiók kezelés - regisztráció #2
     public function confirmRegistration(Request $request)
     {
         $request->validate([
             'id' => ['required'],
-            'guid' => ['uuid', 'required'],
+            'token' => ['string', "min:{$this->token_length}", "max:{$this->token_length}", 'required'],
         ]);
 
         $guest = Guest::findOrFail($request->id);
         $data = $guest->data;
 
-        if (empty($data['verification_guid'])) {
-            return response()->json(['error' => __('Invalid data #1')], 401);
+        if (empty($data['confirm_token']) || empty($data['confirm_exp'])) {
+            return response()->json(['message' => __('Invalid request')], 401);
         }
+
         if (!empty($guest->hasVerifiedEmail())) {
             return response()->json(['message' => __('Your email is already verified')], 200);
         }
 
-        if ($data['verification_guid'] !== $request->guid) {
-            return response()->json([
-                'error' => __('Invalid data #2'),
-                'stored_guid' => $data['verification_guid'],
-                'sent_guid' => $request->guid,
-            ], 401);
+        if ($data['confirm_exp'] < time()) {
+            return response()->json(['message' => __('The confirmation link is invalid or it has expired, please request a new one.')], 401);
         }
 
-        unset($data['verification_guid']);
+        if ($data['confirm_token'] !== $request->token) {
+            return response()->json(['message' => __('The confirmation link is invalid or it has expired, please request a new one..')], 401);
+        }
+
+        unset($data['confirm_token']);
+        unset($data['confirm_exp']);
 
         $guest->forceFill([
             'password' => Hash::make($request->password),
@@ -249,6 +273,7 @@ class GuestAuthController extends Controller
         }
     }
 
+    // fiók kezelés - regisztráció #3
     public function resendEmailVerificationMail(Request $request)
     {
         $request->validate([
@@ -259,12 +284,14 @@ class GuestAuthController extends Controller
         if ($guest) {
             VerifyEmail::$createUrlCallback = function ($notifiable) {
                 $data = $notifiable->data;
-                $guid = Str::uuid()->toString();
-                $data['verification_guid'] = $guid;
+                $token = Str::random($this->token_length);
+                $exp_at = time() + Config::get('auth.password_timeout') * 60;
+                $data['confirm_token'] = $token;
+                $data['confirm_exp'] = $exp_at;
                 $notifiable->data = $data;
                 $notifiable->save();
 
-                return implode('/', [Config::get('app.frontend_url'), 'confirm-registration', $notifiable->id, $guid]);
+                return implode('/', [Config::get('app.frontend_url'), 'confirm-registration', $notifiable->id, $token]);
             };
             $guest->sendEmailVerificationNotification();
         }

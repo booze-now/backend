@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('table', 36)->nullable();
             $table->boolean('reservee')->nullable();
             $table->string('picture', 64)->nullable();
-            $table->boolean('active')->default(false);
+            $table->boolean('active')->default(true);
             $table->json('data')->default('{}');
             // $table->rememberToken();
             $table->timestamps();
@@ -33,8 +33,8 @@ return new class extends Migration
             'middle_name' => 'Guest',
             'last_name' => 'Schopper',
             'email' => 'zschopper+guest@gmail.com',
-            'password' => 'Bo0ze-nOOOw!'
-
+            'password' => 'Bo0ze-nOOOw!',
+            'active' => true,
         ])->save();
     }
 
