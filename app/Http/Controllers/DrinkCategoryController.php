@@ -10,9 +10,23 @@ class DrinkCategoryController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        return DrinkCategory::all();
+        $visible = [];
+        $hidden = [];
+
+        if ($request->nolang) {
+            $visible = [
+                'name_en',
+                'name_hu',
+            ];
+            $hidden = [
+                'name',
+            ];
+        }
+
+        return DrinkCategory::get()->makeVisible($visible)->makeHidden($hidden);
+
     }
 
     /**

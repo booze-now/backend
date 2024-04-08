@@ -36,7 +36,7 @@ class GuestAuthController extends Controller
         $credentials = request(['email', 'password']);
 
         if (!$token = Auth::attempt($credentials)) {
-            return response()->json(['message' => __('Your email address or password Whoops! It seems something didn\'t go as planned.')], 401);
+            return response()->json(['message' => __('Whoops! It seems something didn\'t go as planned.')], 401);
         }
         $user = Auth::user();
 
@@ -206,7 +206,7 @@ class GuestAuthController extends Controller
             'middle_name' => $request->middle_name,
             'last_name' => $request->last_name,
             'email' => $request->email,
-            'password' => Hash::make($request->password),
+            'password' => $request->password,
         ]);
 
         VerifyEmail::$createUrlCallback = function ($notifiable) {
@@ -259,7 +259,6 @@ class GuestAuthController extends Controller
         unset($data['confirm_exp']);
 
         $guest->forceFill([
-            'password' => Hash::make($request->password),
             'data' => $data,
             'email_verified_at' => \Date::now(),
         ])->save();

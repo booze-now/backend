@@ -18,11 +18,25 @@ class DrinkController extends Controller
     public function index(Request $request)
     {
         $with = [];
+        $visible = [];
+        $hidden = [];
 
+        if ($request->nolang) {
+            $visible = [
+                'name_en',
+                'name_hu',
+                'description_en',
+                'description_hu',
+            ];
+            $hidden = [
+                'name',
+                'description'
+            ];
+        }
         if ($request->with) {
             $with = array_intersect(explode(',', strtolower($request->with)), self::$valid_withs);
         }
-        return Drink::with($with)->get();
+        return Drink::with($with)->get()->makeVisible($visible)->makeHidden($hidden);
     }
 
     /**
