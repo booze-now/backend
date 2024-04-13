@@ -24,7 +24,11 @@ class Order extends Model
         'served_at',
         'table',
     ];
-
+protected $dates = [
+    'recorded_at',
+    'made_at',
+    'served_at',
+];
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -39,14 +43,18 @@ class Order extends Model
         'status'
     ];
 
+    public function guest()
+    {
+        return $this->belongsTo(Guest::class, 'guest_id');
+    }
 
     public function getStatusAttribute()
     {
-        if ($this->recorded_at->null()) {
+        if ($this->recorded_at === null) {
             $status = __('pending');
-        } elseif ($this->made_at->null()) {
+        } elseif ($this->made_at === null) {
             $status = __('in progress');
-        } elseif ($this->served_at->null()) {
+        } elseif ($this->served_at === null) {
             $status = __('ready');
         } else {
             $status = __('served');

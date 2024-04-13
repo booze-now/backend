@@ -41,7 +41,7 @@ return new class extends Migration
             'middle_name' => 'StafAdmin',
             'last_name' => 'StafAdmin',
             'email' => 'StafAdmin@boozenow.hu',
-            'role_code'=>1,
+            'role_code'=> \App\Models\Employee::BACKOFFICE,
             'password' => 'StafAdminBo0ze-nOOOw!',
         ])->save();
     }

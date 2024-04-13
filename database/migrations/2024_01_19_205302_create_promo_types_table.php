@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\PromoController;
+use App\Http\Controllers\PromoTypeController;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,6 +19,14 @@ return new class extends Migration
             $table->string('description_hu');
             $table->timestamps();
         });
+
+       /*  $type= new PromoTypeController();
+        $type->create(['description_hu'=>'Húsvéti akció','description_en'=>'Easter sale' ]);
+ */
+(new \App\Models\PromoType())->fill([
+    'description_hu'=>'Húsvéti akció',
+    'description_en'=>'Easter sale'
+])->save();
     }
 
     /**

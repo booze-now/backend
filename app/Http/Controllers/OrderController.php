@@ -125,4 +125,29 @@ class OrderController extends Controller
 
         return $order;
     }
+
+    public function getOrdersWithGuests()
+    {
+        $orders = Order::with('guest')->get();
+
+        // Transform the orders to include guest names instead of IDs
+        $ordersWithGuestNames = $orders->map(function ($order) {
+            return [
+                'id' => $order->id,
+                'guest_id' => $order->guest_id,
+                'guest_name' => $order->guest->name,
+                'recorded_by' => $order->ready_by,
+                'recorded_at' => $order->ready_at,
+                'made_by' => $order->made_by,
+                'made_at' => $order->made_at,
+                'table' => $order->table,
+                'created_at' => $order->created_at,
+                'updated_at' => $order->updated_at,
+            ];
+        });
+
+        return $ordersWithGuestNames;
+    }
+
+    
 }

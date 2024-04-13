@@ -27,7 +27,9 @@ class EmployeeController extends Controller
     {
         // return response($request->all(), 404);
         $valid = $request->validate([
-            'name' => 'string|required',
+            'first_name' => 'string|required',
+            'middle_name' => 'string|sometimes',
+            'last_name' => 'string|required',
             'email' => 'string|required|unique:employees,email',
             'password' => [
                 'string',
@@ -64,8 +66,10 @@ class EmployeeController extends Controller
     public function update(Request $request, Employee $employee)
     {
         $valid = $request->validate([
-            'name' => 'string|sometimes|required',
-            'email' => 'string|sometimes|required|unique:employees,email',
+            'first_name' => 'string|required',
+            'middle_name' => 'string|sometimes',
+            'last_name' => 'string|required',
+            'email' => 'string|sometimes|required',
             'password' => [
                 'string',
                 'required',
@@ -78,10 +82,9 @@ class EmployeeController extends Controller
             ],
             'role_code' => [
                 'integer',
-                'required',
                 Rule::in(array_keys(Employee::ROLES))
             ],
-            'active' => 'boolean|sometimes|required',
+            'active' => 'boolean|sometimes',
         ]);
 
         $employee->fill($valid)->save();
@@ -132,7 +135,9 @@ class EmployeeController extends Controller
     {
         $guest = Employee::find(Auth::user()->id);
         $valid = $request->validate([
-            'name' => 'string|sometimes|required',
+            'first_name' => 'string|required',
+            'middle_name' => 'string|sometimes',
+            'last_name' => 'string|required',
             'email' => 'prohibited',
             'active' => 'prohibited',
             'password' => [

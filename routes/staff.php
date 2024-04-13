@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Auth\EmployeeAuthController as AuthController;
-
+use App\Http\Controllers\OrderController;
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
@@ -22,6 +22,9 @@ Route::middleware(['auth:guard_employee'])->group(function () {
 
     Route::get('/menu', [\App\Http\Controllers\DrinkController::class, 'menu']);
     Route::get('/menu-tree', [\App\Http\Controllers\DrinkController::class, 'menuTree']);
+
+    Route::apiResource('orders', OrderController::class);
+    Route::get('/orders-with-guests', [OrderController::class, 'getOrdersWithGuests']);
 
     Route::get('drinks/scheme', [\App\Http\Controllers\DrinkController::class, 'scheme']);
     Route::apiResource('drinks', \App\Http\Controllers\DrinkController::class);
