@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\GuestAuthController as AuthController;
 use App\Http\Controllers\DrinkController;
 use App\Http\Controllers\GuestController as GuestController;
+use App\Http\Controllers\OrderController;
 
 Route::post('/register', [AuthController::class, 'register']); // +regisztráció
 Route::post('/confirm-registration', [AuthController::class, 'confirmRegistration']); // +regisztráció
@@ -21,6 +22,10 @@ Route::get('/menu-tree', [DrinkController::class, 'menuTree']);
 
 Route::get('/drinks', [DrinkController::class, 'index']);
 Route::get('/drinks/{drink}', [DrinkController::class, 'show']);
+
+//ordering
+Route::post('/{userId}/cart', [OrderController::class, 'placeOrder']);
+
 
 Route::middleware(['auth:guard_guest'])->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);

@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DrinkUnit;
 use App\Models\Order;
+use App\Models\OrderDetail;
+use App\Models\Promo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Schema;
 
@@ -140,6 +143,7 @@ class OrderController extends Controller
                 'recorded_at' => $order->ready_at,
                 'made_by' => $order->made_by,
                 'made_at' => $order->made_at,
+                'status'=>$order->status,
                 'table' => $order->table,
                 'created_at' => $order->created_at,
                 'updated_at' => $order->updated_at,
@@ -148,6 +152,44 @@ class OrderController extends Controller
 
         return $ordersWithGuestNames;
     }
+    public function placeOrder(Request $request, $userId)
+    {
+        $cartItems = $request->input('cartItems');
+        $user = $request->user();
+        // Create a new order
+        $order = Order::create([
+            'guest_id' => $userId,
+            'recorded_by' => $userId,
+            'recorded_at' => now(),
+        ]);
 
+       
+
+        // Create order details for each item in cartItems
+        $orderDetails = [];
+        foreach ($cartItems as $key => $quantity) {
+            list($drink_id, $amount, $unit) = explode('|', $key);
+            // Example: Extracted values are ['89', '0.33', 'l'] for key '89|0.33|l'
+
+            $unitPrice = DrinkUnit::where('drink_id', $drink_id)
+            ->value('unit_price');
+
+
+            $orderDetails[] = [
+                'order_id' => $order->id,
+                'drink_unit_id' => $drink_id,
+                'amount' => $amount,
+                'promo_id' => null, // You can set this based on your logic
+                'unit_price' => $unitPrice, // You can set this based on your logic
+                'discount' => 0,
+                'receipt_id' => null,
+            ];
+        }
+
+        // Save all order details
+        OrderDetail::insert($orderDetails);
+
+        return response()->json(['message' => 'Order placed successfully'], 201);
+    }
     
 }

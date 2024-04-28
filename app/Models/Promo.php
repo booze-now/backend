@@ -30,6 +30,7 @@ class Promo extends Model
      */
     protected $fillable = [
         'promo_id',
+        'procent',
         'start',
         'end',
         'category_id',

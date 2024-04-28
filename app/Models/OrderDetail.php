@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class OrderDetail extends Model
 {
@@ -33,4 +34,9 @@ class OrderDetail extends Model
         'created_at',
         'updated_at',
     ];
+
+    public function orders(): HasMany
+    {
+        return $this->hasMany(Order::class, 'order_id', 'id');
+    }
 }

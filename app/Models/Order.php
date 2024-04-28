@@ -48,6 +48,11 @@ protected $dates = [
         return $this->belongsTo(Guest::class, 'guest_id');
     }
 
+    public function order()
+    {
+        return $this->belongsTo(Guest::class, 'order_id');
+    }
+
     public function getStatusAttribute()
     {
         if ($this->recorded_at === null) {
