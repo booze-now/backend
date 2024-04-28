@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Employee;
+use Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Validation\Rule;
+use Illuminate\Validation\Rules\Password as PasswordRule;
 
 class EmployeeController extends Controller
 {
@@ -17,7 +20,8 @@ class EmployeeController extends Controller
      */
     public function index(Request $request)
     {
-        return Employee::all();
+        $visible = ['created_at'];
+        return Employee::get()->makeVisible($visible);
     }
 
     /**
@@ -28,18 +32,10 @@ class EmployeeController extends Controller
         // return response($request->all(), 404);
         $valid = $request->validate([
             'first_name' => 'string|required',
-            'middle_name' => 'string|sometimes',
+            'middle_name' => 'string|nullable|sometimes',
             'last_name' => 'string|required',
             'email' => 'string|required|unique:employees,email',
-            'password' => [
-                'string',
-                'required',
-                'min:10',             // legalább 10 karakter hosszú
-                'regex:/[a-z]/',      // legalább egy kisbetű
-                'regex:/[A-Z]/',      // legalább egy nagybetű
-                'regex:/[0-9]/',      // legalább egy számjegy
-                'regex:/[@+\-\.$!%*#?&]/', // legalább egy speciális karakter
-            ],
+            'password' => ['optional', PasswordRule::min(10)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
             'role_code' => [
                 'integer',
                 'required',
@@ -66,25 +62,16 @@ class EmployeeController extends Controller
     public function update(Request $request, Employee $employee)
     {
         $valid = $request->validate([
-            'first_name' => 'string|required',
-            'middle_name' => 'string|sometimes',
-            'last_name' => 'string|required',
-            'email' => 'string|sometimes|required',
-            'password' => [
-                'string',
-                'required',
-                'sometimes',
-                'min:10',             // legalább 10 karakter hosszú
-                'regex:/[a-z]/',      // legalább egy kisbetű
-                'regex:/[A-Z]/',      // legalább egy nagybetű
-                'regex:/[0-9]/',      // legalább egy számjegy
-                'regex:/[@+\-\.$!%*#?&]/', // legalább egy speciális karakter
-            ],
+            'first_name' => 'string|sometimes|min:2',
+            'middle_name' => 'string|nullable|sometimes',
+            'last_name' => 'string|sometimes|min:2',
+            'email' => 'string|sometimes|required|unique:employees,email,' . $employee->id,
+            'password' => ['sometimes', PasswordRule::min(10)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
             'role_code' => [
                 'integer',
                 Rule::in(array_keys(Employee::ROLES))
             ],
-            'active' => 'boolean|sometimes',
+            'active' => 'boolean|sometimes|required',
         ]);
 
         $employee->fill($valid)->save();
@@ -121,13 +108,8 @@ class EmployeeController extends Controller
         return $employee;
     }
 
-    public function me(Request $request) {
-        $payload = Auth::payload()->toArray();
-        $payload['refresh_ttl'] = $payload['iat'] + Config::get('jwt.refresh_ttl') * 60;
-        $payload['iat_dt'] = gmdate("Y-m-d\TH:i:s\Z", intval($payload['iat']));
-        $payload['exp_dt'] = gmdate("Y-m-d\TH:i:s\Z", intval($payload['exp']));
-        $payload['refresh_ttl_dt'] = gmdate("Y-m-d\TH:i:s\Z", intval($payload['refresh_ttl']));
-
+    public function me(Request $request)
+    {
         return [Auth::user()->makeVisible(['created_at'])];
     }
 
@@ -136,25 +118,49 @@ class EmployeeController extends Controller
         $guest = Employee::find(Auth::user()->id);
         $valid = $request->validate([
             'first_name' => 'string|required',
-            'middle_name' => 'string|sometimes',
+            'middle_name' => 'string|optional|sometimes',
             'last_name' => 'string|required',
             'email' => 'prohibited',
+            'password' => ['sometimes', PasswordRule::min(10)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
+            'role_code' => 'prohibited',
             'active' => 'prohibited',
-            'password' => [
-                'string',
-                'required',
-                'confirmed',
-                'sometimes',
-                'min:10',             // legalább 10 karakter hosszú
-                'regex:/[a-z]/',      // legalább egy kisbetű
-                'regex:/[A-Z]/',      // legalább egy nagybetű
-                'regex:/[0-9]/',      // legalább egy számjegy
-                'regex:/[@+\-\.$!%*#?&]/', // legalább egy speciális karakter
-            ],
         ]);
 
         $guest->fill($valid)->save();
         return $guest;
     }
 
+
+    public function updatePassword(Request $request)
+    {
+        // $guest = Employee::find(Auth::user()->id);
+        $user = Auth::user();
+
+        $valid = $request->validate([
+            'password' => ['required', 'confirmed', PasswordRule::min(10)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
+        ]);
+
+        if (!Hash::check($request->current_password, Auth::user()->password)) {
+            return back()->withErrors(['current_password' => 'Your current password is incorrect.']);
+        }
+        $user->password = $valid->password;
+        $user->save();
+
+        return $user;
+    }
+
+    public function roles()
+    {
+        $locales = config('app.available_locales');
+        $ret = [];
+        foreach (EMPLOYEE::ROLES as $code => $role) {
+            $obj = ['id' => $code];
+            foreach ($locales as $lang) {
+                $obj["name_{$lang}"] = __($role, [], $lang);
+            }
+            $ret[] = $obj;
+        }
+
+        return $ret;
+    }
 }

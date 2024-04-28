@@ -11,7 +11,6 @@ class DrinkUnit extends Model
 {
     use HasFactory;
 
-
     protected $dispatchesEvents = [
         'created' => \App\Events\DrinkUnitCreated::class,
         'updated' => \App\Events\DrinkUnitUpdated::class,
@@ -32,7 +31,7 @@ class DrinkUnit extends Model
         'active',
     ];
 
-    protected $appends = ['unit'];
+    protected $appends = ['unit', 'unit_code'];
     protected $hidden = [
         'unit_en',
         'unit_hu',
@@ -54,6 +53,11 @@ class DrinkUnit extends Model
     {
         $locale = app()->getLocale();
         return $this->attributes["unit_{$locale}"];
+    }
+
+    public function getUnitCodeAttribute()
+    {
+        return $this->attributes["unit_en"];
     }
 
     public function setUnitAttribute($value)

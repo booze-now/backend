@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\DrinkCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\ValidationException;
 
 class DrinkCategoryController extends Controller
 {
@@ -26,7 +28,24 @@ class DrinkCategoryController extends Controller
         }
 
         return DrinkCategory::get()->makeVisible($visible)->makeHidden($hidden);
+    }
 
+    public function parents(Request $request)
+    {
+        $visible = [];
+        $hidden = [];
+
+        if ($request->nolang) {
+            $visible = [
+                'name_en',
+                'name_hu',
+            ];
+            $hidden = [
+                'name',
+            ];
+        }
+
+        return DrinkCategory::whereNull('parent_id')->get()->makeVisible($visible)->makeHidden($hidden);
     }
 
     /**
@@ -37,15 +56,17 @@ class DrinkCategoryController extends Controller
         $valid = $request->validate([
             'name_en' => 'string|required|unique:drink_categories,name_en',
             'name_hu' => 'string|required|unique:drink_categories,name_hu',
-            'parent' => 'nullable|int|sometimes'
+            'parent_id' => 'nullable|int|sometimes'
         ]);
 
-        if ($request->parent) {
-            $parent = DrinkCategory::findOrFail($request->parent)->first();
-            if ($parent->parent) {
-                throw new \Exception(__(":parent is invalid as a parent category.", ['parent' => $parent->name]));
+        // nem lehet az adott szülőt beállítani, az nem főkategória
+        if ($request->parent_id) {
+            $parent = DrinkCategory::find($request->parent_id);
+            if ($parent && $parent->parent_id) {
+                throw new \Exception(__("Only a main category can be a parent."));
             }
         }
+
         $category = new DrinkCategory();
         $category->fill($valid);
         $category->save();
@@ -55,9 +76,22 @@ class DrinkCategoryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(DrinkCategory $category)
+    public function show(Request $request, $id)
     {
-        return $category;
+        $visible = [];
+        $hidden = [];
+
+        if ($request->nolang) {
+            $visible = [
+                'name_en',
+                'name_hu',
+            ];
+            $hidden = [
+                'name',
+            ];
+        }
+
+        return DrinkCategory::findOrFail($id)->makeVisible($visible)->makeHidden($hidden);
     }
 
     /**
@@ -73,29 +107,37 @@ class DrinkCategoryController extends Controller
      */
     public function update(Request $request, DrinkCategory $category)
     {
-        $valid = $request->validate([
-            'name' => 'string|required|unique:drink_categories',
-            'parent' => 'nullable|int:sometimes'
+        $validator = Validator::make($request->all(), [
+            'name_en' => 'string|required|unique:drink_categories,name_en,' . $category->id,
+            'name_hu' => 'string|required|unique:drink_categories,name_hu,' . $category->id,
+            'parent_id' => 'nullable|int:sometimes'
         ]);
 
-        if ($request->parent) {
-            $parent = DrinkCategory::findOrFail($request->parent)->first();
-            if ($parent->parent) {
-                throw new \Exception(__(":category is invalid as a parent category.", ['parent' => $parent->name]));
+        if ($request->parent_id) {
+            // nem lehet önmaga gyereke
+            if ($category->id == $category->parent_id) {
+                $validator->errors()->add('parent_id', __("A category cannot be parent of itself."));
+            }
+            // nem lehet az adott szülőt beállítani, ha a szülő nem főkategória
+            $parent = DrinkCategory::find($request->parent_id);
+            if ($parent && $parent->parent_id) {
+                $validator->errors()->add('parent_id', __("Only a main category can be a parent."));
             }
 
-            $children = DrinkCategory::where('parent', $category->id)->count();
+            // nem lehet szülőt beállítani, ha már más kategóriáknak szülője a kategória
+            $children = DrinkCategory::where('parent_id', $category->id)->count();
             if ($children > 0) {
-                throw new \Exception(__(":category cannot be subcategory if it has children category already.", ['parent' => $request->name ?? $category->name]));
-            }
-            if ($request->parent == $category->id) {
-                throw new \Exception(__("Invalid main category: :parent.", ['parent' => $request->parent]));
+                $validator->errors()->add('parent_id', __(":category cannot be subcategory if it has children category already.", ['parent' => $request->name ?? $category->name]));
             }
         }
 
-        $category->fill($valid);
+        if ($validator->errors()->isNotEmpty()) {
+            throw new ValidationException($validator);
+        }
+
+        $category->fill($request->all());
         $category->save();
-        return $category;
+        return $this->show($request, $category->id);
     }
 
     /**

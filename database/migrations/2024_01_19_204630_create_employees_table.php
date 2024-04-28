@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
             $table->string('first_name', 32);
-            $table->string('middle_name', 32);
+            $table->string('middle_name', 32)->nullable();
             $table->string('last_name', 32);
             $table->string('email', 64)->unique();
             $table->timestamp('email_verified_at')->nullable();
@@ -45,7 +45,6 @@ return new class extends Migration
             'password' => 'StafAdminBo0ze-nOOOw!',
         ])->save();
     }
-
 
     /**
      * Reverse the migrations.
