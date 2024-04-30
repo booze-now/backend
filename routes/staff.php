@@ -25,6 +25,7 @@ Route::middleware(['auth:guard_employee'])->group(function () {
 
     Route::apiResource('orders', OrderController::class);
     Route::get('/orders-with-guests', [OrderController::class, 'getOrdersWithGuests']);
+    Route::put('/order-update/{order}', [OrderController::class, 'update'])->name('orderUpdate');
 
     Route::get('drinks/scheme', [\App\Http\Controllers\DrinkController::class, 'scheme']);
     Route::apiResource('drinks', \App\Http\Controllers\DrinkController::class);

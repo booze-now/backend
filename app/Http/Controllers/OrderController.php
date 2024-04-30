@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\DrinkUnit;
+use App\Models\Drink;
 use App\Models\Order;
 use App\Models\OrderDetail;
 use App\Models\Promo;
@@ -130,28 +131,72 @@ class OrderController extends Controller
     }
 
     public function getOrdersWithGuests()
-    {
-        $orders = Order::with('guest')->get();
+{
+    $orders = Order::with('guest', 'orderDetails')->get();
 
-        // Transform the orders to include guest names instead of IDs
-        $ordersWithGuestNames = $orders->map(function ($order) {
+    // Transform the orders to include guest names instead of IDs
+    $ordersWithGuestNames = $orders->map(function ($order) {
+        $orderDetails = $order->orderDetails->map(function ($orderDetail) {
+            $drink = Drink::find($orderDetail->drink_unit_id);
+            $drinkName = $drink->name;
+            $unit = $drink->units;
+            
             return [
-                'id' => $order->id,
-                'guest_id' => $order->guest_id,
-                'guest_name' => $order->guest->name,
-                'recorded_by' => $order->ready_by,
-                'recorded_at' => $order->ready_at,
-                'made_by' => $order->made_by,
-                'made_at' => $order->made_at,
-                'status'=>$order->status,
-                'table' => $order->table,
-                'created_at' => $order->created_at,
-                'updated_at' => $order->updated_at,
+                'id' => $orderDetail->id,
+                'order_id' => $orderDetail->order_id,
+                'drink_unit_id' => $orderDetail->drink_unit_id,
+                'amount' => $orderDetail->amount,
+                'promo_id' => $orderDetail->promo_id,
+                'unit_price' => $orderDetail->unit_price,
+                'discount' => $orderDetail->discount,
+                'receipt_id' => $orderDetail->receipt_id,
+                'created_at' => $orderDetail->created_at,
+                'updated_at' => $orderDetail->updated_at,
+                'drink_name' => $drinkName,
+                'unit' => $unit,
             ];
         });
 
-        return $ordersWithGuestNames;
+        return [
+            'id' => $order->id,
+            'guest_id' => $order->guest_id,
+            'guest_name' => $order->guest->name,
+            'recorded_by' => $order->recorded_by,
+            'recorded_at' => $order->recorded_at,
+            'made_by' => $order->made_by,
+            'made_at' => $order->made_at,
+            'status' => $order->status,
+            'table' => $order->table,
+            'created_at' => $order->created_at,
+            'updated_at' => $order->updated_at,
+            'order_details' => $orderDetails,
+        ];
+    });
+
+    return $ordersWithGuestNames;
+}
+
+
+    public function orderUpdate(Request $request, Order $order)
+    {
+        $valid = $request->validate([
+            'guest_id' => 'integer|required',
+            'recorded_by' => 'integer|sometimes',
+            'recorded_at' => 'datetime|sometimes',
+            'made_by' => 'integer|sometimes|nullable',
+            'made_at' => 'datetime|sometimes|nullable',
+            'served_by' => 'integer|sometimes|nullable',
+            'served_at' => 'datetime|sometimes|nullable',
+            'table' => 'string|sometimes|nullable',
+            'status' => 'string|required', // Hozzáadva a státusz validációja
+        ]);
+    
+        // Az Order modellben lévő státusz attribútum frissítése
+        $order->status = $valid['status'];
+        $order->fill($valid)->save();
+        return $order;
     }
+
     public function placeOrder(Request $request, $userId)
     {
         $cartItems = $request->input('cartItems');

@@ -52,7 +52,10 @@ protected $dates = [
     {
         return $this->belongsTo(Guest::class, 'order_id');
     }
-
+    public function orderDetails()
+    {
+        return $this->hasMany(OrderDetail::class);
+    }
     public function getStatusAttribute()
     {
         if ($this->recorded_at === null) {

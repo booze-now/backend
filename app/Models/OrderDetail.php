@@ -35,8 +35,4 @@ class OrderDetail extends Model
         'updated_at',
     ];
 
-    public function orders(): HasMany
-    {
-        return $this->hasMany(Order::class, 'order_id', 'id');
-    }
 }
