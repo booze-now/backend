@@ -7,7 +7,10 @@ use App\Models\Drink;
 use App\Models\Order;
 use App\Models\OrderDetail;
 use App\Models\Promo;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Schema;
 
 class OrderController extends Controller
@@ -131,50 +134,50 @@ class OrderController extends Controller
     }
 
     public function getOrdersWithGuests()
-{
-    $orders = Order::with('guest', 'orderDetails')->get();
+    {
+        $orders = Order::with('guest', 'orderDetails')->get();
 
-    // Transform the orders to include guest names instead of IDs
-    $ordersWithGuestNames = $orders->map(function ($order) {
-        $orderDetails = $order->orderDetails->map(function ($orderDetail) {
-            $drink = Drink::find($orderDetail->drink_unit_id);
-            $drinkName = $drink->name;
-            $unit = $drink->units;
-            
+        // Transform the orders to include guest names instead of IDs
+        $ordersWithGuestNames = $orders->map(function ($order) {
+            $orderDetails = $order->orderDetails->map(function ($orderDetail) {
+                $drink = Drink::find($orderDetail->drink_unit_id);
+                $drinkName = $drink->name;
+                $unit = $drink->units;
+
+                return [
+                    'id' => $orderDetail->id,
+                    'order_id' => $orderDetail->order_id,
+                    'drink_unit_id' => $orderDetail->drink_unit_id,
+                    'amount' => $orderDetail->amount,
+                    'promo_id' => $orderDetail->promo_id,
+                    'unit_price' => $orderDetail->unit_price,
+                    'discount' => $orderDetail->discount,
+                    'receipt_id' => $orderDetail->receipt_id,
+                    'created_at' => $orderDetail->created_at,
+                    'updated_at' => $orderDetail->updated_at,
+                    'drink_name' => $drinkName,
+                    'unit' => $unit,
+                ];
+            });
+
             return [
-                'id' => $orderDetail->id,
-                'order_id' => $orderDetail->order_id,
-                'drink_unit_id' => $orderDetail->drink_unit_id,
-                'amount' => $orderDetail->amount,
-                'promo_id' => $orderDetail->promo_id,
-                'unit_price' => $orderDetail->unit_price,
-                'discount' => $orderDetail->discount,
-                'receipt_id' => $orderDetail->receipt_id,
-                'created_at' => $orderDetail->created_at,
-                'updated_at' => $orderDetail->updated_at,
-                'drink_name' => $drinkName,
-                'unit' => $unit,
+                'id' => $order->id,
+                'guest_id' => $order->guest_id,
+                'guest_name' => $order->guest->name,
+                'recorded_by' => $order->recorded_by,
+                'recorded_at' => $order->recorded_at,
+                'made_by' => $order->made_by,
+                'made_at' => $order->made_at,
+                'status' => $order->status,
+                'table' => $order->table,
+                'created_at' => $order->created_at,
+                'updated_at' => $order->updated_at,
+                'order_details' => $orderDetails,
             ];
         });
 
-        return [
-            'id' => $order->id,
-            'guest_id' => $order->guest_id,
-            'guest_name' => $order->guest->name,
-            'recorded_by' => $order->recorded_by,
-            'recorded_at' => $order->recorded_at,
-            'made_by' => $order->made_by,
-            'made_at' => $order->made_at,
-            'status' => $order->status,
-            'table' => $order->table,
-            'created_at' => $order->created_at,
-            'updated_at' => $order->updated_at,
-            'order_details' => $orderDetails,
-        ];
-    });
-
-    return $ordersWithGuestNames;
-}
+        return $ordersWithGuestNames;
+    }
 
 
     public function orderUpdate(Request $request, Order $order)
@@ -190,7 +193,7 @@ class OrderController extends Controller
             'table' => 'string|sometimes|nullable',
             'status' => 'string|required', // Hozzáadva a státusz validációja
         ]);
-    
+
         // Az Order modellben lévő státusz attribútum frissítése
         $order->status = $valid['status'];
         $order->fill($valid)->save();
@@ -208,7 +211,7 @@ class OrderController extends Controller
             'recorded_at' => now(),
         ]);
 
-       
+
 
         // Create order details for each item in cartItems
         $orderDetails = [];
@@ -217,7 +220,7 @@ class OrderController extends Controller
             // Example: Extracted values are ['89', '0.33', 'l'] for key '89|0.33|l'
 
             $unitPrice = DrinkUnit::where('drink_id', $drink_id)
-            ->value('unit_price');
+                ->value('unit_price');
 
 
             $orderDetails[] = [
@@ -236,5 +239,35 @@ class OrderController extends Controller
 
         return response()->json(['message' => 'Order placed successfully'], 201);
     }
-    
+    public function getOrderStats(Request $request)
+    {
+        try {
+            $date = $request->input('date', date('Y-m-d')); // Default to current date if not provided
+            $startOfDay = $date . ' 00:00:00';
+            $endOfDay = $date . ' 23:59:59';
+           /*  $backgroundColor = ["#4e73df", "#1cc88a", "#36b9cc"];
+            $hoverBackgroundColor = ["#2e59d9", "#17a673", "#2c9faf"];
+            $hoverBorderColor = "rgba(234, 236, 244, 1)"; */
+
+            $recordedOrders = Order::whereBetween('recorded_at', [$startOfDay, $endOfDay])->count();
+            $inProgressOrders = Order::whereBetween('made_at', [$startOfDay, $endOfDay])->count();
+            $servedOrders = Order::whereBetween('served_at', [$startOfDay, $endOfDay])->count();
+            $lateServedOrders = Order::whereBetween('served_at', [$startOfDay, $endOfDay])
+                ->whereRaw('TIMESTAMPDIFF(MINUTE, recorded_at, served_at) > ?', [10])
+                ->count();
+
+            return response()->json([
+                'date' => $date,
+                'recorded' => $recordedOrders,
+                'in_progress' => $inProgressOrders,
+                'served' => $servedOrders,
+                'late_served' => $lateServedOrders,
+              /*   'backgroundColor'=>$backgroundColor,
+                'hoverBackgroundColor'=>$hoverBackgroundColor,
+                'hoverBorderColor'=>$hoverBorderColor, */
+            ]);
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'An error occurred.'], 500);
+        }
+    }
 }

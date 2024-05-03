@@ -1,0 +1,251 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "BoozeNow",
+    "collectionId": "6b688a4a-7815-4e96-a9c7-ae7695804dca",
+    "dateExported": "2024-05-03T10:52:17.235Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "3804b82f-8309-436f-84bc-e2eac20eaa59",
+            "colId": "6b688a4a-7815-4e96-a9c7-ae7695804dca",
+            "containerId": "",
+            "name": "http://localhost:8000/api/login?email=admin@boozenow.hu&password=Bo0ze-nOOOw!",
+            "url": "http://localhost:8000/api/staff/orders",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-02-17T14:04:46.414Z",
+            "modified": "2024-04-13T13:26:08.384Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "guest_id",
+                    "value": "1",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "recorded_by",
+                    "value": "9",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "made_by",
+                    "value": "7",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3N0YWZmL2xvZ2luIiwiaWF0IjoxNzEzMDEzMzQ1LCJleHAiOjE3MTMwMTY5NDUsIm5iZiI6MTcxMzAxMzM0NSwianRpIjoick04UWwzTHRyRVhTOU1HSiIsInN1YiI6IjIiLCJwcnYiOiIzMjk2M2E2MDZjMmYxNzFmMWMxNDMzMWU3Njk3NjZjZDU5MTJlZDE1Iiwicm9sZSI6InN0YWZmIn0.unpb_BrkzjhDrAOn9H32WremMj3QYxGRbiS2dlDowW4"
+            },
+            "tests": []
+        },
+        {
+            "_id": "a03ad3be-08df-4c13-adaf-7e2ed3323f85",
+            "colId": "6b688a4a-7815-4e96-a9c7-ae7695804dca",
+            "containerId": "",
+            "name": "http://localhost:8000/api/user",
+            "url": "http://localhost:8000/api/staff/drinks/4?lang=en",
+            "method": "DELETE",
+            "sortNum": 20000,
+            "created": "2024-02-18T17:55:54.286Z",
+            "modified": "2024-04-06T15:42:31.981Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [
+                {
+                    "name": "lang",
+                    "value": "en",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "3a293fb0-a6c5-4044-bd81-3f589358798b",
+            "colId": "6b688a4a-7815-4e96-a9c7-ae7695804dca",
+            "containerId": "",
+            "name": "http://localhost:8000/api/login?email=admin@boozenow.hu&password=Bo0ze-nOOOw!",
+            "url": "http://localhost:8000/api/staff/login?email=StafAdmin@boozenow.hu&password=StafAdminBo0ze-nOOOw!",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-02-18T18:01:09.126Z",
+            "modified": "2024-04-13T10:59:12.000Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [
+                {
+                    "name": "email",
+                    "value": "StafAdmin@boozenow.hu",
+                    "isPath": false
+                },
+                {
+                    "name": "password",
+                    "value": "StafAdminBo0ze-nOOOw!",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "af3173c9-7a26-44df-a693-c75c719b3101",
+            "colId": "6b688a4a-7815-4e96-a9c7-ae7695804dca",
+            "containerId": "",
+            "name": "http://localhost:8000/api/staff/orders",
+            "url": "http://localhost:8000/api/staff/orders",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-04-28T12:31:20.165Z",
+            "modified": "2024-04-28T12:31:20.165Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3N0YWZmL2xvZ2luIiwiaWF0IjoxNzE0MzA3NDQ2LCJleHAiOjE3MTQzMTEwNDYsIm5iZiI6MTcxNDMwNzQ0NiwianRpIjoiWlUxcnR6bWxSVGE1U2dyRSIsInN1YiI6IjIiLCJwcnYiOiIzMjk2M2E2MDZjMmYxNzFmMWMxNDMzMWU3Njk3NjZjZDU5MTJlZDE1Iiwicm9sZSI6InN0YWZmIn0.L7I9hfv5OgtKJlVQboWD5KuhkTKDDrZXolwjqaQjnTQ"
+            }
+        },
+        {
+            "_id": "e5b9c562-a879-4960-8a6f-31f96ac49d86",
+            "colId": "6b688a4a-7815-4e96-a9c7-ae7695804dca",
+            "containerId": "",
+            "name": "http://localhost:8000/api/staff/orders",
+            "url": "http://localhost:8000/api/staff/orders/1?lang=en",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-04-28T12:32:47.483Z",
+            "modified": "2024-04-28T12:33:11.664Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "lang",
+                    "value": "en",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3N0YWZmL2xvZ2luIiwiaWF0IjoxNzE0MzA3NDQ2LCJleHAiOjE3MTQzMTEwNDYsIm5iZiI6MTcxNDMwNzQ0NiwianRpIjoiWlUxcnR6bWxSVGE1U2dyRSIsInN1YiI6IjIiLCJwcnYiOiIzMjk2M2E2MDZjMmYxNzFmMWMxNDMzMWU3Njk3NjZjZDU5MTJlZDE1Iiwicm9sZSI6InN0YWZmIn0.L7I9hfv5OgtKJlVQboWD5KuhkTKDDrZXolwjqaQjnTQ"
+            }
+        },
+        {
+            "_id": "94bef76d-4345-4012-8755-4a2e784ae166",
+            "colId": "6b688a4a-7815-4e96-a9c7-ae7695804dca",
+            "containerId": "",
+            "name": "http://localhost:8000api/guest/guest/1/cart",
+            "url": "http://localhost:8000/api/guest/{userId}/cart?guest_id=1&recorded_by=1&drink_unit_id=89&amount=2&promo_id=1&unit_price=150",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-04-28T18:11:50.006Z",
+            "modified": "2024-04-28T18:11:50.006Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "userId",
+                    "value": "1",
+                    "isPath": true
+                },
+                {
+                    "name": "guest_id",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "recorded_by",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "drink_unit_id",
+                    "value": "89",
+                    "isPath": false
+                },
+                {
+                    "name": "amount",
+                    "value": "2",
+                    "isPath": false
+                },
+                {
+                    "name": "promo_id",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "unit_price",
+                    "value": "150",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3N0YWZmL2xvZ2luIiwiaWF0IjoxNzE0MzI1NDQ5LCJleHAiOjE3MTQzMjkwNDksIm5iZiI6MTcxNDMyNTQ0OSwianRpIjoidWRGMG5OdnNNSzNKOXk2SyIsInN1YiI6IjIiLCJwcnYiOiIzMjk2M2E2MDZjMmYxNzFmMWMxNDMzMWU3Njk3NjZjZDU5MTJlZDE1Iiwicm9sZSI6InN0YWZmIn0.4tsiaGh_5Lz4yBkungSJJNKgoaKepZHnZyGEeyI2fSI"
+            }
+        },
+        {
+            "_id": "5ee3ea67-4add-4b62-b58e-33a2c307062f",
+            "colId": "6b688a4a-7815-4e96-a9c7-ae7695804dca",
+            "containerId": "",
+            "name": "http://localhost:8000/api/guest/{userId}/cart?cartItems=127|1|dl",
+            "url": "http://localhost:8000/api/guest/{userId}/cart",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-04-28T18:14:50.885Z",
+            "modified": "2024-04-28T18:14:50.885Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "userId",
+                    "value": "2",
+                    "isPath": true
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\"cartItems\":{\"127|1|dl\":1,\"137|1|dl\":2,\"139|1|bottle\":2}} ",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3N0YWZmL2xvZ2luIiwiaWF0IjoxNzE0MzI3OTk0LCJleHAiOjE3MTQzMzE1OTQsIm5iZiI6MTcxNDMyNzk5NCwianRpIjoiWDBINHdGNkFvQkxpT1VFQiIsInN1YiI6IjIiLCJwcnYiOiIzMjk2M2E2MDZjMmYxNzFmMWMxNDMzMWU3Njk3NjZjZDU5MTJlZDE1Iiwicm9sZSI6InN0YWZmIn0.wEO1G_VzkHpFKYhjVqX_Jjd2Z3m4Q6KioZ-YLj4GeyY"
+            }
+        },
+        {
+            "_id": "6f99caf4-3068-4e9a-8022-3dce0f8c054c",
+            "colId": "6b688a4a-7815-4e96-a9c7-ae7695804dca",
+            "containerId": "",
+            "name": "http://localhost:8000/api/staff/menu-tree",
+            "url": "http://localhost:8000/api/staff/menu-tree",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2024-05-01T05:44:26.915Z",
+            "modified": "2024-05-01T05:44:26.915Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3N0YWZmL2xvZ2luIiwiaWF0IjoxNzE0NDU3OTg0LCJleHAiOjE3MTQ0NjE1ODQsIm5iZiI6MTcxNDQ1Nzk4NCwianRpIjoiaUNiZzVrNVF5UVhGNDB1OCIsInN1YiI6IjIiLCJwcnYiOiIzMjk2M2E2MDZjMmYxNzFmMWMxNDMzMWU3Njk3NjZjZDU5MTJlZDE1Iiwicm9sZSI6InN0YWZmIn0.pQ4iaNsPs_Unof8Du5Z8Kyv6QkptAVPgYFE62RGNLZ0"
+            }
+        }
+    ],
+    "ref": "_ov1YciXubQPzYIvgkWUU-fc3cLbo6tGk2W7nZp2xcCvIM2xau0eJQsWMYe2jKioPRPpJ1LhB1JwEpLyik_0hw"
+}
