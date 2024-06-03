@@ -52,6 +52,7 @@ class DrinkController extends Controller
             'description_en' => 'string|sometimes|nullable',
             'description_hu' => 'string|sometimes|nullable',
             'active' => 'boolean|sometimes',
+            'image_url' => 'string|sometimes|nullable',
         ]);
         $drink = new Drink();
         $drink->fill($valid)->save();
@@ -99,6 +100,7 @@ class DrinkController extends Controller
             'description_en' => 'string|sometimes|nullable',
             'description_hu' => 'string|sometimes|nullable',
             'active' => 'boolean|sometimes',
+            'image_url' => 'string|sometimes|nullable',
         ]);
 
         $drink->fill($valid)->save();

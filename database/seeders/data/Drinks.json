@@ -6,204 +6,13 @@
         "description_en": "Strong, concentrated coffee made by forcing hot water through finely ground coffee beans.",
         "category_en": "Coffees",
         "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 1,
                 "unit_hu": null,
                 "unit_en": null,
                 "unit_price": 450
-            }
-        ]
-    },
-    {
-        "hu": "Caffe Lungo",
-        "description_hu": "Hosszabb ideig átfolyatott vízzel készült espresso, melynek íze enyhébb és kevésbé koncentrált.",
-        "en": "Caffe Lungo",
-        "description_en": "Espresso made with more water, resulting in a milder and less concentrated flavor.",
-        "category_en": "Coffees",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 450
-            }
-        ]
-    },
-    {
-        "hu": "Cappuccino",
-        "description_hu": "Espresso, forró tej és tejszínhab kombinációja, melynek tetejét kakaóporral megszórják.",
-        "en": "Cappuccino",
-        "description_en": "Combination of espresso, hot milk, and steamed milk foam, often topped with cocoa powder.",
-        "category_en": "Coffees",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 590
-            }
-        ]
-    },
-    {
-        "hu": "Latte Macchiato",
-        "description_hu": "Forró tej, melyhez hozzáadnak egy kevés eszpresszót, hogy a tejes habot megjelenítsék.",
-        "en": "Latte Macchiato",
-        "description_en": "Hot milk 'stained' with a shot of espresso, creating a layered drink with milk foam on top.",
-        "category_en": "Coffees",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 650
-            }
-        ]
-    },
-    {
-        "hu": "Melange",
-        "description_hu": "Hosszabb eszpresszó forró vízzel hígítva, tejjel és tejszínhabbal.",
-        "en": "Melange",
-        "description_en": "Espresso diluted with hot water, served with milk and milk foam.",
-        "category_en": "Coffees",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 750
-            }
-        ]
-    },
-    {
-        "hu": "Kókuszos Latte Macchiato",
-        "description_hu": "Latte macchiato kókuszízesítéssel, tejszínhabbal és kókuszreszelékkel.",
-        "en": "Coconut Latte Macchiato",
-        "description_en": "Latte macchiato with coconut flavoring, topped with whipped cream and shredded coconut.",
-        "category_en": "Coffees",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 750
-            }
-        ]
-    },
-    {
-        "hu": "Caramellás Latte Macchiato",
-        "description_hu": "Latte macchiato karamellízesített változata, tejszínhabbal és karamell sziruppal.",
-        "en": "Caramel Latte Macchiato",
-        "description_en": "Latte macchiato with caramel flavoring, topped with whipped cream and caramel syrup.",
-        "category_en": "Coffees",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 750
-            }
-        ]
-    },
-    {
-        "hu": "Jegeskávé Vanília Fagylalttal",
-        "description_hu": "Hidegen felszolgált, erős kávé vanília fagylalttal, krémes és hűsítő ízvilággal.",
-        "en": "Iced Coffee with Vanilla Ice Cream",
-        "description_en": "Chilled, strong coffee served with vanilla ice cream, creamy and refreshing.",
-        "category_en": "Coffees",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 890
-            }
-        ]
-    },
-    {
-        "hu": "Tej",
-        "description_hu": "Friss tejből készült ital, melyet gyakran használnak kávékhoz és teákhoz.",
-        "en": "Milk",
-        "description_en": "Beverage made from fresh milk, commonly used in coffee and tea.",
-        "category_en": "Coffees",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": "dl",
-                "unit_en": "dl",
-                "unit_price": 100
-            }
-        ]
-    },
-    {
-        "hu": "Tejszín",
-        "description_hu": "Tömörített tehéntej, melyet gyakran használnak kávékhoz és desszertekhez.",
-        "en": "Cream",
-        "description_en": "Thickened cow's milk, commonly used in coffee and desserts.",
-        "category_en": "Coffees",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": "db",
-                "unit_en": "pcs",
-                "unit_price": 100
-            }
-        ]
-    },
-    {
-        "hu": "Tejszínhab",
-        "description_hu": "Vert tejszín, melyet kemény habbá vernek, gyakran díszítésként használnak italokhoz.",
-        "en": "Whipped Cream",
-        "description_en": "Cream beaten until it is light and fluffy, often used as a topping for beverages.",
-        "category_en": "Coffees",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": "adag",
-                "unit_en": "dozen",
-                "unit_price": 150
-            }
-        ]
-    },
-    {
-        "hu": "Ceylon OP Nuware Eliya",
-        "description_hu": "2100 méter magasságban szüretelt fekete tea. Intenzív, piros-arany szín könnyű aromával.",
-        "en": "Ceylon OP Nuware Eliya",
-        "description_en": "Black tea harvested at altitude of 2100 metres. Intensive flavour, red-gold colour with a light aroma.",
-        "category_en": "Teas",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 400
-            }
-        ]
-    },
-    {
-        "hu": "Ceylon Sencha",
-        "description_hu": "Klasszikus japán stílusú zöldtea, melyet Kínában termesztenek. Könnyű ízű, mézsárga főzetű tea.",
-        "en": "Ceylon Sencha",
-        "description_en": "Classic Ceylon green tea, light taste with honey like yellow brew.",
-        "category_en": "Teas",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 400
             }
         ]
     },
@@ -214,76 +23,13 @@
         "description_en": "Gren tea scented with aroma of yasmine blossoms.",
         "category_en": "Teas",
         "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 1,
                 "unit_hu": null,
                 "unit_en": null,
                 "unit_price": 400
-            }
-        ]
-    },
-    {
-        "hu": "Erdei Eper",
-        "description_hu": "Hibiszkusz, bodzabogyó, mazsola, alma, fekete ribizli és levele, áfonya, málna és szeder keveréke.",
-        "en": "Wild Strawberry",
-        "description_en": "Mixture of hibiscus, elderberry, raisin, apple, blackcurrant and leaves, blueberry, raspberry and blackberry.",
-        "category_en": "Teas",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 400
-            }
-        ]
-    },
-    {
-        "hu": "Szicíliai Narancs",
-        "description_hu": "Titkos tipp: alma, hibiszkusz, narancs, narancshéj, narancs- és rózsavirágok.",
-        "en": "Sicilian Orange",
-        "description_en": "Hidden tip: apple, hibiscus, orange, orange peel, orange and rose flowers.",
-        "category_en": "Teas",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 400
-            }
-        ]
-    },
-    {
-        "hu": "Méz",
-        "description_hu": "Természetes édesítőszer, melyet gyakran használnak teaízesítésekhez.",
-        "en": "Honey",
-        "description_en": "Natural sweetener commonly used to flavor teas.",
-        "category_en": "Teas",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": "adag",
-                "unit_en": "dozen",
-                "unit_price": 150
-            }
-        ]
-    },
-    {
-        "hu": "Classic Citromos",
-        "description_hu": "Hagyományos citromízű limonádé, mely frissen préselt citromléből készül.",
-        "en": "Classic Lemon",
-        "description_en": "Traditional lemon-flavored lemonade made from freshly squeezed lemon juice.",
-        "category_en": "Lemonades",
-        "active": true,
-        "units": [
-            {
-                "amount": 5,
-                "unit_hu": "dl",
-                "unit_en": "dl",
-                "unit_price": 890
             }
         ]
     },
@@ -294,124 +40,13 @@
         "description_en": "Refreshing lemonade made from fresh strawberries.",
         "category_en": "Lemonades",
         "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 5,
                 "unit_hu": "dl",
                 "unit_en": "dl",
                 "unit_price": 890
-            }
-        ]
-    },
-    {
-        "hu": "Málnás",
-        "description_hu": "Friss málnából készült, gyümölcsös ízű limonádé.",
-        "en": "Raspberry",
-        "description_en": "Fruity lemonade made from fresh raspberries.",
-        "category_en": "Lemonades",
-        "active": true,
-        "units": [
-            {
-                "amount": 5,
-                "unit_hu": "dl",
-                "unit_en": "dl",
-                "unit_price": 890
-            }
-        ]
-    },
-    {
-        "hu": "Bodzás",
-        "description_hu": "Bodzavirágból készült limonádé, melyet hűsítőnek és kellemesnek találnak a szomjasok.",
-        "en": "Elderflower",
-        "description_en": "Lemonade made from elderflower, considered refreshing and pleasant by many.",
-        "category_en": "Lemonades",
-        "active": true,
-        "units": [
-            {
-                "amount": 5,
-                "unit_hu": "dl",
-                "unit_en": "dl",
-                "unit_price": 890
-            }
-        ]
-    },
-    {
-        "hu": "Mangós",
-        "description_hu": "Friss mangóból készült, trópusi ízű limonádé.",
-        "en": "Mango",
-        "description_en": "Tropical-flavored lemonade made from fresh mango.",
-        "category_en": "Lemonades",
-        "active": true,
-        "units": [
-            {
-                "amount": 5,
-                "unit_hu": "dl",
-                "unit_en": "dl",
-                "unit_price": 890
-            }
-        ]
-    },
-    {
-        "hu": "Meggyes",
-        "description_hu": "Friss meggyből készült, enyhén savanykás ízű limonádé.",
-        "en": "Sour Cherry",
-        "description_en": "Lemonade made from fresh sour cherries, with a slightly tart taste.",
-        "category_en": "Lemonades",
-        "active": true,
-        "units": [
-            {
-                "amount": 5,
-                "unit_hu": "dl",
-                "unit_en": "dl",
-                "unit_price": 890
-            }
-        ]
-    },
-    {
-        "hu": "Happy Day Ananász",
-        "description_hu": "Frissen facsart ananászlé, melyet hűsítő italként felszolgálnak.",
-        "en": "Happy Day Pineapple",
-        "description_en": "Freshly squeezed pineapple juice, served as a refreshing beverage.",
-        "category_en": "Bulk Soft Drinks",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": "dl",
-                "unit_en": "dl",
-                "unit_price": 200
-            }
-        ]
-    },
-    {
-        "hu": "Sió Lime",
-        "description_hu": "Frissítő lime ízű szénsavas ital.",
-        "en": "Sió Lime",
-        "description_en": "Refreshing carbonated beverage with lime flavor.",
-        "category_en": "Bulk Soft Drinks",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": "dl",
-                "unit_en": "dl",
-                "unit_price": 200
-            }
-        ]
-    },
-    {
-        "hu": "Sió Alma",
-        "description_hu": "Frissítő alma ízű szénsavas ital.",
-        "en": "Sió Apple",
-        "description_en": "Refreshing carbonated beverage with apple flavor.",
-        "category_en": "Bulk Soft Drinks",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": "dl",
-                "unit_en": "dl",
-                "unit_price": 200
             }
         ]
     },
@@ -422,6 +57,7 @@
         "description_en": "Freshly squeezed apricot juice with a naturally sweet flavor.",
         "category_en": "Fruit Juices",
         "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 0.25,
@@ -431,22 +67,7 @@
             }
         ]
     },
-    {
-        "hu": "Cappy Körte",
-        "description_hu": "Frissen facsart körtelelé, mely finoman édes és enyhén savanykás.",
-        "en": "Cappy Pear",
-        "description_en": "Freshly squeezed pear juice, delicately sweet and slightly tart.",
-        "category_en": "Fruit Juices",
-        "active": true,
-        "units": [
-            {
-                "amount": 0.25,
-                "unit_hu": "l",
-                "unit_en": "l",
-                "unit_price": 650
-            }
-        ]
-    },
+
     {
         "hu": "Cappy Eper",
         "description_hu": "Frissen facsart eperlé, mely friss és gyümölcsös ízzel rendelkezik.",
@@ -454,6 +75,7 @@
         "description_en": "Freshly squeezed strawberry juice with a fresh and fruity flavor.",
         "category_en": "Fruit Juices",
         "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 0.25,
@@ -470,124 +92,13 @@
         "description_en": "Carbonated soft drink flavored with caramelized sugar and caffeine.",
         "category_en": "Carbonated Drinks",
         "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 0.25,
                 "unit_hu": "l",
                 "unit_en": "l",
                 "unit_price": 580
-            }
-        ]
-    },
-    {
-        "hu": "Coca-Cola Zéró",
-        "description_hu": "Szénsavas, cukormentes kóla ital, mely az eredeti Coca-Cola ízvilágát hozza.",
-        "en": "Coca-Cola Zero",
-        "description_en": "Carbonated, sugar-free cola beverage that replicates the original Coca-Cola flavor.",
-        "category_en": "Carbonated Drinks",
-        "active": true,
-        "units": [
-            {
-                "amount": 0.25,
-                "unit_hu": "l",
-                "unit_en": "l",
-                "unit_price": 580
-            }
-        ]
-    },
-    {
-        "hu": "Fanta Narancs",
-        "description_hu": "Szénsavas üdítőital, melyet narancs ízű gyümölcsléből és szénsavból készítenek.",
-        "en": "Fanta Orange",
-        "description_en": "Carbonated soft drink made from orange-flavored fruit juice and carbonation.",
-        "category_en": "Carbonated Drinks",
-        "active": true,
-        "units": [
-            {
-                "amount": 0.25,
-                "unit_hu": "l",
-                "unit_en": "l",
-                "unit_price": 580
-            }
-        ]
-    },
-    {
-        "hu": "Kinley Gyömbér",
-        "description_hu": "Gyömbéres ízű szénsavas ital, mely frissítő hatású.",
-        "en": "Kinley Ginger",
-        "description_en": "Carbonated beverage with a ginger flavor, known for its refreshing effect.",
-        "category_en": "Carbonated Drinks",
-        "active": true,
-        "units": [
-            {
-                "amount": 0.25,
-                "unit_hu": "l",
-                "unit_en": "l",
-                "unit_price": 580
-            }
-        ]
-    },
-    {
-        "hu": "Kinley Tonic",
-        "description_hu": "Bitteres ízű, szénsavas ital, melyet gyakran ginhez adnak.",
-        "en": "Kinley Tonic",
-        "description_en": "Bitter-tasting carbonated beverage, often mixed with gin.",
-        "category_en": "Carbonated Drinks",
-        "active": true,
-        "units": [
-            {
-                "amount": 0.25,
-                "unit_hu": "l",
-                "unit_en": "l",
-                "unit_price": 580
-            }
-        ]
-    },
-    {
-        "hu": "Thomas Henry Tonic",
-        "description_hu": "Kiváló minőségű, keserű ízű tonic víz, mely a legjobb gin-koktélokhoz készült.",
-        "en": "Thomas Henry Tonic",
-        "description_en": "High-quality tonic water with a bitter taste, crafted for the finest gin cocktails.",
-        "category_en": "Carbonated Drinks",
-        "active": true,
-        "units": [
-            {
-                "amount": 0.25,
-                "unit_hu": "l",
-                "unit_en": "l",
-                "unit_price": 990
-            }
-        ]
-    },
-    {
-        "hu": "RedBull Classic",
-        "description_hu": "Élénkítő ital, mely koffeint, taurint és egyéb energizáló anyagokat tartalmaz.",
-        "en": "Red Bull Classic",
-        "description_en": "Energy drink containing caffeine, taurine, and other energizing ingredients.",
-        "category_en": "Energy Drinks",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 890
-            }
-        ]
-    },
-    {
-        "hu": "Hell",
-        "description_hu": "Erős koffeines energiaital, melyet azok fogyasztanak, akik hosszú ideig fenn akarnak maradni.",
-        "en": "Hell",
-        "description_en": "Strong caffeinated energy drink consumed by those who need to stay awake for extended periods.",
-        "category_en": "Energy Drinks",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 590
             }
         ]
     },
@@ -598,94 +109,7 @@
         "description_en": "Sweet, fruity brandy with quince flavor.",
         "category_en": "Brandies",
         "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 745
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 1490
-            }
-        ]
-    },
-    {
-        "hu": "Panyolai Elixir Irsai Olivér Szőlő",
-        "description_hu": "Aromás, gyümölcsös pálinka Irsai Olivér szőlőből készítve.",
-        "en": "Panyolai Elixir Irsai Olivér Grape",
-        "description_en": "Aromatic, fruity brandy made from Irsai Olivér grapes.",
-        "category_en": "Brandies",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 745
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 1490
-            }
-        ]
-    },
-    {
-        "hu": "Panyolai Elixír Érlelt Szabolcsi Alma",
-        "description_hu": "Érett, zamatos pálinka Szabolcsi alma fajtákból készült.",
-        "en": "Panyolai Elixir Aged Szabolcs Apple",
-        "description_en": "Matured, flavorful brandy made from Szabolcs apple varieties.",
-        "category_en": "Brandies",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 745
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 1490
-            }
-        ]
-    },
-    {
-        "hu": "Panyolai Rubinmeggy",
-        "description_hu": "Intenzív meggy ízű pálinka, melyet édessége és zamata tesz különlegessé.",
-        "en": "Panyolai Ruby Sour Cherry",
-        "description_en": "Intensely flavored sour cherry brandy, distinguished by its sweetness and aroma.",
-        "category_en": "Brandies",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 745
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 1490
-            }
-        ]
-    },
-    {
-        "hu": "Panyolai Misztikum Mák Likör (50%)",
-        "description_hu": "Magas alkoholtartalmú mák likőr, mely intenzív és karakteres ízvilágot kínál.",
-        "en": "Panyolai Mystique Poppy Seed Liqueur (50%)",
-        "description_en": "High-proof poppy seed liqueur offering intense and distinctive flavors.",
-        "category_en": "Brandies",
-        "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 2,
@@ -708,6 +132,7 @@
         "description_en": "Sweet, smooth apricot-flavored brandy, often served with desserts.",
         "category_en": "Brandies",
         "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 2,
@@ -724,78 +149,13 @@
         ]
     },
     {
-        "hu": "Jim Beam",
-        "description_hu": "Klasszikus amerikai bourbon whiskey, melyet kukoricából, rozsból és árpából készítenek.",
-        "en": "Jim Beam",
-        "description_en": "Classic American bourbon whiskey made from corn, rye, and barley.",
-        "category_en": "Whiskeys",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 375
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 750
-            }
-        ]
-    },
-    {
-        "hu": "Jim Beam Apple",
-        "description_hu": "Almával ízesített bourbon whiskey, friss és gyümölcsös jegyekkel.",
-        "en": "Jim Beam Apple",
-        "description_en": "Bourbon whiskey flavored with apple, with fresh and fruity notes.",
-        "category_en": "Whiskeys",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 395
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 790
-            }
-        ]
-    },
-    {
-        "hu": "Johnnie Walker",
-        "description_hu": "Skót whisky, melyet legalább három éves érlelés után palackoznak.",
-        "en": "Johnnie Walker",
-        "description_en": "Scotch whisky bottled after a minimum of three years of maturation.",
-        "category_en": "Whiskeys",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 395
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 790
-            }
-        ]
-    },
-    {
         "hu": "Jack Daniel's",
         "description_hu": "Tennessee whiskey, melyet szén és keményfából készült ládákban érlelnek.",
         "en": "Jack Daniel's",
         "description_en": "Tennessee whiskey aged in charcoal and oak barrels.",
         "category_en": "Whiskeys",
         "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 2,
@@ -808,116 +168,6 @@
                 "unit_hu": "cl",
                 "unit_en": "cl",
                 "unit_price": 900
-            }
-        ]
-    },
-    {
-        "hu": "Jack Daniel's Honey",
-        "description_hu": "Természetes mézzel ízesített Tennessee whiskey.",
-        "en": "Jack Daniel's Honey",
-        "description_en": "Tennessee whiskey flavored with natural honey.",
-        "category_en": "Whiskeys",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 450
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 900
-            }
-        ]
-    },
-    {
-        "hu": "Jack Daniel's Fire",
-        "description_hu": "Fűszeres Tennessee whiskey, mely tűzesetet hozhat a torkunkon.",
-        "en": "Jack Daniel's Fire",
-        "description_en": "Spicy Tennessee whiskey that can set your throat on fire.",
-        "category_en": "Whiskeys",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 450
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 900
-            }
-        ]
-    },
-    {
-        "hu": "Jameson",
-        "description_hu": "Írországban készített különleges whiskey, melyet három különféle gabonából desztillálnak.",
-        "en": "Jameson",
-        "description_en": "Special whiskey made in Ireland, distilled from a blend of three different grains.",
-        "category_en": "Whiskeys",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 475
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 950
-            }
-        ]
-    },
-    {
-        "hu": "Jameson Black Barrel",
-        "description_hu": "Különleges ír whiskey, melyet kiemelkedő minőségű tölgyfahordókban érlelnek.",
-        "en": "Jameson Black Barrel",
-        "description_en": "Special Irish whiskey aged in exceptional quality oak barrels.",
-        "category_en": "Whiskeys",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 795
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 1590
-            }
-        ]
-    },
-    {
-        "hu": "Finsbury",
-        "description_hu": "Angol gin, mely kifinomult és frissítő ízeket kínál.",
-        "en": "Finsbury",
-        "description_en": "English gin offering refined and refreshing flavors.",
-        "category_en": "Gins",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 325
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 650
             }
         ]
     },
@@ -928,50 +178,7 @@
         "description_en": "London dry gin based on juniper, citrus, and fruits.",
         "category_en": "Gins",
         "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 395
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 790
-            }
-        ]
-    },
-    {
-        "hu": "Beefeater Pink",
-        "description_hu": "Rózsaszín gin, mely friss és gyümölcsös jegyekkel rendelkezik.",
-        "en": "Beefeater Pink",
-        "description_en": "Pink gin with fresh and fruity notes.",
-        "category_en": "Gins",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 395
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 790
-            }
-        ]
-    },
-    {
-        "hu": "Beefeater Orange",
-        "description_hu": "Narancsos ízű gin, mely kifinomult és citrusos jegyeket hordoz.",
-        "en": "Beefeater Orange",
-        "description_en": "Orange-flavored gin carrying sophisticated and citrusy notes.",
-        "category_en": "Gins",
-        "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 2,
@@ -994,6 +201,7 @@
         "description_en": "One of the most famous London gins known for its sophisticated flavor profile.",
         "category_en": "Gins",
         "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 2,
@@ -1010,298 +218,13 @@
         ]
     },
     {
-        "hu": "Nordes",
-        "description_hu": "Spanyol gin, mely északi bogyós gyümölcsökkel és tengeri ásványi anyagokkal készül.",
-        "en": "Nordes",
-        "description_en": "Spanish gin made with northern berries and maritime minerals.",
-        "category_en": "Gins",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 645
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 1290
-            }
-        ]
-    },
-    {
-        "hu": "Rsu",
-        "description_hu": "Magyar gin, mely a legjobb minőségű alapanyagokból készül.",
-        "en": "Rsu",
-        "description_en": "Hungarian gin made from the highest quality ingredients.",
-        "category_en": "Gins",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 650
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 1300
-            }
-        ]
-    },
-    {
-        "hu": "Drumshanbo Gunpowder Irish",
-        "description_hu": "Ír gin, mely friss és fűszeres jegyekkel rendelkezik.",
-        "en": "Drumshanbo Gunpowder Irish",
-        "description_en": "Irish gin with fresh and spicy notes.",
-        "category_en": "Gins",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 695
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 1390
-            }
-        ]
-    },
-    {
-        "hu": "Kapriol Grapefruit & Hibiscus",
-        "description_hu": "Magyar gin, melyet frissítő grépfrút és hibiszkusz jegyek jellemznek.",
-        "en": "Kapriol Grapefruit & Hibiscus",
-        "description_en": "Hungarian gin characterized by refreshing grapefruit and hibiscus notes.",
-        "category_en": "Gins",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 745
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 1490
-            }
-        ]
-    },
-    {
-        "hu": "La Su Mgo",
-        "description_hu": "Magyar gin, melynek alapját helyi növények adják.",
-        "en": "La Su Mgo",
-        "description_en": "Hungarian gin based on local botanicals.",
-        "category_en": "Gins",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 745
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 1490
-            }
-        ]
-    },
-    {
-        "hu": "Carolans Krémlikőr",
-        "description_hu": "Ír krémlikőr, mely kávé és karamell jegyekkel bír.",
-        "en": "Carolans Irish Cream Liqueur",
-        "description_en": "Irish cream liqueur with coffee and caramel notes.",
-        "category_en": "Liqueurs",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 395
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 790
-            }
-        ]
-    },
-    {
-        "hu": "Malibu",
-        "description_hu": "Karibi koktéllikőr, mely kókusz ízvilággal rendelkezik.",
-        "en": "Malibu",
-        "description_en": "Caribbean coconut liqueur.",
-        "category_en": "Liqueurs",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 375
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 750
-            }
-        ]
-    },
-    {
-        "hu": "Tátratea (42,52)",
-        "description_hu": "Szlovák gyógynövényes likőr, melynek alapját 52 különböző gyógynövény adja.",
-        "en": "Tatratea (42,52)",
-        "description_en": "Slovak herbal liqueur made from 52 different herbs.",
-        "category_en": "Liqueurs",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 595
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 1190
-            }
-        ]
-    },
-    {
-        "hu": "Tátratea (62,72)",
-        "description_hu": "Erősebb változatú szlovák gyógynövényes likőr.",
-        "en": "Tatratea (62,72)",
-        "description_en": "Stronger version of Slovak herbal liqueur.",
-        "category_en": "Liqueurs",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 645
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 1290
-            }
-        ]
-    },
-    {
-        "hu": "Becherovka",
-        "description_hu": "Cseh gyógynövényes likőr, mely kesernyés és fűszeres ízvilággal rendelkezik.",
-        "en": "Becherovka",
-        "description_en": "Czech herbal liqueur with a bitter and spicy flavor profile.",
-        "category_en": "Liqueurs",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 395
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 790
-            }
-        ]
-    },
-    {
-        "hu": "Unicum",
-        "description_hu": "Magyar gyógynövényes likőr, melyet több mint 40 különféle gyógynövényből készítenek.",
-        "en": "Unicum",
-        "description_en": "Hungarian herbal liqueur made from more than 40 different herbs.",
-        "category_en": "Liqueurs",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 410
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 820
-            }
-        ]
-    },
-    {
-        "hu": "Unicum Szilva",
-        "description_hu": "Magyar gyógynövényes szilvalekvár likőr.",
-        "en": "Unicum Plum",
-        "description_en": "Hungarian herbal plum liqueur.",
-        "category_en": "Liqueurs",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 410
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 820
-            }
-        ]
-    },
-    {
-        "hu": "Unicum Barista",
-        "description_hu": "Kávéízű magyar gyógynövényes likőr.",
-        "en": "Unicum Barista",
-        "description_en": "Coffee-flavored Hungarian herbal liqueur.",
-        "category_en": "Liqueurs",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 410
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 820
-            }
-        ]
-    },
-    {
         "hu": "Jägermeister",
         "description_hu": "Német gyógynövényes likőr, mely több mint 50 különböző összetevőt tartalmaz.",
         "en": "Jägermeister",
         "description_en": "German herbal liqueur containing over 50 different ingredients.",
         "category_en": "Liqueurs",
         "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 2,
@@ -1314,72 +237,6 @@
                 "unit_hu": "cl",
                 "unit_en": "cl",
                 "unit_price": 820
-            }
-        ]
-    },
-    {
-        "hu": "Tubi",
-        "description_hu": "Görög gyümölcslikőr, melyet citrom- és narancshéjból készítenek.",
-        "en": "Tubi",
-        "description_en": "Greek fruit liqueur made from lemon and orange peels.",
-        "category_en": "Liqueurs",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 745
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 1490
-            }
-        ]
-    },
-    {
-        "hu": "Finlandia",
-        "description_hu": "Finn vodka, melyet hat alapanyagból készítenek, többségében búza és árpa felhasználásával.",
-        "en": "Finlandia",
-        "description_en": "Finnish vodka made from six key ingredients, mostly using wheat and barley.",
-        "category_en": "Vodkas",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 345
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 690
-            }
-        ]
-    },
-    {
-        "hu": "Absolut",
-        "description_hu": "Svéd vodka, mely tiszta és sima ízvilágával kiemelkedik.",
-        "en": "Absolut",
-        "description_en": "Swedish vodka known for its pure and smooth taste.",
-        "category_en": "Vodkas",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 395
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 790
             }
         ]
     },
@@ -1390,6 +247,7 @@
         "description_en": "Russian vodka made from high-quality Russian grains and pure water.",
         "category_en": "Vodkas",
         "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 2,
@@ -1412,6 +270,7 @@
         "description_en": "French vodka made from the finest French wheat.",
         "category_en": "Vodkas",
         "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 2,
@@ -1428,56 +287,13 @@
         ]
     },
     {
-        "hu": "Bacardi Carta Blanca",
-        "description_hu": "Fehér rum, melyet könnyű és lágy ízvilág jellemzi.",
-        "en": "Bacardi Carta Blanca",
-        "description_en": "White rum with a light and smooth flavor profile.",
-        "category_en": "Rums",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 375
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 750
-            }
-        ]
-    },
-    {
-        "hu": "Bacardi Carta Negra",
-        "description_hu": "Sötét rum, melynek ízvilága gazdag és karakteres.",
-        "en": "Bacardi Carta Negra",
-        "description_en": "Dark rum with a rich and bold flavor profile.",
-        "category_en": "Rums",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 425
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 850
-            }
-        ]
-    },
-    {
         "hu": "Captain Morgan",
         "description_hu": "Karakteres jamaicai rum, melyet a karibi tengerparti szellem ad.",
         "en": "Captain Morgan",
         "description_en": "Robust Jamaican rum with the spirit of the Caribbean coast.",
         "category_en": "Rums",
         "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 2,
@@ -1490,94 +306,6 @@
                 "unit_hu": "cl",
                 "unit_en": "cl",
                 "unit_price": 850
-            }
-        ]
-    },
-    {
-        "hu": "Diplomatico Rum Exclusiva",
-        "description_hu": "Karakteres venezuelai rum, mely édes és fűszeres jegyekkel rendelkezik.",
-        "en": "Diplomatico Rum Exclusiva",
-        "description_en": "Robust Venezuelan rum with sweet and spicy notes.",
-        "category_en": "Rums",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 845
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 1690
-            }
-        ]
-    },
-    {
-        "hu": "Bumbu",
-        "description_hu": "Különleges karibi rum, melyet keleti fűszerekkel ízesítenek.",
-        "en": "Bumbu",
-        "description_en": "Special Caribbean rum flavored with exotic spices.",
-        "category_en": "Rums",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 845
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 1690
-            }
-        ]
-    },
-    {
-        "hu": "Don Papa Barso",
-        "description_hu": "Fülledt és aromás rum, mely a Fülöp-szigetekről származik.",
-        "en": "Don Papa Barso",
-        "description_en": "Rich and aromatic rum originating from the Philippines.",
-        "category_en": "Rums",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 975
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 1950
-            }
-        ]
-    },
-    {
-        "hu": "El Jimador Blanco",
-        "description_hu": "Kiváló minőségű mexikói tequila, mely tiszta és friss ízvilágot kínál.",
-        "en": "El Jimador Blanco",
-        "description_en": "Premium Mexican tequila offering a clean and fresh taste profile.",
-        "category_en": "Tequilas",
-        "active": true,
-        "units": [
-            {
-                "amount": 2,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 450
-            },
-            {
-                "amount": 4,
-                "unit_hu": "cl",
-                "unit_en": "cl",
-                "unit_price": 900
             }
         ]
     },
@@ -1588,6 +316,7 @@
         "description_en": "Mexican tequila aged in oak barrels for at least two months.",
         "category_en": "Tequilas",
         "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 2,
@@ -1604,104 +333,19 @@
         ]
     },
     {
-        "hu": "Rosé Spritz",
-        "description_hu": "Rózsaszínű spriccelt bor, melyet szódával és jégkockákkal tálalnak.",
-        "en": "Rosé Spritz",
-        "description_en": "Pink spritz made with sparkling wine, soda, and ice cubes.",
-        "category_en": "Spritzes",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 1290
-            }
-        ]
-    },
-    {
-        "hu": "Mojo Spritz",
-        "description_hu": "Frissítő spriccelt ital, mely különleges ízvilággal bír.",
-        "en": "Mojo Spritz",
-        "description_en": "Refreshing spritz with a unique flavor profile.",
-        "category_en": "Spritzes",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 1290
-            }
-        ]
-    },
-    {
-        "hu": "Bodzás-Uborkás Spritz",
-        "description_hu": "Szintén frissítő spriccelt ital, mely bodza és uborka ízekkel rendelkezik.",
-        "en": "Elderflower-Cucumber Spritz",
-        "description_en": "Another refreshing spritz with elderflower and cucumber flavors.",
-        "category_en": "Spritzes",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 1390
-            }
-        ]
-    },
-    {
         "hu": "Aperol Spritz",
         "description_hu": "Klasszikus olasz spriccelt ital, melyet aperol, prosecco és szódavíz alkot.",
         "en": "Aperol Spritz",
         "description_en": "Classic Italian spritz made with Aperol, prosecco, and soda water.",
         "category_en": "Spritzes",
         "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 1,
                 "unit_hu": null,
                 "unit_en": null,
                 "unit_price": 1390
-            }
-        ]
-    },
-    {
-        "hu": "Málnás Lime-os Spritz",
-        "description_hu": "Málnás és lime-os ízekkel készült frissítő spriccelt ital.",
-        "en": "Raspberry-Lime Spritz",
-        "description_en": "Refreshing spritz made with raspberry and lime flavors.",
-        "category_en": "Spritzes",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 1390
-            }
-        ]
-    },
-    {
-        "hu": "Natur Aqua Mentes",
-        "description_hu": "Szénsavmentes ásványvíz.",
-        "en": "Natur Aqua Still",
-        "description_en": "Still mineral water without carbonation.",
-        "category_en": "Mineral Waters",
-        "active": true,
-        "units": [
-            {
-                "amount": 0.33,
-                "unit_hu": "l",
-                "unit_en": "l",
-                "unit_price": 450
-            },
-            {
-                "amount": 0.75,
-                "unit_hu": "l",
-                "unit_en": "l",
-                "unit_price": 890
             }
         ]
     },
@@ -1712,6 +356,7 @@
         "description_en": "Sparkling mineral water.",
         "category_en": "Mineral Waters",
         "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 0.33,
@@ -1728,98 +373,19 @@
         ]
     },
     {
-        "hu": "Szóda",
-        "description_hu": "Szénsavas víz.",
-        "en": "Soda",
-        "description_en": "Carbonated water.",
-        "category_en": "Mineral Waters",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": "dl",
-                "unit_en": "dl",
-                "unit_price": 60
-            }
-        ]
-    },
-    {
         "hu": "Soproni",
         "description_hu": "Kiváló minőségű magyar sörfajta.",
         "en": "Soproni",
         "description_en": "Excellent quality Hungarian beer.",
         "category_en": "Draft Beers",
         "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 1,
                 "unit_hu": null,
                 "unit_en": null,
                 "unit_price": 1
-            }
-        ]
-    },
-    {
-        "hu": "Soproni Ipa",
-        "description_hu": "Amerikai stílusú indiai sör, melyet a hagyományos sörre jellemző ízvilág jellemez.",
-        "en": "Soproni Ipa",
-        "description_en": "American-style Indian pale ale with traditional beer flavors.",
-        "category_en": "Draft Beers",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 1
-            }
-        ]
-    },
-    {
-        "hu": "Edelweiss Búza",
-        "description_hu": "Búzasör, mely különlegesen lágy ízvilággal rendelkezik.",
-        "en": "Edelweiss Wheat",
-        "description_en": "Wheat beer with a uniquely smooth taste profile.",
-        "category_en": "Draft Beers",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 1
-            }
-        ]
-    },
-    {
-        "hu": "Mort Subite meggysör",
-        "description_hu": "Cseresznyés ízű belga sör.",
-        "en": "Mort Subite Cherry Beer",
-        "description_en": "Belgian beer with a cherry flavor.",
-        "category_en": "Draft Beers",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 1
-            }
-        ]
-    },
-    {
-        "hu": "Gösser",
-        "description_hu": "A Gösser osztrák sörfőzde terméke, mely hagyományos ízvilágával és minőségével hódít.",
-        "en": "Gösser",
-        "description_en": "Product of the Austrian brewery Gösser, known for its traditional taste and quality.",
-        "category_en": "Bottled Beers",
-        "active": true,
-        "units": [
-            {
-                "amount": 0.33,
-                "unit_hu": "l",
-                "unit_en": "l",
-                "unit_price": 690
             }
         ]
     },
@@ -1830,140 +396,13 @@
         "description_en": "Dutch beer Heineken, globally renowned for its excellent quality and distinctive taste.",
         "category_en": "Bottled Beers",
         "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 0.5,
                 "unit_hu": "l",
                 "unit_en": "l",
                 "unit_price": 750
-            }
-        ]
-    },
-    {
-        "hu": "Heineken Alkoholmentes /0%/",
-        "description_hu": "Az alkoholmentes változat a Heineken sörről, mely frissítő alternatívát kínál az alkoholmentes életmódhoz.",
-        "en": "Heineken Alcohol-Free /0%/",
-        "description_en": "Alcohol-free version of Heineken beer, offering a refreshing alternative for a non-alcoholic lifestyle.",
-        "category_en": "Bottled Beers",
-        "active": true,
-        "units": [
-            {
-                "amount": 0.5,
-                "unit_hu": "l",
-                "unit_en": "l",
-                "unit_price": 750
-            }
-        ]
-    },
-    {
-        "hu": "Gösser Natur Zitrone /0%/",
-        "description_hu": "A Gösser citromos radlerje, mely alkoholmentes változatban is elérhető, frissítő ízzel és kellemes savassággal.",
-        "en": "Gösser Lemon Radler /0%/",
-        "description_en": "Gösser's lemon radler, available in alcohol-free version, with a refreshing taste and pleasant acidity.",
-        "category_en": "Bottled Beers",
-        "active": true,
-        "units": [
-            {
-                "amount": 0.5,
-                "unit_hu": "l",
-                "unit_en": "l",
-                "unit_price": 790
-            }
-        ]
-    },
-    {
-        "hu": "Krušovice Világos",
-        "description_hu": "A Krušovice cseh sörfőzde klasszikus világos söre, melyet a hagyományoknak megfelelően készítenek.",
-        "en": "Krušovice Lager",
-        "description_en": "Classic Czech lager from the Krušovice brewery, made in accordance with traditional methods.",
-        "category_en": "Bottled Beers",
-        "active": true,
-        "units": [
-            {
-                "amount": 0.5,
-                "unit_hu": "l",
-                "unit_en": "l",
-                "unit_price": 750
-            }
-        ]
-    },
-    {
-        "hu": "Soproni Óvatos Duhaj Démon",
-        "description_hu": "A Soproni sörfőzde különleges söre, melynek karakteres íze és egyedi neve emlékezetessé teszi.",
-        "en": "Soproni Careful Devilish Demon",
-        "description_en": "Special beer from the Sopron brewery, with a distinctive taste and unique name that makes it memorable.",
-        "category_en": "Bottled Beers",
-        "active": true,
-        "units": [
-            {
-                "amount": 0.5,
-                "unit_hu": "l",
-                "unit_en": "l",
-                "unit_price": 750
-            }
-        ]
-    },
-    {
-        "hu": "Kronenbourg",
-        "description_hu": "A Kronenbourg francia sörfőzde terméke, mely hagyományos francia söritalokkal és minőséggel büszkélkedhet.",
-        "en": "Kronenbourg",
-        "description_en": "Product of the French brewery Kronenbourg, boasting traditional French beer styles and quality.",
-        "category_en": "Bottled Beers",
-        "active": true,
-        "units": [
-            {
-                "amount": 0.5,
-                "unit_hu": "l",
-                "unit_en": "l",
-                "unit_price": 850
-            }
-        ]
-    },
-    {
-        "hu": "Mojo",
-        "description_hu": "(becherovka, feketeribizlilé, citrom, fahéjrúd)",
-        "en": "Mojo",
-        "description_en": "(Becherovka, Blackcurrant Juice, Lemon, Cinnamon Stick)",
-        "category_en": "Cocktails",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 1190
-            }
-        ]
-    },
-    {
-        "hu": "Cuba Libre",
-        "description_hu": "(bacardi, cola, lime)",
-        "en": "Cuba Libre",
-        "description_en": "(Bacardi, Cola, Lime)",
-        "category_en": "Cocktails",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 1190
-            }
-        ]
-    },
-    {
-        "hu": "Gin Fizz",
-        "description_hu": "(citromlé, cukorszirup, szóda, gin)",
-        "en": "Gin Fizz",
-        "description_en": "(Lemon Juice, Simple Syrup, Soda, Gin)",
-        "category_en": "Cocktails",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 1190
             }
         ]
     },
@@ -1974,140 +413,13 @@
         "description_en": "(Orange Juice, Grenadine, Tequila)",
         "category_en": "Cocktails",
         "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 1,
                 "unit_hu": null,
                 "unit_en": null,
                 "unit_price": 1190
-            }
-        ]
-    },
-    {
-        "hu": "Summer Fresh",
-        "description_hu": "(vodka, mangó / málnaszirup, lime, almalé, gyümölcs)",
-        "en": "Summer Fresh",
-        "description_en": "(Vodka, Mango/Raspberry Syrup, Lime, Apple Juice, Fruits)",
-        "category_en": "Cocktails",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 1190
-            }
-        ]
-    },
-    {
-        "hu": "Sex On The Beach",
-        "description_hu": "(vodka, mangószirup, narancslé, feketeribizli)",
-        "en": "Sex On The Beach",
-        "description_en": "(Vodka, Mango Syrup, Orange Juice, Blackcurrant)",
-        "category_en": "Cocktails",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 1190
-            }
-        ]
-    },
-    {
-        "hu": "Pina Colada",
-        "description_hu": "(rum, tejszin, ananászlé, kókusz szirup)",
-        "en": "Pina Colada",
-        "description_en": "(Rum, Coconut Cream, Pineapple Juice, Coconut Syrup)",
-        "category_en": "Cocktails",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 1290
-            }
-        ]
-    },
-    {
-        "hu": "Flamingo",
-        "description_hu": "(epres gin, mangó / málnaszirup, narancslé, tonic, lime, gyümölcsök)",
-        "en": "Flamingo",
-        "description_en": "(Strawberry Gin, Mango/Raspberry Syrup, Orange Juice, Tonic, Lime, Fruits)",
-        "category_en": "Cocktails",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 1390
-            }
-        ]
-    },
-    {
-        "hu": "Bloody Mary",
-        "description_hu": "(vodka, paradicsomlé, citromlé, só, bors, worcester, tabasco)",
-        "en": "Bloody Mary",
-        "description_en": "(Vodka, Tomato Juice, Lemon Juice, Salt, Pepper, Worcestershire Sauce, Tabasco)",
-        "category_en": "Cocktails",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 1690
-            }
-        ]
-    },
-    {
-        "hu": "Speed",
-        "description_hu": "(gin, bacardi, tequila, citromlé, eperszirup, energiaital)",
-        "en": "Speed",
-        "description_en": "(Gin, Bacardi, Tequila, Lemon Juice, Strawberry Syrup, Energy Drink)",
-        "category_en": "Cocktails",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 1790
-            }
-        ]
-    },
-    {
-        "hu": "Margarita",
-        "description_hu": "(tequila, triple sec, citromlé)",
-        "en": "Margarita",
-        "description_en": "(Tequila, Triple Sec, Lemon Juice)",
-        "category_en": "Cocktails",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 1990
-            }
-        ]
-    },
-    {
-        "hu": "Midnight medicine",
-        "description_hu": "(tubi, tonic, fekete ribizlilé, citrom)",
-        "en": "Midnight Medicine",
-        "description_en": "(Tubi, Tonic, Blackcurrant Juice, Lemon)",
-        "category_en": "Cocktails",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 1990
             }
         ]
     },
@@ -2118,6 +430,7 @@
         "description_en": "(Gin, Vodka, Rum, Tequila, Triple Sec, Cola, Lime)",
         "category_en": "Cocktails",
         "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 1,
@@ -2134,38 +447,7 @@
         "description_en": "A blend of flavored Bacardi rum and cola, offering a zesty flavor that's sure to refresh.",
         "category_en": "Long Drinks",
         "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 990
-            }
-        ]
-    },
-    {
-        "hu": "Bombay Gin Tonic",
-        "description_hu": "A klasszikus Gin-Tonic koktél, melyet a Bombay gin és a tonik alkot.",
-        "en": "Bombay Gin Tonic",
-        "description_en": "The classic Gin and Tonic cocktail made with Bombay gin and tonic water.",
-        "category_en": "Long Drinks",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 990
-            }
-        ]
-    },
-    {
-        "hu": "Finlandia Tonic",
-        "description_hu": "A Finnországban készült Finlandia vodka és tonik keveréke, mely egy könnyed, frissítő ital.",
-        "en": "Finlandia Tonic",
-        "description_en": "A mix of Finlandia vodka and tonic water, crafted in Finland, creating a light, refreshing drink.",
-        "category_en": "Long Drinks",
-        "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 1,
@@ -2182,6 +464,7 @@
         "description_en": "A unique blend of American Jack Daniel's whiskey and cola, indulging the palate with its zesty flavor.",
         "category_en": "Long Drinks",
         "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 1,
@@ -2191,70 +474,7 @@
             }
         ]
     },
-    {
-        "hu": "Martini Fiero Tonic",
-        "description_hu": "A Martini Fiero és a tonik elegáns kombinációja, mely frissítő és pikáns ízével felpezsdíti az estéket.",
-        "en": "Martini Fiero Tonic",
-        "description_en": "An elegant combination of Martini Fiero and tonic, refreshing and zesty, perfect for enlivening evenings.",
-        "category_en": "Long Drinks",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 1390
-            }
-        ]
-    },
-    {
-        "hu": "Fény (6db)",
-        "description_hu": "A Fény az egyik legkedveltebb shots kategóriájú ital, mely egyidejűleg hatást gyakorol a szemekre és a szájra.",
-        "en": "Light (6 pcs)",
-        "description_en": "Light is one of the most popular drinks in the shots category, simultaneously affecting the eyes and the mouth.",
-        "category_en": "Shots",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 2190
-            }
-        ]
-    },
-    {
-        "hu": "Kacsa (6db)",
-        "description_hu": "A Kacsa az egyik legérdekesebb shots kategóriájú ital, mely érdekes és változatos ízvilágot kínál.",
-        "en": "Duck (6 pcs)",
-        "description_en": "Duck is one of the most interesting drinks in the shots category, offering a unique and varied flavor profile.",
-        "category_en": "Shots",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 2190
-            }
-        ]
-    },
-    {
-        "hu": "Vodka Barbie (5db)",
-        "description_hu": "A Vodka Barbie egy könnyed és édes ital, mely az édes ízvilágot kedvelők számára ideális választás.",
-        "en": "Vodka Barbie (5 pcs)",
-        "description_en": "Vodka Barbie is a light and sweet drink, ideal for those who enjoy a sugary flavor profile.",
-        "category_en": "Shots",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 2290
-            }
-        ]
-    },
+
     {
         "hu": "Málnás Vodka (6db)",
         "description_hu": "Az édes málnás vodka egy kellemes és frissítő ital, melyet a málna és a vodka íze dominál.",
@@ -2262,44 +482,13 @@
         "description_en": "Sweet raspberry vodka is a pleasant and refreshing drink dominated by the flavors of raspberry and vodka.",
         "category_en": "Shots",
         "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 1,
                 "unit_hu": null,
                 "unit_en": null,
                 "unit_price": 2290
-            }
-        ]
-    },
-    {
-        "hu": "Mangós Vodka (6db)",
-        "description_hu": "A Mangós Vodka egy trópusi ízvilágú ital, melyben az édes mangó és a vodka íze találkozik.",
-        "en": "Mango Vodka (6 pcs)",
-        "description_en": "Mango Vodka is a drink with a tropical flavor profile, where the sweet mango meets the taste of vodka.",
-        "category_en": "Shots",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 2290
-            }
-        ]
-    },
-    {
-        "hu": "Bulanga (6db)",
-        "description_hu": "A Bulanga egy erős és karakteres ital, melyet az igazi férfiak kedvelnek.",
-        "en": "Bulanga (6 pcs)",
-        "description_en": "Bulanga is a strong and robust drink favored by real men.",
-        "category_en": "Shots",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 2690
             }
         ]
     },
@@ -2310,6 +499,7 @@
         "description_en": "Lelovits Tamás Olaszrizling is an excellent quality white wine crafted by a renowned Hungarian winery.",
         "category_en": "House Wines",
         "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 1,
@@ -2326,6 +516,7 @@
         "description_en": "Lelovits Tamás Rosé Cuvée is a light and refreshing rosé wine, ideal for enthusiasts of light drinks.",
         "category_en": "House Wines",
         "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 1,
@@ -2335,248 +526,7 @@
             }
         ]
     },
-    {
-        "hu": "Frittmann Kékfrankos Rosé",
-        "description_hu": "A Frittmann Kékfrankos Rosé egy könnyed és gyümölcsös rozébor, melyet a híres magyar borászat készít.",
-        "en": "Frittmann Kékfrankos Rosé",
-        "description_en": "Frittmann Kékfrankos Rosé is a light and fruity rosé wine crafted by a renowned Hungarian winery.",
-        "category_en": "Rosé Wines",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": "dl",
-                "unit_en": "dl",
-                "unit_price": 450
-            },
-            {
-                "amount": 1,
-                "unit_hu": "üveg",
-                "unit_en": "bottle",
-                "unit_price": 3375
-            }
-        ]
-    },
-    {
-        "hu": "Bodri Rozi Rosé",
-        "description_hu": "A Bodri Rozi Rosé egy friss és kellemes rozébor, melyet a híres magyar borászat készít.",
-        "en": "Bodri Rozi Rosé",
-        "description_en": "Bodri Rozi Rosé is a fresh and pleasant rosé wine crafted by a renowned Hungarian winery.",
-        "category_en": "Rosé Wines",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": "dl",
-                "unit_en": "dl",
-                "unit_price": 530
-            },
-            {
-                "amount": 1,
-                "unit_hu": "üveg",
-                "unit_en": "bottle",
-                "unit_price": 3975
-            }
-        ]
-    },
-    {
-        "hu": "Vylyan Kakas Rosé",
-        "description_hu": "A Vylyan Kakas Rosé egy intenzív és karakteres rozébor, mely kitűnő választás a rozék kedvelőinek.",
-        "en": "Vylyan Kakas Rosé",
-        "description_en": "Vylyan Kakas Rosé is an intense and robust rosé wine, excellent choice for rosé enthusiasts.",
-        "category_en": "Rosé Wines",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": "dl",
-                "unit_en": "dl",
-                "unit_price": 550
-            },
-            {
-                "amount": 1,
-                "unit_hu": "üveg",
-                "unit_en": "bottle",
-                "unit_price": 4125
-            }
-        ]
-    },
-    {
-        "hu": "Tar Cabernet Franc",
-        "description_hu": "A Tar Cabernet Franc egy testes és karakteres vörösbor, mely kitűnően párosítható húsételekkel.",
-        "en": "Tar Cabernet Franc",
-        "description_en": "Tar Cabernet Franc is a full-bodied and robust red wine, perfect for pairing with meat dishes.",
-        "category_en": "Red Wines",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": "dl",
-                "unit_en": "dl",
-                "unit_price": 1
-            },
-            {
-                "amount": 1,
-                "unit_hu": "üveg",
-                "unit_en": "bottle",
-                "unit_price": 1
-            }
-        ]
-    },
-    {
-        "hu": "Vylyan Ördög Cuvée",
-        "description_hu": "A Vylyan Ördög Cuvée egy komplex és mély vörösbor, mely gazdag ízvilágával kápráztatja el az ínyenceket.",
-        "en": "Vylyan Ördög Cuvée",
-        "description_en": "Vylyan Ördög Cuvée is a complex and deep red wine, captivating connoisseurs with its rich flavor profile.",
-        "category_en": "Red Wines",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": "dl",
-                "unit_en": "dl",
-                "unit_price": 1
-            },
-            {
-                "amount": 1,
-                "unit_hu": "üveg",
-                "unit_en": "bottle",
-                "unit_price": 1
-            }
-        ]
-    },
-    {
-        "hu": "Vida Ölelés Merlot",
-        "description_hu": "A Vida Ölelés Merlot egy könnyed és gyümölcsös vörösbor, melyet a híres magyar borászat készít.",
-        "en": "Vida Ölelés Merlot",
-        "description_en": "Vida Ölelés Merlot is a light and fruity red wine crafted by a renowned Hungarian winery.",
-        "category_en": "Red Wines",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": "dl",
-                "unit_en": "dl",
-                "unit_price": 1
-            },
-            {
-                "amount": 1,
-                "unit_hu": "üveg",
-                "unit_en": "bottle",
-                "unit_price": 1
-            }
-        ]
-    },
-    {
-        "hu": "Balla Géza Kadarka",
-        "description_hu": "A Balla Géza Kadarka egy tradicionális és karakteres vörösbor, mely méltó képviselője a magyar borászatnak.",
-        "en": "Balla Géza Kadarka",
-        "description_en": "Balla Géza Kadarka is a traditional and robust red wine, a worthy representative of Hungarian winemaking.",
-        "category_en": "Red Wines",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": "dl",
-                "unit_en": "dl",
-                "unit_price": 1
-            },
-            {
-                "amount": 1,
-                "unit_hu": "üveg",
-                "unit_en": "bottle",
-                "unit_price": 1
-            }
-        ]
-    },
-    {
-        "hu": "Schieber Irsai Olivér",
-        "description_hu": "A Schieber Irsai Olivér egy könnyed és friss fehérbor, melyet a híres magyar borászat készít.",
-        "en": "Schieber Irsai Olivér",
-        "description_en": "Schieber Irsai Olivér is a light and fresh white wine crafted by a renowned Hungarian winery.",
-        "category_en": "White Wines",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": "dl",
-                "unit_en": "dl",
-                "unit_price": 490
-            },
-            {
-                "amount": 1,
-                "unit_hu": "üveg",
-                "unit_en": "bottle",
-                "unit_price": 3675
-            }
-        ]
-    },
-    {
-        "hu": "Tűzkő Banka Zöldveltelini",
-        "description_hu": "A Tűzkő Banka Zöldveltelini egy aromás és zamatos fehérbor, mely gazdag ízvilágával lenyűgözi az ínyenceket.",
-        "en": "Tűzkő Banka Zöldveltelini",
-        "description_en": "Tűzkő Banka Zöldveltelini is an aromatic and flavorful white wine, impressing connoisseurs with its rich flavor profile.",
-        "category_en": "White Wines",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": "dl",
-                "unit_en": "dl",
-                "unit_price": 570
-            },
-            {
-                "amount": 1,
-                "unit_hu": "üveg",
-                "unit_en": "bottle",
-                "unit_price": 4275
-            }
-        ]
-    },
-    {
-        "hu": "Hangyál Sárgamuskotály",
-        "description_hu": "A Hangyál Sárgamuskotály egy félédes fehérbor, melyet gyümölcsös ízvilága és enyhe édessége tesz különlegessé.",
-        "en": "Hangyál Sárgamuskotály",
-        "description_en": "Hangyál Sárgamuskotály is a semi-sweet white wine, distinguished by its fruity flavor and mild sweetness.",
-        "category_en": "White Wines",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": "dl",
-                "unit_en": "dl",
-                "unit_price": 690
-            },
-            {
-                "amount": 1,
-                "unit_hu": "üveg",
-                "unit_en": "bottle",
-                "unit_price": 5175
-            }
-        ]
-    },
-    {
-        "hu": "Hangyál Balázs Sauvignon Blanc",
-        "description_hu": "A Hangyál Balázs Sauvignon Blanc egy könnyed és friss fehérbor, melyet a híres magyar borászat készít.",
-        "en": "Hangyál Balázs Sauvignon Blanc",
-        "description_en": "Hangyál Balázs Sauvignon Blanc is a light and fresh white wine crafted by a renowned Hungarian winery.",
-        "category_en": "White Wines",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": "dl",
-                "unit_en": "dl",
-                "unit_price": 740
-            },
-            {
-                "amount": 1,
-                "unit_hu": "üveg",
-                "unit_en": "bottle",
-                "unit_price": 5550
-            }
-        ]
-    },
+
     {
         "hu": "Sabar Birtokbor Olaszrizling",
         "description_hu": "A Sabar Birtokbor Olaszrizling egy kiváló minőségű fehérbor, melyet a híres magyar borászat készít.",
@@ -2584,6 +534,7 @@
         "description_en": "Sabar Estate Wine Olaszrizling is an excellent quality white wine crafted by a renowned Hungarian winery.",
         "category_en": "White Wines",
         "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 1,
@@ -2600,6 +551,7 @@
         "description_en": "Strongbow Gold is a light and fruity cider crafted by a renowned English brewery.",
         "category_en": "Ciders",
         "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 0.33,
@@ -2616,6 +568,7 @@
         "description_en": "Törley Gála is a light and fresh sparkling wine, an excellent choice for special occasions.",
         "category_en": "Sparkling Wines",
         "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 1,
@@ -2632,76 +585,13 @@
         "description_en": "Törley Doux is a sweet and fresh sparkling wine crafted by a renowned Hungarian sparkling wine factory.",
         "category_en": "Sparkling Wines",
         "active": true,
+        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
             {
                 "amount": 1,
                 "unit_hu": "üveg",
                 "unit_en": "bottle",
                 "unit_price": 2900
-            }
-        ]
-    },
-    {
-        "hu": "Hungaria Extra Dry",
-        "description_hu": "A Hungaria Extra Dry egy könnyed és friss pezsgő, melyet a híres magyar pezsgőgyár készít.",
-        "en": "Hungaria Extra Dry",
-        "description_en": "Hungaria Extra Dry is a light and fresh sparkling wine crafted by a renowned Hungarian sparkling wine factory.",
-        "category_en": "Sparkling Wines",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": "üveg",
-                "unit_en": "bottle",
-                "unit_price": 4900
-            }
-        ]
-    },
-    {
-        "hu": "Hungaria Irsai Olivér Doux",
-        "description_hu": "A Hungaria Irsai Olivér Doux egy édes és friss pezsgő, melyet a híres magyar pezsgőgyár készít.",
-        "en": "Hungaria Irsai Olivér Doux",
-        "description_en": "Hungaria Irsai Olivér Doux is a sweet and fresh sparkling wine crafted by a renowned Hungarian sparkling wine factory.",
-        "category_en": "Sparkling Wines",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": "üveg",
-                "unit_en": "bottle",
-                "unit_price": 4900
-            }
-        ]
-    },
-    {
-        "hu": "Tussock Jumper Cava Brut",
-        "description_hu": "A Tussock Jumper Cava Brut egy elegáns és zamatos pezsgő, melyet a híres spanyol borászat készít.",
-        "en": "Tussock Jumper Cava Brut",
-        "description_en": "Tussock Jumper Cava Brut is an elegant and flavorful sparkling wine crafted by a renowned Spanish winery.",
-        "category_en": "Sparkling Wines",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": "üveg",
-                "unit_en": "bottle",
-                "unit_price": 5990
-            }
-        ]
-    },
-    {
-        "hu": "Dissegna Prosecco Extra Dry",
-        "description_hu": "A Dissegna Prosecco Extra Dry egy friss és gyümölcsös pezsgő, melyet a híres olasz borászat készít.",
-        "en": "Dissegna Prosecco Extra Dry",
-        "description_en": "Dissegna Prosecco Extra Dry is a fresh and fruity sparkling wine crafted by a renowned Italian winery.",
-        "category_en": "Sparkling Wines",
-        "active": true,
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": "üveg",
-                "unit_en": "bottle",
-                "unit_price": 6590
             }
         ]
     }

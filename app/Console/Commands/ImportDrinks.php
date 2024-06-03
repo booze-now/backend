@@ -53,6 +53,7 @@ class ImportDrinks extends Command
                     'description_hu' => $data->description_hu ?? null,
                     'category_id' => $category->id,
                     'active' => $data->active,
+                    'image_url' => $data->image_url,
                 ]);
 
                 foreach ($data->units as $unit) {

@@ -26,8 +26,8 @@ class Drink extends Model
      * category_id: integer
      * description_en: ?string
      * description_hu: ?string
-     * picture: ?string
      * active: boolean=true
+     * image_url: ?string
      *
      * Relations
      *
@@ -51,8 +51,8 @@ class Drink extends Model
         'category_id',
         'description_en',
         'description_hu',
-        'picture',
         'active',
+        'image_url'
     ];
 
     protected $appends = ['name', 'description'];
@@ -77,6 +77,7 @@ class Drink extends Model
         'description_en',
         'description_hu',
         'active',
+        'image_url',
         'created_at',
         'updated_at',
     ];

@@ -20,7 +20,6 @@ class DatabaseSeeder extends Seeder
             // DrinkSeeder::class,
             // OrderSeeder::class,
             // ReceiptSeeder::class,
-
         ]);
 
         // \App\Models\User::factory(10)->create();
