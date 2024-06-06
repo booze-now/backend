@@ -1,42 +1,8 @@
 [
     {
-        "hu": "Espresso",
-        "description_hu": "Erős, koncentrált kávé, melyet forró vízzel préselnek át finom őrölt kávébabokon.",
-        "en": "Espresso",
-        "description_en": "Strong, concentrated coffee made by forcing hot water through finely ground coffee beans.",
-        "category_en": "Coffees",
-        "active": true,
-        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 450
-            }
-        ]
-    },
-    {
-        "hu": "Jázmin",
-        "description_hu": "Jázminvirágok aromájával ízesített zöld tea.",
-        "en": "Yasmin",
-        "description_en": "Gren tea scented with aroma of yasmine blossoms.",
-        "category_en": "Teas",
-        "active": true,
-        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 400
-            }
-        ]
-    },
-    {
-        "hu": "Epres",
+        "hu": "Eprlé",
         "description_hu": "Friss eperből készült, frissítő ízű limonádé.",
-        "en": "Strawberry",
+        "en": "Strawberry Juice",
         "description_en": "Refreshing lemonade made from fresh strawberries.",
         "category_en": "Lemonades",
         "active": true,
@@ -333,23 +299,6 @@
         ]
     },
     {
-        "hu": "Aperol Spritz",
-        "description_hu": "Klasszikus olasz spriccelt ital, melyet aperol, prosecco és szódavíz alkot.",
-        "en": "Aperol Spritz",
-        "description_en": "Classic Italian spritz made with Aperol, prosecco, and soda water.",
-        "category_en": "Spritzes",
-        "active": true,
-        "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
-        "units": [
-            {
-                "amount": 1,
-                "unit_hu": null,
-                "unit_en": null,
-                "unit_price": 1390
-            }
-        ]
-    },
-    {
         "hu": "Natur Aqua Szénsavas",
         "description_hu": "Szénsavas ásványvíz.",
         "en": "Natur Aqua Sparkling",
@@ -445,7 +394,7 @@
         "description_hu": "Az ízesített Bacardi rum és kóla keveréke, melynek pikáns ízvilága garantáltan felfrissít.",
         "en": "Bacardi Spiced Cola",
         "description_en": "A blend of flavored Bacardi rum and cola, offering a zesty flavor that's sure to refresh.",
-        "category_en": "Long Drinks",
+        "category_en": "Cocktails",
         "active": true,
         "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [
@@ -462,7 +411,7 @@
         "description_hu": "Az amerikai Jack Daniel's whisky és kóla egyedülálló keveréke, mely pikáns ízével kényezteti az ízlelőbimbókat.",
         "en": "Jack Cola",
         "description_en": "A unique blend of American Jack Daniel's whiskey and cola, indulging the palate with its zesty flavor.",
-        "category_en": "Long Drinks",
+        "category_en": "Cocktails",
         "active": true,
         "image_url": "https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg",
         "units": [

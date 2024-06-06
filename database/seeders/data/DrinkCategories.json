@@ -18,22 +18,6 @@
             {
                 "hu": "Szénsavas italok",
                 "en": "Carbonated Drinks"
-            },
-            {
-                "hu": "Energiaitalok",
-                "en": "Energy Drinks"
-            },
-            {
-                "hu": "Kávék",
-                "en": "Coffees"
-            },
-            {
-                "hu": "Teák",
-                "en": "Teas"
-            },
-            {
-                "hu": "Kimért üdítők",
-                "en": "Bulk Soft Drinks"
             }
         ]
     },
@@ -66,14 +50,6 @@
             {
                 "hu": "Fehér borok",
                 "en": "White Wines"
-            },
-            {
-                "hu": "Vörös borok",
-                "en": "Red Wines"
-            },
-            {
-                "hu": "Rozék",
-                "en": "Rosé Wines"
             }
         ]
     },
@@ -83,28 +59,12 @@
         "children": []
     },
     {
-        "hu": "Brandyk",
+        "hu": "Pálinkák",
         "en": "Brandies"
-    },
-    {
-        "hu": "Spritzek",
-        "en": "Spritzes"
     },
     {
         "hu": "Koktélok",
         "en": "Cocktails"
-    },
-    {
-        "hu": "Long Drinkek",
-        "en": "Long Drinks"
-    },
-    {
-        "hu": "Rövid italok",
-        "en": "Spirits"
-    },
-    {
-        "hu": "Pálinkák",
-        "en": "Fruit Brandies"
     },
     {
         "hu": "Vodkák",
